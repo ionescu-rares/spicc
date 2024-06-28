@@ -32,7 +32,7 @@
     bind:this={scrollDownButton}
     id="scroll-down-button"
     on:click={handleClick}
-    class="absolute text-3xl font-bold text-white border-none btn-accent bg-brand btn-circle bottom-8 right-12 md:right-24 btn-lg bounce-animation"
+    class="absolute text-xl font-bold text-white border-none md:text-3xl btn-accent bg-brand btn-circle bottom-8 right-12 md:right-24 btn-md md:btn-lg bounce-animation"
     >↓</button
   >
 </section>
