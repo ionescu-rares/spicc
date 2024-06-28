@@ -5,7 +5,7 @@
 </script>
 
 <section
-  class="flex flex-col items-center h-auto px-8 py-24 md:px-32 md:text-center bg-brand"
+  class="flex flex-col items-center h-auto px-8 py-24 lg:px-32 lg:text-center bg-brand"
 >
   <SectionTitle title="Cine suntem?" />
   <p class="mt-16 text-2xl leading-relaxed">
@@ -15,9 +15,9 @@
     și incluziunea socială.
   </p>
   <div
-    class="flex flex-col mt-24 gap-y-8 md:gap-y-0 md:grid md:grid-rows-6 md:grid-cols-2 md:gap-x-8 place-items-center text-start"
+    class="flex flex-col mt-24 gap-y-8 lg:gap-y-0 lg:grid lg:grid-rows-6 lg:grid-cols-2 lg:gap-x-8 place-items-center text-start"
   >
-    <img src={misiuneSrc} alt="misiune" class="-start-1 md:row-span-6" />
+    <img src={misiuneSrc} alt="misiune" class="-start-1 lg:row-span-6" />
     <h3 class="col-start-2 row-end-2 text-4xl font-bold">Misiune</h3>
     <p class="col-start-2 row-start-2 row-end-4 text-2xl">
       Dorim să construim un spațiu deschis participării și propunerilor tuturor
@@ -26,7 +26,7 @@
     </p>
   </div>
   <div
-    class="flex flex-col mt-24 gap-y-8 md:gap-y-0 md:grid md:grid-rows-6 md:grid-cols-2 md:gap-x-8 place-items-center text-start"
+    class="flex flex-col mt-24 gap-y-8 lg:gap-y-0 lg:grid lg:grid-rows-6 lg:grid-cols-2 lg:gap-x-8 place-items-center text-start"
   >
     <img src={viziuneSrc} alt="viziune" class="row-span-6" />
     <h3 class="col-start-1 row-end-2 text-4xl font-bold">Viziune</h3>
