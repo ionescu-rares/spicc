@@ -7,7 +7,7 @@
   import fifth from "$lib/images/5.jpg";
   import sixth from "$lib/images/6.jpg";
   import seventh from "$lib/images/7.jpg";
-  import { onDestroy, onMount } from "svelte";
+  import { onDestroy } from "svelte";
   const slides = [first, second, third, fourth, fifth, sixth, seventh];
   const handleClick = () => {
     window.scrollTo({
@@ -20,7 +20,7 @@
     scrollDownButton.classList.add("bounce-animation");
     setTimeout(() => {
       scrollDownButton.classList.remove("bounce-animation");
-    }, 1000); // Duration of the bounce animation
+    }, 1000);
   }, 6000);
 
   onDestroy(() => clearInterval(toggleBounce));

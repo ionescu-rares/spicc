@@ -18,12 +18,12 @@
     poster={voceaPoster}
     title="Descoperă-ți vocea!"
   >
-    <p class="text-2xl leading-relaxed">Dragi vizitatori,</p>
-    <p class="mt-8 text-2xl leading-relaxed">
+    <p class="md:text-2xl text-lg leading-relaxed">Dragi vizitatori,</p>
+    <p class="mt-8 md:text-2xl text-lg leading-relaxed">
       Sunteți pasionați de feminism, egalitate de gen sau aveți experiențe sau
       perspective de împărtășit?
     </p>
-    <p class="mt-8 text-2xl leading-relaxed">
+    <p class="mt-8 md:text-2xl text-lg leading-relaxed">
       Trimite-ne articole/poveștile tale pe <a
         href="https://www.spicc.eu/contact"
         rel="noopener noreferrer"
@@ -39,7 +39,7 @@
     title="Flashmob „Firul Solidarității”"
     reversed
   >
-    <p class="text-2xl">
+    <p class="md:text-2xl text-lg">
       Eveniment realizat cu ocazia Zilei Internaționale pentru Eliminarea
       Violenței împotriva Femeilor
     </p>
@@ -49,7 +49,7 @@
     title="
     Împreună pentru siguranța femeilor"
     slides={[siguranta, siguranta2, siguranta3]}
-    ><p class="text-2xl">
+    ><p class="md:text-2xl text-lg">
       Timișorenii au fost chemați să participe la un marș pentru siguranța
       femeilor, în data de 22 octombrie, între orele 15 și 17, în Piața Sf.
       Gheorghe.

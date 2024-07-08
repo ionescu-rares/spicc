@@ -12,13 +12,7 @@
     <ul class="px-1 menu menu-horizontal">
       <li><a class="active:bg-brand" href="/cine-suntem">Cine suntem</a></li>
       <li>
-        <details>
-          <summary><a href="/ce-facem">Ce facem</a></summary>
-          <ul class="z-10 p-2 rounded-t-none bg-brand">
-            <li><a>Link 1</a></li>
-            <li><a>Link 2</a></li>
-          </ul>
-        </details>
+        <a href="/ce-facem">Ce facem</a>
       </li>
     </ul>
   </div>

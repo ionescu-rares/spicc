@@ -1,14 +1,13 @@
 <script>
+  import PageLayout from "$lib/components/pageLayout.svelte";
   import SectionTitle from "$lib/components/typography/sectionTitle.svelte";
   import misiuneSrc from "$lib/images/cine-suntem/misiune.jpeg";
   import viziuneSrc from "$lib/images/cine-suntem/viziune.jpg";
 </script>
 
-<section
-  class="flex flex-col items-center h-auto px-8 py-24 lg:px-32 lg:text-center bg-brand"
->
+<PageLayout>
   <SectionTitle title="Cine suntem?" />
-  <p class="mt-16 text-2xl leading-relaxed">
+  <p class="mt-16 text-lg leading-relaxed md:text-2xl">
     Suntem o asociație feministă, care militează împotriva discriminării de gen
     prin activism și advocacy și sprijină prin acțiunile sale egalitatea de
     șanse, emanciparea femeilor, educația și politicile publice sensibile la gen
@@ -19,7 +18,7 @@
   >
     <img src={misiuneSrc} alt="misiune" class="-start-1 lg:row-span-6" />
     <h3 class="col-start-2 row-end-2 text-4xl font-bold">Misiune</h3>
-    <p class="col-start-2 row-start-2 row-end-4 text-2xl">
+    <p class="col-start-2 row-start-2 row-end-4 text-lg md:text-2xl">
       Dorim să construim un spațiu deschis participării și propunerilor tuturor
       feminismelor, încurajând gândirea critică și promovând cetățenia activă și
       dialogul intercultural.
@@ -30,7 +29,7 @@
   >
     <img src={viziuneSrc} alt="viziune" class="row-span-6" />
     <h3 class="col-start-1 row-end-2 text-4xl font-bold">Viziune</h3>
-    <p class="col-start-1 row-start-2 row-end-5 text-2xl">
+    <p class="col-start-1 row-start-2 row-end-5 text-lg md:text-2xl">
       Viziunea noastră este a unei lumi în care toate formele de violență
       împotriva femeilor au fost eliminate, în care vocile femeilor se aud clar
       și puternic, în care femeile, eliberate de toate formele de opresiune se
@@ -38,4 +37,4 @@
       maxim potențialul.
     </p>
   </div>
-</section>
+</PageLayout>
