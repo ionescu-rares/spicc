@@ -18,12 +18,12 @@
     poster={voceaPoster}
     title="Descoperă-ți vocea!"
   >
-    <p class="md:text-2xl text-lg leading-relaxed">Dragi vizitatori,</p>
-    <p class="mt-8 md:text-2xl text-lg leading-relaxed">
+    <p class="text-lg leading-relaxed md:text-2xl">Dragi vizitatori,</p>
+    <p class="mt-8 text-lg leading-relaxed md:text-2xl">
       Sunteți pasionați de feminism, egalitate de gen sau aveți experiențe sau
       perspective de împărtășit?
     </p>
-    <p class="mt-8 md:text-2xl text-lg leading-relaxed">
+    <p class="mt-8 text-lg leading-relaxed md:text-2xl">
       Trimite-ne articole/poveștile tale pe <a
         href="https://www.spicc.eu/contact"
         rel="noopener noreferrer"
@@ -39,21 +39,21 @@
     title="Flashmob „Firul Solidarității”"
     reversed
   >
-    <p class="md:text-2xl text-lg">
+    <p class="text-lg md:text-2xl">
       Eveniment realizat cu ocazia Zilei Internaționale pentru Eliminarea
       Violenței împotriva Femeilor
     </p>
-    <button class="mt-8 btn btn-secondary btn-wide">Mai multe</button>
+    <button class="mt-8 btn btn-primary btn-wide">Mai multe</button>
   </Article>
   <Article
     title="
     Împreună pentru siguranța femeilor"
     slides={[siguranta, siguranta2, siguranta3]}
-    ><p class="md:text-2xl text-lg">
+    ><p class="text-lg md:text-2xl">
       Timișorenii au fost chemați să participe la un marș pentru siguranța
       femeilor, în data de 22 octombrie, între orele 15 și 17, în Piața Sf.
       Gheorghe.
     </p>
-    <button class="mt-8 btn btn-secondary btn-wide">Mai multe</button></Article
+    <button class="mt-8 btn btn-primary btn-wide">Mai multe</button></Article
   >
 </section>

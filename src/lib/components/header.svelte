@@ -5,7 +5,11 @@
 <div class="relative py-0 navbar text-slate-200 bg-brand">
   <div class="flex-1">
     <a href="/" class="text-xl"
-      ><img src={logo} alt="logo" class="rounded-full btn-ghost" /></a
+      ><img
+        src={logo}
+        alt="logo"
+        class="border-none rounded-full btn-ghost"
+      /></a
     >
   </div>
   <div class="flex-none">

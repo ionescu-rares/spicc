@@ -1,21 +1,24 @@
 <script lang="ts">
+  export let buttonLabel = "Mai multe";
+  export let modalId = "";
+  export let title = "";
   const openModal = () => {
     if (document) {
-      (document.getElementById("my_modal_2") as HTMLFormElement).showModal();
+      (document.getElementById(modalId) as HTMLFormElement).showModal();
     }
   };
-  let buttonLabel = "";
 </script>
 
-<button class="btn" on:click={openModal}>{buttonLabel}</button>
-<dialog id="my_modal_3" class="modal">
-  <div class="modal-box">
+<button class="btn btn-primary" on:click={openModal}>{buttonLabel}</button>
+<dialog id={modalId} class="modal">
+  <div class="w-11/12 h-auto max-w-6xl max-h-[80%] modal-box">
     <form method="dialog">
-      <button class="absolute btn btn-sm btn-circle btn-ghost right-2 top-2"
+      <button
+        class="absolute text-3xl btn btn-md btn-circle btn-ghost right-4 top-4"
         >✕</button
       >
     </form>
-    <h3 class="text-lg font-bold">Hello!</h3>
-    <p class="py-4">Press ESC key or click on ✕ button to close</p>
+    <h3 class="text-4xl font-bold">{title}</h3>
+    <div class="py-8 text-start"><slot /></div>
   </div>
 </dialog>
