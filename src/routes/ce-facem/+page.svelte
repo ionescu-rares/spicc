@@ -9,6 +9,7 @@
   import EducamDetails from "./educamDetails.svelte";
   import InformamDetails from "./informamDetails.svelte";
   import CapacitamDetails from "./capacitamDetails.svelte";
+  import planSigurantaSrc from "$lib/images/ce-facem/plan_siguranta.jpg";
 </script>
 
 <PageLayout>
@@ -19,14 +20,17 @@
       title="Educăm"
       content="Promovăm drepturile femeilor prin educație, combatem inegalitățile și discriminările de gen, dezvoltăm conștiința socială, redefinim masculinitatea și feminitatea, stimulăm gândirea critică."
     >
-      <Modal modalId="modal_1" title="Educăm"><EducamDetails /></Modal>
+      <Modal modalId="modal_1" title="Educăm"
+        ><EducamDetails /><img src={educamSrc} alt="educam" /></Modal
+      >
     </FullImageCard>
     <FullImageCard
       imageSrc={informamSrc}
       title="Informăm"
       content="Informarea este necesară pentru a conștientiza și înțelege inegalitățile și discriminarea de gen, pentru a găsi mijloacele adecvate de combatere a acestora, pentru a responsabiliza, implica și inspira membrii societății."
     >
-      <Modal modalId="modal_2" title="Informăm"><InformamDetails /></Modal
+      <Modal modalId="modal_2" title="Informăm"
+        ><InformamDetails /><img src={planSigurantaSrc} alt="informam" /></Modal
       ></FullImageCard
     >
     <FullImageCard
@@ -34,7 +38,8 @@
       title="Capacităm"
       content="Dezvoltăm competențe, cunoștințe și abilități necesare pentru a înțelege și promova egalitatea de gen, prin formare și training, conceperea și distribuirea resurselor și materialelor educaționale"
     >
-      <Modal modalId="modal_3" title="Capacităm"><CapacitamDetails /></Modal
+      <Modal modalId="modal_3" title="Capacităm"
+        ><CapacitamDetails /><img src={capacitamSrc} alt="capacitam" /></Modal
       ></FullImageCard
     >
   </div>

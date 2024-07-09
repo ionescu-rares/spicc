@@ -1,9 +1,9 @@
-<div class="text-lg leading-relaxed lg:text-2xl">
+<div class="leading-relaxed text-md lg:text-xl">
   Activitățile de informare sunt instrumente puternice pentru atingerea
   obiectivelor legate de creșterea conștientizării, educarea tinerilor și
   mobilizarea societății, în vederea construirii unei societăți mai echitabile
   din punct de vedere de gen. Prin informare:
-  <ol class="list-decimal list-inside">
+  <ol class="flex flex-col p-2 list-decimal list-inside">
     <li>
       Conștientizăm: aducem la cunoștința publicului aspecte și probleme legate
       de inegalitățile de gen și stereotipurile associate, creând astfel

@@ -19,6 +19,8 @@
       >
     </form>
     <h3 class="text-4xl font-bold">{title}</h3>
-    <div class="py-8 text-start"><slot /></div>
+    <div class="flex flex-col justify-center gap-8 py-8 text-start">
+      <slot />
+    </div>
   </div>
 </dialog>

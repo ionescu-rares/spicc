@@ -1,4 +1,4 @@
-<div class="text-lg leading-relaxed lg:text-2xl">
+<div class="leading-relaxed text-md lg:text-xl">
   Educația de gen este crucială pentru construirea unei societăți echitabile și
   incluzive. Prin educație promovăm înțelegerea și recunoașterea egalității
   între sexe, combatem stereotipurile de gen și încurajăm respectul reciproc. <br

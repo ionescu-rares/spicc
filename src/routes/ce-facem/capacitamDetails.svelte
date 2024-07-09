@@ -1,4 +1,4 @@
-<div class="text-lg leading-relaxed lg:text-2xl">
+<div class="leading-relaxed text-md lg:text-xl">
   Capacitarea femeilor și fetelor este esențială pentru a le oferi șanse egale,
   pentru a le dezvolta abilitățile și pentru a contribui la construirea unei
   societăți mai echitabile. Capacitând fetele și femei, vizăm:
