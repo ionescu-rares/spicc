@@ -4,7 +4,7 @@
   export let thumbnail = "";
 </script>
 
-<div class="card card-compact bg-base-100 w-96 shadow-xl">
+<div class="card card-compact bg-base-100 h-full w-96 shadow-xl">
   <figure class="h-64 flex justify-center relative">
     <img
       src={thumbnail}
