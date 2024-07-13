@@ -43,7 +43,7 @@
     <ul class="menu bg-base-200 min-h-full w-80 p-4">
       <!-- Sidebar content here -->
       <button
-        class="btn btn-ghost btn-circle self-end"
+        class="btn btn-ghost btn-circle self-end items-center text-md"
         on:click={() => (checked = false)}>X</button
       >
       <HeaderItem href="/cine-suntem" bind:checked>Cine suntem</HeaderItem>
