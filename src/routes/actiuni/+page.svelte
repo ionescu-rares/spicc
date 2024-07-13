@@ -15,7 +15,9 @@
 
 <PageLayout withSpacing>
   <SectionTitle title="Acțiuni" />
-  <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-16">
+  <div
+    class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-8 xl:gap-16"
+  >
     <Card thumbnail={copaculSrc}>
       Copacul drepturilor fundamentale ale Omului, realizat cu ocazia zilei de
       10 Decembrie 2023 - Ziua Internațională a Drepturilor Umane

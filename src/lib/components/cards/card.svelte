@@ -19,7 +19,7 @@
   </figure>
   <div class="card-body">
     <h2 class="card-title">{title}</h2>
-    <p class="text-md lg:text-xl leading-relaxed text-start"><slot /></p>
+    <p class="text-lg lg:text-xl leading-relaxed text-start"><slot /></p>
     <div class="card-actions justify-end">
       <MaiMulteButton smallSize />
     </div>
