@@ -21,6 +21,9 @@
       <li>
         <a href="/proiecte">Proiecte</a>
       </li>
+      <li>
+        <a href="/actiuni">Acțiuni</a>
+      </li>
     </ul>
   </div>
 </div>
