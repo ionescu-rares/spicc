@@ -34,7 +34,7 @@
   onDestroy(() => clearTimeout(initialDelay));
 </script>
 
-<section class="relative w-full h-[calc(100svh-89px)] flex">
+<section class="relative w-full h-[calc(100svh-87px)] flex">
   <Carousel {slides} />
   <button
     id="scroll-down-button"

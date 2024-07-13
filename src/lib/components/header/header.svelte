@@ -10,7 +10,7 @@
   <input id="my-drawer-3" type="checkbox" class="drawer-toggle" bind:checked />
   <div class="drawer-content flex flex-col">
     <!-- Navbar -->
-    <div class="navbar bg-brand w-full flex justify-between items-center">
+    <div class="navbar bg-brand w-full flex justify-between items-center py-0">
       <a href="/" class="text-xl">
         <img src={logo} alt="logo" class="border-none rounded-full btn-ghost" />
       </a>
