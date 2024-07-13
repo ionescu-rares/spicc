@@ -60,7 +60,6 @@
     >
   </div>
 </PageLayout>
-Explanation:
 
 <style>
   .grid-container {
