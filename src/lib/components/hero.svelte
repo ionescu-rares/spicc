@@ -27,9 +27,9 @@
     triggerAnimation();
     const toggleBounce = setInterval(() => {
       triggerAnimation();
-    }, 5000);
+    }, 7000);
     onDestroy(() => clearInterval(toggleBounce));
-  }, 5000);
+  }, 7000);
 
   onDestroy(() => clearTimeout(initialDelay));
 </script>
