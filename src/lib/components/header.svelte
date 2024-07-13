@@ -18,6 +18,9 @@
       <li>
         <a href="/ce-facem">Ce facem</a>
       </li>
+      <li>
+        <a href="/proiecte">Proiecte</a>
+      </li>
     </ul>
   </div>
 </div>

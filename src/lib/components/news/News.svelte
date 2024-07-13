@@ -9,9 +9,10 @@
   import siguranta3 from "$lib/images/news/siguranta_femeilor/siguranta3.jpg";
   import voceaVideoSrc from "$lib/videos/vocea_video.mp4";
   import SectionTitle from "../typography/sectionTitle.svelte";
+  import MaiMulteButton from "../buttons/MaiMulteButton.svelte";
 </script>
 
-<section class="flex flex-col items-center gap-24 p-8 md:p-16 bg-brand">
+<section class="flex flex-col items-center gap-24 p-4 md:p-8 bg-brand">
   <SectionTitle title={"Noutăți"} />
   <Article
     videoSrc={voceaVideoSrc}
@@ -43,7 +44,7 @@
       Eveniment realizat cu ocazia Zilei Internaționale pentru Eliminarea
       Violenței împotriva Femeilor
     </p>
-    <button class="mt-8 btn btn-primary btn-wide">Mai multe</button>
+    <MaiMulteButton />
   </Article>
   <Article
     title="
@@ -54,6 +55,6 @@
       femeilor, în data de 22 octombrie, între orele 15 și 17, în Piața Sf.
       Gheorghe.
     </p>
-    <button class="mt-8 btn btn-primary btn-wide">Mai multe</button></Article
+    <MaiMulteButton /></Article
   >
 </section>

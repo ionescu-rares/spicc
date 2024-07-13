@@ -9,11 +9,11 @@
   export let slides: string[] = [];
 </script>
 
-<div class="flex flex-col article-grid">
+<div class="flex flex-col article-grid text-start">
   <div
     class={`image-area h-full flex ${reversed ? "col-start-4 col-end-7" : "col-start-1 col-end-4"}`}
   >
-    {#if slides.length === 1}
+    {#if src}
       <img {src} alt="news" class="object-cover w-full h-auto rounded-lg" />
     {:else if slides.length > 1}
       <Carousel {slides} className="rounded-lg" />

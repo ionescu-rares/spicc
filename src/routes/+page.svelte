@@ -1,5 +1,4 @@
 <script>
-  import Carousel from "$lib/components/carousel.svelte";
   import News from "$lib/components/news/News.svelte";
   import lauralaurentiu from "$lib/images/sponsors/lauralaurentiu.jpg";
   import toluna from "$lib/images/sponsors/toluna.png";
@@ -25,7 +24,7 @@
   <Hero />
   <News />
   <section
-    class="flex flex-col items-center justify-center w-full gap-16 p-8 bg-white md:p-16 text-slate-700"
+    class="flex flex-col items-center justify-center w-full gap-16 p-4 bg-white md:p-8 text-slate-700"
   >
     <SectionTitle title="Sponsori" />
     <div class="grid grid-cols-2 gap-16">
