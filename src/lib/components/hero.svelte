@@ -15,24 +15,31 @@
       behavior: "smooth",
     });
   };
-  let scrollDownButton: HTMLButtonElement;
-  const toggleBounce = setInterval(() => {
-    scrollDownButton.classList.add("bounce-animation");
+  let animateButton = false;
+  const triggerAnimation = () => {
+    animateButton = true;
     setTimeout(() => {
-      scrollDownButton.classList.remove("bounce-animation");
+      animateButton = false;
     }, 1000);
-  }, 6000);
+  };
 
-  onDestroy(() => clearInterval(toggleBounce));
+  const initialDelay = setTimeout(() => {
+    triggerAnimation();
+    const toggleBounce = setInterval(() => {
+      triggerAnimation();
+    }, 5000);
+    onDestroy(() => clearInterval(toggleBounce));
+  }, 5000);
+
+  onDestroy(() => clearTimeout(initialDelay));
 </script>
 
 <section class="relative w-full h-[calc(100svh-89px)] flex">
   <Carousel {slides} />
   <button
-    bind:this={scrollDownButton}
     id="scroll-down-button"
     on:click={handleClick}
-    class="absolute text-xl font-bold text-white border-none md:text-3xl btn-accent bg-brand btn-circle bottom-8 right-12 md:right-24 btn-md md:btn-lg bounce-animation"
+    class={`absolute text-xl font-bold text-white border-none md:text-3xl btn-accent bg-brand btn-circle bottom-8 right-12 md:right-24 btn-md ${animateButton && "bounce-animation"} md:btn-lg`}
     >↓</button
   >
 </section>
