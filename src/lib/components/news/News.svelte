@@ -12,7 +12,7 @@
   import MaiMulteButton from "../buttons/MaiMulteButton.svelte";
 </script>
 
-<section class="flex flex-col items-center gap-24 p-4 md:p-8 bg-brand">
+<section class="flex flex-col items-center gap-24 py-16 px-4 md:px-8 bg-brand">
   <SectionTitle title={"Noutăți"} />
   <Article
     videoSrc={voceaVideoSrc}
