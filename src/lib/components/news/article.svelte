@@ -7,9 +7,12 @@
   export let poster = "";
   export let title = "";
   export let slides: string[] = [];
+  export let fullSize = false;
 </script>
 
-<div class="flex flex-col article-grid text-start">
+<div
+  class={`flex flex-col article-grid max-h-auto text-start ${fullSize ? "no-max-height" : "with-max-height"}`}
+>
   <div
     class={`image-area h-full flex ${reversed ? "col-start-4 col-end-7" : "col-start-1 col-end-4"}`}
   >
@@ -46,7 +49,6 @@
       grid-template-columns: repeat(6, 1fr);
       grid-template-rows: repeat(3, 1fr);
       column-gap: 64px;
-      max-height: 400px;
     }
     .image-area {
       grid-row: 1 / span 3;
@@ -59,6 +61,12 @@
     }
     .slot-area {
       grid-row: 2 / 4;
+    }
+    .with-max-height {
+      max-height: 400px;
+    }
+    .no-max-height {
+      max-height: auto;
     }
   }
 </style>

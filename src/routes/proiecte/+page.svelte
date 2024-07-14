@@ -29,7 +29,7 @@
       implicarea lor în construirea unei comunități online, capabile să adreseze
       informat problematica de gen.
     </p>
-    <MaiMulteButton /></Article
+    <MaiMulteButton onClick={() => window.open("/fem", "_self")} /></Article
   >
   <Article title="Think outside the box" src={thinkOutsideSrc}>
     <p class="text-lg md:text-2xl">

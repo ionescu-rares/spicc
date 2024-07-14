@@ -7,8 +7,20 @@
   import fifth from "$lib/images/5.jpg";
   import sixth from "$lib/images/6.jpg";
   import seventh from "$lib/images/7.jpg";
+  import eighth from "$lib/images/8.jpg";
+  import nineth from "$lib/images/9.jpg";
   import { onDestroy } from "svelte";
-  const slides = [first, second, third, fourth, fifth, sixth, seventh];
+  const slides = [
+    first,
+    second,
+    third,
+    fourth,
+    fifth,
+    sixth,
+    seventh,
+    eighth,
+    nineth,
+  ];
   const handleClick = () => {
     window.scrollTo({
       top: window.innerHeight,

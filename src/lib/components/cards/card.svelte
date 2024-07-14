@@ -1,27 +1,32 @@
 <script>
-  import MaiMulteButton from "../buttons/MaiMulteButton.svelte";
   export let title = "";
   export let thumbnail = "";
+  export let date = "";
 </script>
 
-<div class="card card-compact bg-base-100 h-full w-96 shadow-xl">
-  <figure class="h-64 flex justify-center relative">
+<div class="h-full shadow-xl card card-compact bg-base-100 w-96">
+  <figure class="relative flex justify-center h-64">
     <img
       src={thumbnail}
-      class="absolute w-full top-0 w-full blur-lg object-cover h-full"
+      class="absolute top-0 object-cover w-full h-full blur-lg"
       alt="thumbnail"
     />
     <img
       src={thumbnail}
-      class="z-10 w-full object-contain h-full"
+      class="z-10 object-contain w-full h-full"
       alt="thumbnail"
     />
   </figure>
-  <div class="card-body">
-    <h2 class="card-title">{title}</h2>
-    <p class="text-lg lg:text-xl leading-relaxed text-start"><slot /></p>
-    <div class="card-actions justify-end">
-      <MaiMulteButton smallSize />
+  <div class="gap-4 card-body">
+    <div class="flex flex-col text-start">
+      <h2 class="text-xl card-title lg:text-2xl">{title}</h2>
+      {#if date}
+        <span class="text-md lg:text-lg">📅 {date}</span>
+      {/if}
+    </div>
+    <p class="leading-relaxed text-md lg:text-lg text-start"><slot /></p>
+    <div class="justify-end card-actions">
+      <slot name="actions" />
     </div>
   </div>
 </div>

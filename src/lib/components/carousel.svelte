@@ -54,7 +54,7 @@
           <img
             src={slide}
             id={`${slide}-cover`}
-            class="flex object-contain mx-auto overflow-hidden shadow-[0 0 8px 8px white inset]"
+            class="flex object-contain mx-auto overflow-hidden shadow-[0 0 8px 8px white inset] md:rounded-xl"
             alt="photoshoot"
           />
           <img

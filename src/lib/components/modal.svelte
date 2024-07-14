@@ -1,15 +1,8 @@
 <script lang="ts">
-  export let buttonLabel = "Mai multe";
   export let modalId = "";
   export let title = "";
-  const openModal = () => {
-    if (document) {
-      (document.getElementById(modalId) as HTMLFormElement).showModal();
-    }
-  };
 </script>
 
-<button class="btn btn-primary" on:click={openModal}>{buttonLabel}</button>
 <dialog id={modalId} class="modal">
   <div class="w-11/12 h-auto max-w-6xl max-h-[80%] modal-box">
     <form method="dialog">
@@ -22,5 +15,8 @@
     <div class="flex flex-col justify-center gap-8 py-8 text-start">
       <slot />
     </div>
+    <form method="dialog" class="grid">
+      <button class="justify-self-end btn btn-primary">Inchide</button>
+    </form>
   </div>
 </dialog>
