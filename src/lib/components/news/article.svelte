@@ -11,13 +11,17 @@
 </script>
 
 <div
-  class={`flex flex-col article-grid max-h-auto text-start ${fullSize ? "no-max-height" : "with-max-height"}`}
+  class={`flex flex-col article-grid max-h-auto text-start ${fullSize ? "no-max-height" : "with-max-height"} overflow-auto relative`}
 >
   <div
-    class={`image-area h-full flex ${reversed ? "col-start-4 col-end-7" : "col-start-1 col-end-4"}`}
+    class={`image-area h-full flex ${reversed ? "col-start-4 col-end-7" : "col-start-1 col-end-4"} sticky top-0`}
   >
     {#if src}
-      <img {src} alt="news" class="object-cover w-full h-auto rounded-lg" />
+      <img
+        {src}
+        alt="news"
+        class="sticky object-cover w-full h-auto rounded-lg"
+      />
     {:else if slides.length > 1}
       <Carousel {slides} className="rounded-lg" />
     {/if}

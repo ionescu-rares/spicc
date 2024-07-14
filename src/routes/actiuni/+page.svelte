@@ -74,6 +74,11 @@
 <style>
   .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  }
+  @media (min-width: 640px) {
+    .grid-container {
+      grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    }
   }
 </style>
