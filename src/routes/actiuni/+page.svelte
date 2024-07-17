@@ -20,7 +20,15 @@
     <Card thumbnail={copaculSrc}>
       Copacul drepturilor fundamentale ale Omului, realizat cu ocazia zilei de
       10 Decembrie 2023 - Ziua Internațională a Drepturilor Umane
-      <MaiMulteButton smallSize slot="actions" />
+      <MaiMulteButton
+        smallSize
+        slot="actions"
+        onClick={() =>
+          window.open(
+            "/ziua-internationala-a-drepturilor-omului-2023",
+            "_self"
+          )}
+      />
     </Card>
     <Card thumbnail={eliminareaViolenteiSrc}
       >Sâmbătă, 25 noiembrie 2023, cu ocazia Zilei Internaționale pentru
