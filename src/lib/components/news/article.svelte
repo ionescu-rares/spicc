@@ -67,7 +67,7 @@
       grid-row: 2 / 4;
     }
     .with-max-height {
-      max-height: 400px;
+      max-height: 500px;
     }
     .no-max-height {
       max-height: auto;
