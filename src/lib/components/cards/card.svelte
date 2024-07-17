@@ -4,7 +4,9 @@
   export let date = "";
 </script>
 
-<div class="w-full h-full shadow-xl card card-compact sm:w-96 bg-base-100">
+<div
+  class="w-full h-full shadow-xl card card-compact sm:w-96 bg-gradient-to-tr from-base-100 to-gray-700"
+>
   <figure class="relative flex justify-center h-64">
     <img
       src={thumbnail}

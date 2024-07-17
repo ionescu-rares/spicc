@@ -2,7 +2,6 @@
   export let title = "";
   export let content = "";
   export let imageSrc = "";
-  export let onClick = () => {};
 </script>
 
 <div class="w-auto shadow-xl card bg-base-100 image-full">
