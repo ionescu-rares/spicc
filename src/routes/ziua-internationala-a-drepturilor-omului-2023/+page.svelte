@@ -12,7 +12,7 @@
     class="flex flex-col w-full h-full grid-rows-2 gap-0 md:flex-none md:grid xl:grid-cols-12 md:grid-rows-4 md:grid-cols-2"
   >
     <div
-      class="items-center p-8 text-center md:grid xl:row-start-1 xl:row-end-2 xl:col-end-5 xl:col-start-1 md:text-start md:bg-gradient-to-tr from-base-100 to-gray-700"
+      class="items-center p-8 text-center md:grid xl:row-start-1 xl:row-end-2 xl:col-end-5 xl:col-start-1 xl:text-start md:bg-gradient-to-tr from-base-100 to-gray-700"
     >
       <Typography variant="xl" bold
         >Ziua Internațională a Drepturilor Omului</Typography
@@ -29,7 +29,7 @@
       src={second}
     />
     <div
-      class="p-8 xl:row-start-2 xl:row-end-3 xl:col-end-5 xl:col-start-1 text-start md:bg-gradient-to-tr from-base-100 to-gray-700"
+      class="py-8 md:px-8 xl:row-start-2 xl:row-end-3 xl:col-end-5 xl:col-start-1 text-start md:bg-gradient-to-tr from-base-100 to-gray-700"
     >
       <Typography>
         10 decembrie marchează aniversarea adoptării Declarației Universale a
