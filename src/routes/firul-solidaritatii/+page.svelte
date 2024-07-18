@@ -11,7 +11,7 @@
 <PageLayout>
   <div class="flex max-w-screen-xl flex-col w-full text-start">
     <SectionTitle title="Firul solidarității" withSpacing={false}>
-      <div class="flex flex-col sm:flex-row sm:gap-4" slot="subtitle">
+      <div class="flex gap-4" slot="subtitle">
         <Typography>📅 23.11.2023</Typography>
         <Typography>📍 Piața Operei</Typography>
       </div></SectionTitle
