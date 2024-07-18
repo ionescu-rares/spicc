@@ -44,7 +44,9 @@
       Eveniment realizat cu ocazia Zilei Internaționale pentru Eliminarea
       Violenței împotriva Femeilor
     </p>
-    <MaiMulteButton />
+    <MaiMulteButton
+      onClick={() => window.open("/firul-solidaritatii", "_self")}
+    />
   </Article>
   <Article
     title="

@@ -9,15 +9,15 @@
 </script>
 
 <PageLayout>
-  <div class="flex max-w-screen-xl flex-col w-full text-start">
+  <div class="flex max-w-screen-lg flex-col w-full text-start">
     <SectionTitle title="Firul solidarității" withSpacing={false}>
       <div class="flex gap-4" slot="subtitle">
-        <Typography>📅 23.11.2023</Typography>
+        <Typography>📅 25/11/2023</Typography>
         <Typography>📍 Piața Operei</Typography>
       </div></SectionTitle
     >
     <Carousel
-      className="h-[300px] md:h-[600px] rounded-xl mt-4"
+      className="max-h-[300px] md:max-h-[600px] rounded-xl mt-4"
       slides={[first, second, third]}
     />
 
