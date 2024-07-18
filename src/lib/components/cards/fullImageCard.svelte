@@ -9,8 +9,8 @@
     <img src={imageSrc} alt="card background" />
   </figure>
   <div class="card-body">
-    <h2 class="text-4xl card-title text-white">{title}</h2>
-    <p class="text-md md:text-xl text-start max-w-[70ch] text-white">
+    <h2 class="text-4xl card-title text-gray-200">{title}</h2>
+    <p class="text-md md:text-xl text-start max-w-[70ch] text-gray-200">
       {content}
     </p>
     <div class="justify-end card-actions">

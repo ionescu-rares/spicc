@@ -50,11 +50,13 @@
       style={`transform: translateX(${-current * 100}%)`}
     >
       {#each slides as slide}
-        <div class="items-center mx-auto slide">
+        <div
+          class="items-center mx-auto slide w-full flex flex-col justify-center"
+        >
           <img
             src={slide}
             id={`${slide}-cover`}
-            class="flex object-contain mx-auto overflow-hidden shadow-[0 0 8px 8px white inset] md:rounded-xl"
+            class="flex object-contain overflow-hidden"
             alt="photoshoot"
           />
           <img

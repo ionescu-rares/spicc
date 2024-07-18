@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import MaiMulteButton from "$lib/components/buttons/MaiMulteButton.svelte";
   import Card from "$lib/components/cards/card.svelte";
   import PageLayout from "$lib/components/pageLayout.svelte";
@@ -12,6 +12,10 @@
   import seminarSrc from "$lib/images/actiuni/seminar.jpg";
   import sigurantaBucurestiSrc from "$lib/images/actiuni/siguranta.jpg";
   import sigurantaSrc from "$lib/images/cine-suntem/viziune.jpg";
+
+  const handleMaiMulteClick = (href: string) => {
+    window.open(href, "_self");
+  };
 </script>
 
 <PageLayout withSpacing>
@@ -24,17 +28,18 @@
         smallSize
         slot="actions"
         onClick={() =>
-          window.open(
-            "/ziua-internationala-a-drepturilor-omului-2023",
-            "_self"
-          )}
+          handleMaiMulteClick("/ziua-internationala-a-drepturilor-omului-2023")}
       />
     </Card>
     <Card thumbnail={eliminareaViolenteiSrc}
       >Sâmbătă, 25 noiembrie 2023, cu ocazia Zilei Internaționale pentru
       Eliminarea Violenței asupra Femeilor, am invitat timișorenii să se alăture
       flashmobului pe care l-am organizat în Piața Operei, la ora 13.30.
-      <MaiMulteButton smallSize slot="actions" /></Card
+      <MaiMulteButton
+        smallSize
+        slot="actions"
+        onClick={() => handleMaiMulteClick("/firul-solidaritatii")}
+      /></Card
     >
     <Card thumbnail={sigurantaSrc}
       >Împreună pentru siguranța femeilor! Timișorenii au fost chemați să
