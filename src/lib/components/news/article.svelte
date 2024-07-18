@@ -51,20 +51,20 @@
     .article-grid {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
-      grid-template-rows: repeat(3, 1fr);
+      grid-template-rows: repeat(8, 1fr);
       column-gap: 64px;
     }
     .image-area {
-      grid-row: 1 / span 3;
+      grid-row: 1 / span 8;
     }
     .content-area {
-      grid-row: 1 / span 3;
+      grid-row: 1 / span 8;
     }
     .title-area {
       grid-row: 1 / 2;
     }
     .slot-area {
-      grid-row: 2 / 4;
+      grid-row: 2 / 8;
     }
     .with-max-height {
       max-height: 500px;
