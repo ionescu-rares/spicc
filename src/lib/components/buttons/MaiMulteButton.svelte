@@ -1,9 +1,11 @@
 <script>
   export let smallSize = false;
   export let onClick = () => {};
+  export let withSpacing = true;
 </script>
 
 <button
   on:click={onClick}
-  class={`mt-8 btn btn-primary ${!smallSize && "btn-wide"}`}>Mai multe</button
+  class={`${withSpacing && "mt-8"} btn btn-primary ${!smallSize && "btn-wide"}`}
+  >Mai multe</button
 >
