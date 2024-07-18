@@ -8,6 +8,6 @@
   export let variant: "medium" | "large" | "xl" = "medium";
 </script>
 
-<p class={`${variants[variant]} ${bold && "font-bold"}`}>
+<p class={`${variants[variant]} ${bold && "font-bold"} `}>
   <slot />
 </p>

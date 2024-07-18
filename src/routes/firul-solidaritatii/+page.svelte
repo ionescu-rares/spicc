@@ -6,6 +6,7 @@
   import first from "$lib/images/news/flashmob/firul_solidaritatii_1.jpg";
   import second from "$lib/images/news/flashmob/firul_solidaritatii_2.jpg";
   import third from "$lib/images/news/flashmob/flashmob.jpg";
+  import fourth from "$lib/images/actiuni/firul-solidaritatii/4.jpg";
 </script>
 
 <PageLayout>
@@ -18,7 +19,7 @@
     >
     <Carousel
       className="max-h-[300px] md:max-h-[600px] rounded-xl mt-4"
-      slides={[first, second, third]}
+      slides={[first, second, third, fourth]}
     />
 
     <div class="mt-8">
@@ -38,6 +39,21 @@
         scandeze împreună,
         <strong>STOP VIOLENȚEI ÎMPOTRIVA FEMEILOR!</strong>”</Typography
       >
+      <br /><br />
+
+      <Typography>
+        <cite>
+          "Prinde firul roșu al solidarității și al schimbării! Alătură-te
+          flashmobului nostru, dedicat combaterii violenței de gen, pentru a
+          simboliza unitatea, perseverența și dorința noastră comună de a
+          transforma societatea într-una mai echitabilă! Haideți să facem ca
+          firul roșu să devină o poveste puternică a schimbării, iar
+          participarea voastră să fie parte din acest dialog colectiv pentru un
+          viitor fără violență de gen! 5 minute de solidaritate cu zecile de mii
+          de femei care cad victime violenței anual, în România și cu sutele de
+          milioane de femei victime ale violenței de gen din lume!"
+        </cite> <br /><br />— îndemnurile noastre adresate publicului.
+      </Typography>
     </div>
   </div>
 </PageLayout>
