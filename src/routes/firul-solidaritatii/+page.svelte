@@ -7,10 +7,11 @@
   import second from "$lib/images/news/flashmob/firul_solidaritatii_2.jpg";
   import third from "$lib/images/news/flashmob/flashmob.jpg";
   import fourth from "$lib/images/actiuni/firul-solidaritatii/4.jpg";
+  import threadSrc from "$lib/images/actiuni/firul-solidaritatii/thread.png";
 </script>
 
 <PageLayout>
-  <div class="flex max-w-screen-lg flex-col w-full text-start">
+  <div class="flex flex-col w-full max-w-screen-lg text-start">
     <SectionTitle title="Firul solidarității" withSpacing={false}>
       <div class="flex gap-4" slot="subtitle">
         <Typography>📅 25/11/2023</Typography>
@@ -22,7 +23,7 @@
       slides={[first, second, third, fourth]}
     />
 
-    <div class="mt-8">
+    <div class="flex flex-col gap-8 mt-8">
       <Typography>
         Sâmbătă, 25 noiembrie, cu ocazia Zilei Internaționale pentru Eliminarea
         Violenței asupra Femeilor, am invitat timișorenii să se alăture
@@ -39,8 +40,6 @@
         scandeze împreună,
         <strong>STOP VIOLENȚEI ÎMPOTRIVA FEMEILOR!</strong>”</Typography
       >
-      <br /><br />
-
       <Typography>
         <cite>
           "Prinde firul roșu al solidarității și al schimbării! Alătură-te
