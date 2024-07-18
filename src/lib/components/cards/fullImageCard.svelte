@@ -10,7 +10,7 @@
   </figure>
   <div class="px-0 card-body">
     <h2 class="text-4xl card-title">{title}</h2>
-    <p class="text-md md:text-xl text-start max-w-[70ch]">
+    <p class="text-md md:text-xl mt-4 text-start max-w-[70ch]">
       {content}
     </p>
     <div class="card-actions">

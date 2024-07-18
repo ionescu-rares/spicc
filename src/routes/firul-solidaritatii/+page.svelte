@@ -8,11 +8,16 @@
   import third from "$lib/images/news/flashmob/flashmob.jpg";
   import fourth from "$lib/images/actiuni/firul-solidaritatii/4.jpg";
   import threadSrc from "$lib/images/actiuni/firul-solidaritatii/thread.png";
+  import SeparatorIcon from "$lib/icons/separator.svelte";
 </script>
 
 <PageLayout>
   <div class="flex flex-col w-full max-w-screen-lg text-start">
-    <SectionTitle title="Firul solidarității" withSpacing={false}>
+    <SectionTitle
+      title="Firul solidarității"
+      withSpacing={false}
+      className="self-center md:self-start"
+    >
       <div class="flex gap-4" slot="subtitle">
         <Typography>📅 25/11/2023</Typography>
         <Typography>📍 Piața Operei</Typography>
@@ -22,8 +27,8 @@
       className="max-h-[300px] md:max-h-[600px] rounded-md mt-4"
       slides={[first, second, third, fourth]}
     />
-
-    <div class="flex flex-col gap-8 mt-8">
+    <svelte:component this={SeparatorIcon} />
+    <div class="flex flex-col gap-8">
       <Typography>
         Sâmbătă, 25 noiembrie, cu ocazia Zilei Internaționale pentru Eliminarea
         Violenței asupra Femeilor, am invitat timișorenii să se alăture
