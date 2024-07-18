@@ -5,7 +5,7 @@
 </script>
 
 <div
-  class="w-full h-full shadow-xl card card-compact sm:w-96 bg-gradient-to-tr from-base-100 to-gray-700"
+  class="w-full h-full rounded-md shadow-xl card card-compact sm:w-96 bg-gradient-to-tr from-base-100 to-gray-700"
 >
   <figure class="relative flex justify-center h-64">
     <img

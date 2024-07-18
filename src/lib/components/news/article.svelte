@@ -20,10 +20,10 @@
       <img
         {src}
         alt="news"
-        class="sticky object-cover w-full h-auto rounded-lg"
+        class="sticky object-cover w-full h-auto rounded-md"
       />
     {:else if slides.length > 1}
-      <Carousel {slides} className="rounded-lg" />
+      <Carousel {slides} className="rounded-md" />
     {/if}
 
     {#if videoSrc}
@@ -31,7 +31,7 @@
         src={videoSrc}
         {poster}
         controls
-        class="flex justify-center w-full bg-black rounded-xl"
+        class="flex justify-center w-full bg-black rounded-md"
         ><track kind="captions" /></video
       >
     {/if}

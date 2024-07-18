@@ -19,7 +19,7 @@
       </div></SectionTitle
     >
     <Carousel
-      className="max-h-[300px] md:max-h-[600px] rounded-xl mt-4"
+      className="max-h-[300px] md:max-h-[600px] rounded-md mt-4"
       slides={[first, second, third, fourth]}
     />
 
