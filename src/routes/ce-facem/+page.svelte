@@ -1,4 +1,5 @@
 <script lang="ts">
+  import planSigurantaSrc from "$lib/images/ce-facem/plan_siguranta.jpg";
   import FullImageCard from "$lib/components/cards/fullImageCard.svelte";
   import PageLayout from "$lib/components/pageLayout.svelte";
   import educamSrc from "$lib/images/ce-facem/educam.jpg";
@@ -9,7 +10,6 @@
   import EducamDetails from "./educamDetails.svelte";
   import InformamDetails from "./informamDetails.svelte";
   import CapacitamDetails from "./capacitamDetails.svelte";
-  import planSigurantaSrc from "$lib/images/ce-facem/plan_siguranta.jpg";
 
   const openModal = (modalId: string) => {
     if (document) {
@@ -20,44 +20,70 @@
 
 <PageLayout>
   <SectionTitle title="Ce facem?" />
-  <div class="grid justify-center grid-flow-row gap-8 mt-24 xl:grid-flow-col">
-    <FullImageCard
-      imageSrc={educamSrc}
-      title="Educăm"
-      content="Promovăm drepturile femeilor prin educație, combatem inegalitățile și discriminările de gen, dezvoltăm conștiința socială, redefinim masculinitatea și feminitatea, stimulăm gândirea critică."
-    >
-      <button class="btn btn-primary" on:click={() => openModal("educam_modal")}
-        >Mai multe</button
+  <div role="tablist" class="w-full bg-transparent tabs tabs-boxed tabs-lg">
+    <input
+      type="radio"
+      name="my_tabs_2"
+      role="tab"
+      class="tab"
+      aria-label="Educăm"
+      checked={true}
+    />
+    <div role="tabpanel" class="py-4 tab-content">
+      <div
+        class="flex flex-col w-full gap-4 lg:grid lg:grid-cols-2 text-start place-items-center"
       >
-      <Modal modalId="educam_modal" title="Educăm"
-        ><EducamDetails /><img src={educamSrc} alt="educam" /></Modal
+        <div class="lg:max-h-[500px] overflow-y-auto order-2 lg:order-1">
+          <EducamDetails />
+        </div>
+        <img
+          src={educamSrc}
+          class="border-md max-h-[500px] order-1 lg:order-2"
+          alt="educam"
+        />
+      </div>
+    </div>
+    <input
+      type="radio"
+      name="my_tabs_2"
+      role="tab"
+      class="tab"
+      aria-label="Informăm"
+    />
+    <div role="tabpanel" class="py-4 tab-content">
+      <div
+        class="flex flex-col w-full gap-4 lg:grid lg:grid-cols-2 text-start place-items-center"
       >
-    </FullImageCard>
-    <FullImageCard
-      imageSrc={informamSrc}
-      title="Informăm"
-      content="Informarea este necesară pentru a conștientiza și înțelege inegalitățile și discriminarea de gen, pentru a găsi mijloacele adecvate de combatere a acestora, pentru a responsabiliza, implica și inspira membrii societății."
-    >
-      <button
-        class="btn btn-primary"
-        on:click={() => openModal("informam_modal")}>Mai multe</button
+        <div class="lg:max-h-[500px] overflow-y-auto order-2 lg:order-1">
+          <InformamDetails />
+        </div>
+        <img
+          src={informamSrc}
+          class="border-md max-h-[500px] order-1 lg:order-2"
+          alt="informam"
+        />
+      </div>
+    </div>
+    <input
+      type="radio"
+      name="my_tabs_2"
+      role="tab"
+      class="tab"
+      aria-label="Capacităm"
+    />
+    <div role="tabpanel" class="py-4 tab-content">
+      <div
+        class="flex flex-col w-full gap-4 lg:grid lg:grid-cols-2 text-start place-items-center"
       >
-      <Modal modalId="informam_modal" title="Informăm"
-        ><InformamDetails /><img src={planSigurantaSrc} alt="informam" /></Modal
-      ></FullImageCard
-    >
-    <FullImageCard
-      imageSrc={capacitamSrc}
-      title="Capacităm"
-      content="Dezvoltăm competențe, cunoștințe și abilități necesare pentru a înțelege și promova egalitatea de gen, prin formare și training, conceperea și distribuirea resurselor și materialelor educaționale"
-    >
-      <button
-        class="btn btn-primary"
-        on:click={() => openModal("capacitam_modal")}>Mai multe</button
-      >
-      <Modal modalId="capacitam_modal" title="Capacităm"
-        ><CapacitamDetails /><img src={capacitamSrc} alt="capacitam" /></Modal
-      ></FullImageCard
-    >
+        <div class="lg:max-h-[500px] overflow-y-auto order-2 lg:order-1">
+          <CapacitamDetails />
+        </div>
+        <img
+          src={capacitamSrc}
+          class="border-md max-h-[500px] order-1 lg:order-2"
+          alt="capacitam"
+        />
+      </div>
+    </div>
   </div>
 </PageLayout>
