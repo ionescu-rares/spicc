@@ -10,6 +10,9 @@
   import EducamDetails from "./educamDetails.svelte";
   import InformamDetails from "./informamDetails.svelte";
   import CapacitamDetails from "./capacitamDetails.svelte";
+  import Article from "$lib/components/news/article.svelte";
+  import Typography from "$lib/components/font/typography.svelte";
+  import MaiMulteButton from "$lib/components/buttons/MaiMulteButton.svelte";
 
   const openModal = (modalId: string) => {
     if (document) {
@@ -18,72 +21,29 @@
   };
 </script>
 
-<PageLayout>
+<PageLayout withSpacing>
   <SectionTitle title="Ce facem?" />
-  <div role="tablist" class="w-full bg-transparent tabs tabs-boxed tabs-lg">
-    <input
-      type="radio"
-      name="my_tabs_2"
-      role="tab"
-      class="tab"
-      aria-label="Educăm"
-      checked={true}
-    />
-    <div role="tabpanel" class="py-4 tab-content">
-      <div
-        class="flex flex-col w-full gap-4 lg:grid lg:grid-cols-2 text-start place-items-center"
-      >
-        <div class="lg:max-h-[500px] overflow-y-auto order-2 lg:order-1">
-          <EducamDetails />
-        </div>
-        <img
-          src={educamSrc}
-          class="border-md max-h-[500px] order-1 lg:order-2"
-          alt="educam"
-        />
-      </div>
-    </div>
-    <input
-      type="radio"
-      name="my_tabs_2"
-      role="tab"
-      class="tab"
-      aria-label="Informăm"
-    />
-    <div role="tabpanel" class="py-4 tab-content">
-      <div
-        class="flex flex-col w-full gap-4 lg:grid lg:grid-cols-2 text-start place-items-center"
-      >
-        <div class="lg:max-h-[500px] overflow-y-auto order-2 lg:order-1">
-          <InformamDetails />
-        </div>
-        <img
-          src={informamSrc}
-          class="border-md max-h-[500px] order-1 lg:order-2"
-          alt="informam"
-        />
-      </div>
-    </div>
-    <input
-      type="radio"
-      name="my_tabs_2"
-      role="tab"
-      class="tab"
-      aria-label="Capacităm"
-    />
-    <div role="tabpanel" class="py-4 tab-content">
-      <div
-        class="flex flex-col w-full gap-4 lg:grid lg:grid-cols-2 text-start place-items-center"
-      >
-        <div class="lg:max-h-[500px] overflow-y-auto order-2 lg:order-1">
-          <CapacitamDetails />
-        </div>
-        <img
-          src={capacitamSrc}
-          class="border-md max-h-[500px] order-1 lg:order-2"
-          alt="capacitam"
-        />
-      </div>
-    </div>
-  </div>
+  <Article title="Educam" src={educamSrc}>
+    <Typography
+      >Promovăm prin educație drepturile femeilor, combatem inegalități,
+      stereotipuri și discriminări de gen, dezvoltăm conștiința socială, abordăm
+      probleme specifice femeilor, redefinim conceptele de masculinitate și
+      feminitate, stimulăm gândirea critică și contribuim astfel la o societate
+      mai inclusivă, mai echitabilă.
+    </Typography><MaiMulteButton /></Article
+  >
+  <Article title="Informam" src={planSigurantaSrc} reversed
+    ><Typography
+      >Informarea este necesară pentru a conștientiza și înțelege inegalitățile
+      și discriminarea de gen, pentru a găsi mijloacele adecvate de combatere a
+      acestora, pentru a responsabiliza, implica și inspira membrii societății.
+    </Typography><MaiMulteButton /></Article
+  >
+  <Article title="Capacitam" src={capacitamSrc}
+    ><Typography
+      >Informarea este necesară pentru a conștientiza și înțelege inegalitățile
+      și discriminarea de gen, pentru a găsi mijloacele adecvate de combatere a
+      acestora, pentru a responsabiliza, implica și inspira membrii societății.
+    </Typography><MaiMulteButton /></Article
+  >
 </PageLayout>

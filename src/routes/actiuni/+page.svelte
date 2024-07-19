@@ -54,7 +54,15 @@
       >Timișorenii au fost chemați să participe la un marș pentru siguranța
       femeilor, în data de 22 octombrie 2023, între orele 15 și 17, în Piața Sf.
       Gheorghe.
-      <MaiMulteButton withSpacing={false} smallSize slot="actions" /></Card
+      <MaiMulteButton
+        withSpacing={false}
+        smallSize
+        slot="actions"
+        onClick={() =>
+          handleMaiMulteClick(
+            "/actiuni/impreuna-pentru-siguranta-femeilor-2023"
+          )}
+      /></Card
     >
     <Card
       thumbnail={sigurantaBucurestiSrc}

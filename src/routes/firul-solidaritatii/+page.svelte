@@ -1,31 +1,21 @@
 <script>
-  import Carousel from "$lib/components/carousel.svelte";
-  import Typography from "$lib/components/font/typography.svelte";
   import PageLayout from "$lib/components/pageLayout.svelte";
-  import SectionTitle from "$lib/components/typography/sectionTitle.svelte";
+  import BlogPost from "$lib/components/layout/blogPost.svelte";
   import first from "$lib/images/news/flashmob/firul_solidaritatii_1.jpg";
   import second from "$lib/images/news/flashmob/firul_solidaritatii_2.jpg";
   import third from "$lib/images/news/flashmob/flashmob.jpg";
   import fourth from "$lib/images/actiuni/firul-solidaritatii/4.jpg";
+  import Typography from "$lib/components/font/typography.svelte";
 </script>
 
 <PageLayout>
-  <div class="flex flex-col w-full max-w-screen-lg text-start">
-    <SectionTitle
-      title="Firul solidarității"
-      withSpacing={false}
-      className="self-center md:self-start"
-    >
-      <div class="flex gap-4" slot="subtitle">
-        <Typography>📅 25/11/2023</Typography>
-        <Typography>📍 Piața Operei</Typography>
-      </div></SectionTitle
-    >
-    <Carousel
-      className="max-h-[300px] md:max-h-[600px] rounded-md mt-4"
-      slides={[first, second, third, fourth]}
-    />
-    <div class="flex flex-col gap-8 mt-8">
+  <BlogPost
+    date="23/11/2023"
+    location="Piața Operei"
+    title="Firul solidarității"
+    slides={[first, second, third, fourth]}
+  >
+    <div slot="info">
       <Typography>
         Sâmbătă, 25 noiembrie, cu ocazia Zilei Internaționale pentru Eliminarea
         Violenței asupra Femeilor, am invitat timișorenii să se alăture
@@ -40,8 +30,8 @@
         flashmob, Asociația SPICC a invitat publicul timișorean să facă parte
         dintr-un dialog colectiv despre un viitor fără violență de gen și să
         scandeze împreună,
-        <strong>STOP VIOLENȚEI ÎMPOTRIVA FEMEILOR!</strong>”</Typography
-      >
+        <strong>STOP VIOLENȚEI ÎMPOTRIVA FEMEILOR!</strong>”
+      </Typography>
       <Typography>
         <cite>
           "Prinde firul roșu al solidarității și al schimbării! Alătură-te
@@ -56,5 +46,5 @@
         </cite> <br /><br />— îndemnurile noastre adresate publicului.
       </Typography>
     </div>
-  </div>
+  </BlogPost>
 </PageLayout>
