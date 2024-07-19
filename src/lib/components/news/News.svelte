@@ -12,7 +12,7 @@
   import MaiMulteButton from "../buttons/MaiMulteButton.svelte";
 </script>
 
-<section class="flex flex-col items-center gap-24 py-16 px-4 md:px-8 bg-brand">
+<section class="flex flex-col items-center gap-24 px-4 py-16 md:px-8 bg-brand">
   <SectionTitle title={"Noutăți"} />
   <Article
     videoSrc={voceaVideoSrc}
@@ -57,6 +57,12 @@
       femeilor, în data de 22 octombrie, între orele 15 și 17, în Piața Sf.
       Gheorghe.
     </p>
-    <MaiMulteButton /></Article
+    <MaiMulteButton
+      onClick={() =>
+        window.open(
+          "/actiuni/impreuna-pentru-siguranta-femeilor-2023",
+          "_self"
+        )}
+    /></Article
   >
 </section>
