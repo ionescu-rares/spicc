@@ -51,7 +51,7 @@
     >
       {#each slides as slide}
         <div
-          class="items-center mx-auto slide w-full flex flex-col justify-center"
+          class="flex flex-col items-center justify-center w-full mx-auto slide"
         >
           <img
             src={slide}

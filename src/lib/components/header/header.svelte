@@ -6,15 +6,15 @@
   let checked = false;
 </script>
 
-<div class="drawer drawer-end z-30">
+<div class="z-30 drawer drawer-end">
   <input id="my-drawer-3" type="checkbox" class="drawer-toggle" bind:checked />
-  <div class="drawer-content flex flex-col">
+  <div class="flex flex-col drawer-content">
     <!-- Navbar -->
-    <div class="navbar bg-brand w-full flex justify-between items-center py-0">
+    <div class="flex items-center justify-between w-full py-0 navbar bg-brand">
       <a href="/" class="text-xl">
         <img src={logo} alt="logo" class="border-none rounded-full btn-ghost" />
       </a>
-      <div class=" hidden lg:block">
+      <div class="hidden lg:block">
         <ul class="menu menu-horizontal">
           <!-- Navbar content here -->
           <li>
@@ -40,10 +40,10 @@
   <div class="drawer-side">
     <label for="my-drawer-3" aria-label="close sidebar" class="drawer-overlay"
     ></label>
-    <ul class="menu bg-base-200 min-h-full w-80 p-4">
+    <ul class="min-h-full p-4 menu bg-brand w-80">
       <!-- Sidebar content here -->
       <button
-        class="btn btn-ghost btn-circle self-end items-center text-md"
+        class="items-center self-end btn btn-ghost btn-circle text-md"
         on:click={() => (checked = false)}>X</button
       >
       <HeaderItem href="/cine-suntem" bind:checked>Cine suntem</HeaderItem>

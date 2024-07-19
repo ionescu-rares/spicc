@@ -8,12 +8,8 @@
   export let slides: string[] = [];
 </script>
 
-<div class="flex flex-col w-full max-w-screen-lg text-start">
-  <SectionTitle
-    {title}
-    withSpacing={false}
-    className="self-center md:self-start"
-  >
+<div class="flex flex-col items-start w-full max-w-screen-lg text-start">
+  <SectionTitle {title} withSpacing={false}>
     <div class="flex gap-4" slot="subtitle">
       <Typography>📅 {date}</Typography>
       <Typography>📍 {location}</Typography>
