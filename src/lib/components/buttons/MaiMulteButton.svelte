@@ -6,6 +6,6 @@
 
 <button
   on:click={onClick}
-  class={`${withSpacing && "mt-8"} btn btn-primary ${!smallSize && "btn-wide"}`}
+  class={`${withSpacing && "mt-8"} rounded-md btn btn-primary ${!smallSize && "btn-wide"}`}
   >Mai multe</button
 >
