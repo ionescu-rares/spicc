@@ -7,8 +7,6 @@
   import second from "$lib/images/news/flashmob/firul_solidaritatii_2.jpg";
   import third from "$lib/images/news/flashmob/flashmob.jpg";
   import fourth from "$lib/images/actiuni/firul-solidaritatii/4.jpg";
-  import threadSrc from "$lib/images/actiuni/firul-solidaritatii/thread.png";
-  import SeparatorIcon from "$lib/icons/separator.svelte";
 </script>
 
 <PageLayout>
@@ -27,8 +25,7 @@
       className="max-h-[300px] md:max-h-[600px] rounded-md mt-4"
       slides={[first, second, third, fourth]}
     />
-    <svelte:component this={SeparatorIcon} />
-    <div class="flex flex-col gap-8">
+    <div class="flex flex-col gap-8 mt-8">
       <Typography>
         Sâmbătă, 25 noiembrie, cu ocazia Zilei Internaționale pentru Eliminarea
         Violenței asupra Femeilor, am invitat timișorenii să se alăture
