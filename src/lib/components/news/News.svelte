@@ -13,7 +13,7 @@
 </script>
 
 <section class="flex flex-col items-center gap-24 px-4 py-16 md:px-8 bg-brand">
-  <SectionTitle title={"Noutăți"} />
+  <SectionTitle title={"Noutăți"} withSpacing={false} />
   <Article
     videoSrc={voceaVideoSrc}
     poster={voceaPoster}
