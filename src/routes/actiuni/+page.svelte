@@ -32,7 +32,9 @@
         smallSize
         slot="actions"
         onClick={() =>
-          handleMaiMulteClick("/ziua-internationala-a-drepturilor-omului-2023")}
+          handleMaiMulteClick(
+            "/actiuni/ziua-internationala-a-drepturilor-omului-2023"
+          )}
       />
     </Card>
     <Card

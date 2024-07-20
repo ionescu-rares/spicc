@@ -3,9 +3,9 @@
   import BlogPost from "$lib/components/layout/blogPost.svelte";
   import PageLayout from "$lib/components/pageLayout.svelte";
   import first from "$lib/images/actiuni/siguranta-2022/1.jpg";
-  import second from "$lib/images/actiuni/siguranta-2022/1.jpg";
-  import third from "$lib/images/actiuni/siguranta-2022/1.jpg";
-  import fourth from "$lib/images/actiuni/siguranta-2022/1.jpg";
+  import second from "$lib/images/actiuni/siguranta-2022/2.jpg";
+  import third from "$lib/images/actiuni/siguranta-2022/3.jpg";
+  import fourth from "$lib/images/actiuni/siguranta-2022/4.jpg";
 </script>
 
 <PageLayout>
