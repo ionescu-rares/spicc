@@ -23,6 +23,7 @@
           <li><a href="/ce-facem">Ce facem</a></li>
           <li><a href="/proiecte">Proiecte</a></li>
           <li><a href="/actiuni">Acțiuni</a></li>
+          <li><a href="/contact">Contact</a></li>
         </ul>
       </div>
       <div class="flex-none lg:hidden">
@@ -50,6 +51,7 @@
       <HeaderItem href="/ce-facem" bind:checked>Ce facem</HeaderItem>
       <HeaderItem href="/proiecte" bind:checked>Proiecte</HeaderItem>
       <HeaderItem href="/actiuni" bind:checked>Acțiuni</HeaderItem>
+      <HeaderItem href="/contact" bind:checked>Contact</HeaderItem>
     </ul>
   </div>
 </div>
