@@ -11,8 +11,8 @@
 <div class="flex flex-col items-start w-full max-w-screen-lg text-start">
   <SectionTitle {title} withSpacing={false}>
     <div class="flex gap-4" slot="subtitle">
-      <Typography>📅 {date}</Typography>
-      <Typography>📍 {location}</Typography>
+      <Typography variant="small">📅 {date}</Typography>
+      <Typography variant="small">📍 {location}</Typography>
     </div></SectionTitle
   >
 
@@ -22,9 +22,20 @@
       {slides}
     />
   {:else if slides.length === 1}
-    <img src={slides[0]} alt="cover" />
+    <div class="relative flex flex-col w-full mt-4 overflow-hidden">
+      <img
+        src={slides[0]}
+        alt="cover"
+        class="flex object-contain max-h-[600px] z-20"
+      />
+      <img
+        src={slides[0]}
+        alt="cover"
+        class="absolute top-0 object-cover w-full h-full blur-xl max-h-[600px] rounded-md"
+      />
+    </div>
   {/if}
-  <div class="flex flex-col w-full mt-4 md:mt-8">
+  <div class="flex flex-col w-full mt-8">
     <slot name="info" />
   </div>
 </div>
