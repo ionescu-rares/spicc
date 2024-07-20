@@ -30,7 +30,7 @@
         flashmob, Asociația SPICC a invitat publicul timișorean să facă parte
         dintr-un dialog colectiv despre un viitor fără violență de gen și să
         scandeze împreună,
-        <strong>STOP VIOLENȚEI ÎMPOTRIVA FEMEILOR!</strong>”
+        <strong>STOP VIOLENȚEI ÎMPOTRIVA FEMEILOR!</strong>” <br /> <br />
       </Typography>
       <Typography>
         <cite>

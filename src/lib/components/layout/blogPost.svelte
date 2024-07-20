@@ -9,20 +9,13 @@
 </script>
 
 <div class="flex flex-col items-start w-full max-w-screen-lg text-start">
-  <SectionTitle {title} withSpacing={false}>
-    <div class="flex gap-4" slot="subtitle">
-      <Typography variant="small">📅 {date}</Typography>
-      <Typography variant="small">📍 {location}</Typography>
-    </div></SectionTitle
-  >
-
   {#if slides.length > 1}
     <Carousel
-      className="max-h-[300px] md:max-h-[600px] rounded-md mt-4"
+      className="max-h-[300px] md:max-h-[600px] rounded-md my-4"
       {slides}
     />
   {:else if slides.length === 1}
-    <div class="relative flex flex-col w-full mt-4 overflow-hidden md:h-full">
+    <div class="relative flex flex-col w-full my-4 overflow-hidden md:h-full">
       <img
         src={slides[0]}
         alt="cover"
@@ -35,7 +28,14 @@
       />
     </div>
   {/if}
-  <div class="flex flex-col w-full mt-8">
+  <SectionTitle {title} withSpacing={false}>
+    <div class="flex gap-4" slot="subtitle">
+      <Typography variant="small">📅 {date}</Typography>
+      <Typography variant="small">📍 {location}</Typography>
+    </div></SectionTitle
+  >
+  <div class="divider" />
+  <div class="flex flex-col w-full">
     <slot name="info" />
   </div>
 </div>
