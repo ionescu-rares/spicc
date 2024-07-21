@@ -5,8 +5,9 @@
     medium: "text-md lg:text-xl",
     large: "text-lg lg:text-2xl",
     xl: "text-xl lg:text-3xl",
+    xxl: "text-2xl lg:text-4xl",
   };
-  export let variant: "small" | "medium" | "large" | "xl" = "medium";
+  export let variant: "small" | "medium" | "large" | "xl" | "xxl" = "medium";
 </script>
 
 <p class={`${variants[variant]} ${bold && "font-bold"} `}>

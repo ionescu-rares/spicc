@@ -1,4 +1,6 @@
 <script lang="ts">
+  import Typography from "../font/typography.svelte";
+
   export let title = "";
   export let className = "";
   export let withSpacing = true;
@@ -7,6 +9,6 @@
 <div
   class={`flex flex-col items-start  ${withSpacing && "mb-8 md:mb-16"} gap-4 ${className}`}
 >
-  <h2 class="text-3xl font-bold md:text-5xl">{title}</h2>
+  <Typography variant="xxl" bold>{title}</Typography>
   <slot name="subtitle" />
 </div>
