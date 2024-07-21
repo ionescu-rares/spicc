@@ -9,7 +9,7 @@
   import SectionTitle from "$lib/components/typography/sectionTitle.svelte";
   import Hero from "$lib/components/hero.svelte";
   const sponsors = [
-    { logo: lauralaurentiu, href: "https://tolunacorporate.com/" },
+    { logo: lauralaurentiu, href: "https://lauralaurentiu.ro/" },
     { logo: toluna, href: "https://tolunacorporate.com/" },
   ];
   const partners = [
