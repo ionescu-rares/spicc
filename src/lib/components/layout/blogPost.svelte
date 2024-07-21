@@ -61,9 +61,7 @@
         <Typography variant="small">📅 {date}</Typography>
         <Typography variant="small">📍 {location}</Typography>
       {/if}
-      <Typography variant="small"
-        >🕒 {readTime} minute{#if readTime > 1}s{/if} read</Typography
-      >
+      <Typography variant="small">🕒 {readTime} min. read</Typography>
     </div>
   </SectionTitle>
   <div class="divider" />
