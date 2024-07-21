@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { handleMaiMulteClick } from "$lib/utils/handleMaiMulteClick.svelte";
   import MaiMulteButton from "$lib/components/buttons/MaiMulteButton.svelte";
   import Card from "$lib/components/cards/card.svelte";
   import PageLayout from "$lib/components/pageLayout.svelte";
@@ -12,10 +13,6 @@
   import seminarSrc from "$lib/images/actiuni/seminar.jpg";
   import sigurantaBucurestiSrc from "$lib/images/actiuni/siguranta.jpg";
   import sigurantaSrc from "$lib/images/cine-suntem/viziune.jpg";
-
-  const handleMaiMulteClick = (href: string) => {
-    window.open(href, "_self");
-  };
 </script>
 
 <PageLayout withSpacing>

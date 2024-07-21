@@ -30,10 +30,12 @@
   {/if}
   <SectionTitle {title} withSpacing={false}>
     <div class="flex gap-4" slot="subtitle">
-      <Typography variant="small">📅 {date}</Typography>
-      <Typography variant="small">📍 {location}</Typography>
-    </div></SectionTitle
-  >
+      {#if date || location}
+        <Typography variant="small">📅 {date}</Typography>
+        <Typography variant="small">📍 {location}</Typography>
+      {/if}
+    </div>
+  </SectionTitle>
   <div class="divider" />
   <div class="flex flex-col w-full">
     <slot name="info" />
