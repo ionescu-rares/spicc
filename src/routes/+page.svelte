@@ -24,7 +24,7 @@
   <Hero />
   <News />
   <section
-    class="flex flex-col items-center justify-center w-full gap-24 p-4 bg-white md:p-8 text-slate-700"
+    class="flex flex-col items-center justify-center w-full gap-16 p-4 bg-white md:p-8 text-slate-700"
   >
     <SectionTitle title="Sponsori" withSpacing={false} />
     <div class="grid grid-cols-2 gap-16">

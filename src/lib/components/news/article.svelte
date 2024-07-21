@@ -1,6 +1,6 @@
 <script lang="ts">
+  import SectionTitle from "$lib/components/typography/sectionTitle.svelte";
   import Carousel from "../carousel.svelte";
-
   export let src = "";
   export let reversed = false;
   export let videoSrc = "";
@@ -40,9 +40,9 @@
     class={`content-area grid ${reversed ? "col-start-1 col-end-4" : "col-start-4 col-end-7"}`}
   >
     {#if title}
-      <h2 class="mt-8 text-4xl font-bold title-area md:mt-0">{title}</h2>
+      <SectionTitle className="mt-4 md:mt-0" withSpacing={false} {title} />
     {/if}
-    <div class="mt-4 slot-area md:mt-0">
+    <div class="pt-4 slot-area md:mt-0">
       <slot />
     </div>
   </article>
