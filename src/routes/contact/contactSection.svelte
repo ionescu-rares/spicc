@@ -36,12 +36,12 @@
   <img
     src={first}
     alt="woman"
-    class="absolute w-64 -right-4 top-16 xl:top-[auto] lg:invisible xl:visible lg:-bottom-8 lg:-left-8 2xl:left-0 lg:w-96"
+    class="absolute w-64 -right-4 top-24 xl:top-[auto] lg:invisible xl:visible lg:-bottom-8 lg:-left-16 2xl:left-0 lg:w-96"
   />
   <img
     src={second}
     alt="man"
-    class="absolute right-0 invisible w-64 xl:visible xs:sm:md:top-12 lg:-bottom-8 2xl:right-0 -right-8 lg:w-96"
+    class="absolute right-0 invisible w-64 xl:visible lg:-bottom-8 2xl:right-0 -right-16 lg:w-96"
   />
   <SectionTitle title="Contactează-ne" className="text-slate-700" />
   <div class="z-10 flex flex-col w-full max-w-screen-lg">

@@ -25,5 +25,5 @@ IBAN: RO57INGB0000999903599361
 </pre>
     Sprijinul tău contează! Mulțumim!
   </Typography>
-  <FeminismIcon className="hidden w-1/2 lg:block" />
+  <FeminismIcon className="hidden w-2/3 2xl:w-2/5 lg:block" />
 </section>
