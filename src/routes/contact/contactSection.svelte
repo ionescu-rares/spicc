@@ -121,32 +121,4 @@
   .toast.invisible {
     right: -100%;
   }
-  input,
-  textarea {
-    background-color: white !important;
-  }
-
-  /* Prevent gray background on focus and active states */
-  input:focus,
-  input:active,
-  textarea:focus,
-  textarea:active {
-    background-color: white !important;
-    outline: none !important;
-    box-shadow: none !important;
-  }
-
-  /* Additional styling to ensure consistency */
-  .input,
-  .textarea {
-    background-color: white;
-    color: #4a5568; /* text-slate-700 */
-    border: 1px solid #cbd5e0; /* border-slate-400 */
-    padding: 0.5rem;
-  }
-
-  .input:focus,
-  .textarea:focus {
-    border-color: #2d3748; /* focus:outline-slate-700 */
-  }
 </style>
