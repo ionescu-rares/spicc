@@ -83,11 +83,7 @@
           class="bg-white border-slate-400 focus:border-none focus:outline-slate-700 text-slate-700 textarea min-h-60 input-bordered"
         />
       </label>
-      <input
-        type="hidden"
-        name="to_email"
-        value="rares.ionescu2000@gmail.com"
-      />
+      <input type="hidden" name="to_email" value="simona.ionescu@spicc.eu" />
       <button type="submit" class="w-full col-span-2 btn btn-tertiary"
         >Trimite</button
       >
