@@ -1,7 +1,7 @@
 <div class="leading-relaxed text-md lg:text-xl">
   Capacitarea femeilor și fetelor este esențială pentru a le oferi șanse egale,
   pentru a le dezvolta abilitățile și pentru a contribui la construirea unei
-  societăți mai echitabile. Capacitând fetele și femei, vizăm:
+  societăți mai echitabile. Capacitând fetele și femeile, vizăm:
   <ol class="flex flex-col gap-4 p-2 list-decimal list-inside">
     <li>
       <strong>Egalitatea de șanse</strong>: capacitarea oferă femeilor și

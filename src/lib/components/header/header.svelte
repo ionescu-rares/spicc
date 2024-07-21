@@ -4,6 +4,15 @@
   import MenuIcon from "../icons/menuIcon.svelte";
   import HeaderItem from "./headerItem.svelte";
   let checked = false;
+
+  const paths = [
+    { url: "/", label: "Acasă" },
+    { url: "/ce-facem", label: "Ce facem" },
+    { url: "/cine-suntem", label: "Cine suntem" },
+    { url: "/proiecte", label: "Proiecte" },
+    { url: "/actiuni", label: "Acțiuni" },
+    { url: "/contact", label: "Contact" },
+  ];
 </script>
 
 <div class="z-30 drawer drawer-end">
@@ -15,18 +24,17 @@
         <img src={logo} alt="logo" class="border-none rounded-full btn-ghost" />
       </a>
       <div class="hidden lg:block">
-        <ul class="menu menu-horizontal">
+        <ul class="text-md menu menu-horizontal">
           <!-- Navbar content here -->
-          {#if $page.url.pathname !== "/"}
-            <li><a href="/">Acasă</a></li>
-          {/if}
-          <li>
-            <a class="active:bg-brand" href="/cine-suntem">Cine suntem</a>
-          </li>
-          <li><a href="/ce-facem">Ce facem</a></li>
-          <li><a href="/proiecte">Proiecte</a></li>
-          <li><a href="/actiuni">Acțiuni</a></li>
-          <li><a href="/contact">Contact</a></li>
+          {#each paths as path}
+            <li>
+              <a
+                href={path.url}
+                class={`${$page.url.pathname === path.url && "font-bold"}`}
+                >{path.label}</a
+              >
+            </li>
+          {/each}
         </ul>
       </div>
       <div class="flex-none lg:hidden">
@@ -50,14 +58,13 @@
         class="items-center self-end btn btn-ghost btn-circle text-md"
         on:click={() => (checked = false)}>X</button
       >
-      {#if $page.url.pathname !== "/"}
-        <HeaderItem href="/" bind:checked>Acasă</HeaderItem>
-      {/if}
-      <HeaderItem href="/cine-suntem" bind:checked>Cine suntem</HeaderItem>
-      <HeaderItem href="/ce-facem" bind:checked>Ce facem</HeaderItem>
-      <HeaderItem href="/proiecte" bind:checked>Proiecte</HeaderItem>
-      <HeaderItem href="/actiuni" bind:checked>Acțiuni</HeaderItem>
-      <HeaderItem href="/contact" bind:checked>Contact</HeaderItem>
+      {#each paths as path}
+        <HeaderItem
+          href={path.url}
+          bind:checked
+          isActive={path.url === $page.url.pathname}>{path.label}</HeaderItem
+        >
+      {/each}
     </ul>
   </div>
 </div>
