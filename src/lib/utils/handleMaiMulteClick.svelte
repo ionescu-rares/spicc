@@ -1,5 +1,6 @@
 <script lang="ts" context="module">
+  import { goto } from "$app/navigation";
   export const handleMaiMulteClick = (href: string) => {
-    window.open(href, "_self");
+    goto(href);
   };
 </script>

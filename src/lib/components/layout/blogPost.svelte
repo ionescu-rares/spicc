@@ -2,13 +2,24 @@
   import Carousel from "$lib/components/carousel.svelte";
   import Typography from "$lib/components/font/typography.svelte";
   import SectionTitle from "$lib/components/typography/sectionTitle.svelte";
+  import LeftIcon from "$lib/icons/left.svelte";
+  import { goto } from "$app/navigation";
+  import { page } from "$app/stores";
+
   export let date = "";
   export let location = "";
   export let title = "";
   export let slides: string[] = [];
+
+  const goBack = () => {
+    goto($page.url.pathname.substring(0, $page.url.pathname.lastIndexOf("/")));
+  };
 </script>
 
 <div class="flex flex-col items-start w-full max-w-screen-lg text-start">
+  <button class="w-8" on:click={goBack}
+    ><LeftIcon className="flex w-full " /></button
+  >
   {#if slides.length > 1}
     <Carousel
       className="max-h-[300px] md:max-h-[600px] rounded-md my-4"

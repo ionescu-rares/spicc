@@ -44,7 +44,7 @@
         withSpacing={false}
         smallSize
         slot="actions"
-        onClick={() => handleMaiMulteClick("/firul-solidaritatii")}
+        onClick={() => handleMaiMulteClick("/actiuni/firul-solidaritatii")}
       /></Card
     >
     <Card
