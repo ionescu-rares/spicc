@@ -10,6 +10,7 @@
   import voceaVideoSrc from "$lib/videos/vocea_video.mp4";
   import SectionTitle from "../typography/sectionTitle.svelte";
   import MaiMulteButton from "../buttons/MaiMulteButton.svelte";
+  import { handleMaiMulteClick } from "$lib/utils/handleMaiMulteClick.svelte";
 </script>
 
 <section class="flex flex-col items-center gap-24 px-4 py-16 md:px-8 bg-brand">
@@ -45,7 +46,7 @@
       Violenței împotriva Femeilor
     </p>
     <MaiMulteButton
-      onClick={() => window.open("/firul-solidaritatii", "_self")}
+      onClick={() => handleMaiMulteClick("/actiuni/firul-solidaritatii")}
     />
   </Article>
   <Article
