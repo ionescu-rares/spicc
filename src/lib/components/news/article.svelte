@@ -39,8 +39,10 @@
   <article
     class={`content-area grid ${reversed ? "col-start-1 col-end-4" : "col-start-4 col-end-7"}`}
   >
-    <h2 class="my-8 text-4xl font-bold title-area md:mt-0">{title}</h2>
-    <div class="slot-area">
+    {#if title}
+      <h2 class="mt-8 text-4xl font-bold title-area md:mt-0">{title}</h2>
+    {/if}
+    <div class="mt-4 slot-area md:mt-0">
       <slot />
     </div>
   </article>

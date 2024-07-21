@@ -7,6 +7,6 @@
 <div
   class={`flex flex-col items-start  ${withSpacing && "mb-8 md:mb-16"} gap-4 ${className}`}
 >
-  <h2 class="text-3xl font-bold md:text-5xl">{title}</h2>
+  <h2 class="text-2xl font-bold md:text-4xl">{title}</h2>
   <slot name="subtitle" />
 </div>

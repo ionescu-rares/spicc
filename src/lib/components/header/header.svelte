@@ -1,8 +1,8 @@
 <script>
   import logo from "$lib/images/spicclogo.jpg";
+  import { page } from "$app/stores";
   import MenuIcon from "../icons/menuIcon.svelte";
   import HeaderItem from "./headerItem.svelte";
-
   let checked = false;
 </script>
 
@@ -17,6 +17,9 @@
       <div class="hidden lg:block">
         <ul class="menu menu-horizontal">
           <!-- Navbar content here -->
+          {#if $page.url.pathname !== "/"}
+            <li><a href="/">Acasă</a></li>
+          {/if}
           <li>
             <a class="active:bg-brand" href="/cine-suntem">Cine suntem</a>
           </li>
@@ -47,6 +50,9 @@
         class="items-center self-end btn btn-ghost btn-circle text-md"
         on:click={() => (checked = false)}>X</button
       >
+      {#if $page.url.pathname !== "/"}
+        <HeaderItem href="/" bind:checked>Acasă</HeaderItem>
+      {/if}
       <HeaderItem href="/cine-suntem" bind:checked>Cine suntem</HeaderItem>
       <HeaderItem href="/ce-facem" bind:checked>Ce facem</HeaderItem>
       <HeaderItem href="/proiecte" bind:checked>Proiecte</HeaderItem>
