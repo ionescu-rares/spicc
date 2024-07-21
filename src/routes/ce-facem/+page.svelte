@@ -33,10 +33,13 @@
     /></Article
   >
   <Article title="Capacităm" src={capacitamSrc}
-    ><Typography
-      >Informarea este necesară pentru a conștientiza și înțelege inegalitățile
-      și discriminarea de gen, pentru a găsi mijloacele adecvate de combatere a
-      acestora, pentru a responsabiliza, implica și inspira membrii societății.
+    ><Typography>
+      Dezvoltăm competențe, cunoștințe și abilități necesare pentru a înțelege
+      și promova egalitatea de gen, prin formare și training, conceperea și
+      distribuirea resurselor și materialelor educaționale. Antamăm parteneriate
+      și colaborări cu organizații specializate în egalitatea de gen, instituții
+      de învățământ, ONG-uri și alte entități interesate, pentru a spori
+      eficiența și impactul inițiativelor de capacitare.
     </Typography><MaiMulteButton
       onClick={() => handleMaiMulteClick("/ce-facem/capacitam")}
     /></Article
