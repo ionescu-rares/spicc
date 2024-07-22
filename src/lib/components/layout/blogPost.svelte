@@ -49,7 +49,7 @@
 
 <div class="flex flex-col items-start w-full max-w-screen-lg text-start">
   <div class="flex justify-between w-full">
-    <button class="w-8" on:click={goBack}
+    <button class="w-6 md:w-8" on:click={goBack}
       ><LeftIcon className="flex w-full" /></button
     >
     <div class="flex">
