@@ -1,10 +1,13 @@
 <script lang="ts">
+  import Facebook from "$lib/components/icons/facebook.svelte";
   import { goBack } from "$lib/utils/goBack.ts";
   import Carousel from "$lib/components/carousel.svelte";
   import Typography from "$lib/components/font/typography.svelte";
   import SectionTitle from "$lib/components/typography/sectionTitle.svelte";
   import LeftIcon from "$lib/icons/left.svelte";
+  import { page } from "$app/stores";
   import { afterUpdate, onMount } from "svelte";
+  import X from "../icons/x.svelte";
 
   export let date = "";
   export let location = "";
@@ -22,7 +25,6 @@
       }
     }
   };
-
   const delayedCalculateReadingTime = () => {
     setTimeout(calculateReadingTime, 0);
   };
@@ -30,15 +32,38 @@
   onMount(() => {
     delayedCalculateReadingTime();
   });
+
+  let urlToShare = `https://spicc.vercel.app${$page.url.pathname}`;
+  function shareOnFacebook() {
+    const encodedUrl = encodeURIComponent(urlToShare);
+    const shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`;
+    window.open(shareUrl, "_blank", "width=600,height=400");
+  }
+
+  function shareOnX() {
+    const encodedUrl = encodeURIComponent(urlToShare);
+    const shareUrl = `https://twitter.com/intent/tweet?url=${encodedUrl}`;
+    window.open(shareUrl, "_blank", "width=600,height=400");
+  }
 </script>
 
 <div class="flex flex-col items-start w-full max-w-screen-lg text-start">
-  <button class="w-8" on:click={goBack}
-    ><LeftIcon className="flex w-full" /></button
-  >
+  <div class="flex justify-between w-full">
+    <button class="w-8" on:click={goBack}
+      ><LeftIcon className="flex w-full" /></button
+    >
+    <div class="flex">
+      <button class="btn btn-ghost btn-sm md:btn-md" on:click={shareOnX}>
+        <X />
+      </button>
+      <button on:click={shareOnFacebook} class="btn btn-ghost btn-sm md:btn-md">
+        <Facebook />
+      </button>
+    </div>
+  </div>
   {#if slides.length > 1}
     <Carousel
-      className="max-h-[300px] md:max-h-[600px] rounded-md my-4"
+      className="max-h-[300px] md:max-h-[600px] rounded-md mt-2 mb-4"
       {slides}
     />
   {:else if slides.length === 1}
