@@ -1,7 +1,5 @@
 <script lang="ts">
   import { onMount, createEventDispatcher, onDestroy } from "svelte";
-  import { marked } from "marked";
-  import DomPurify from "dompurify";
   export let content: string;
 
   let editor: HTMLElement | undefined = undefined;
