@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Editor from "$lib/components/MarkdownEditor/Editor.svelte";
   import SectionTitle from "$lib/components/typography/sectionTitle.svelte";
   import first from "$lib/icons/1.png";
   import second from "$lib/icons/5.png";
@@ -8,12 +9,19 @@
 
   let isSuccess = false;
   let isError = false;
+  let editorContent = "";
 
   const sendEmail = (event: Event) => {
     event.preventDefault();
 
     const form = event.target as HTMLFormElement;
     console.log("FORM", form);
+
+    const messageInput = document.createElement("input");
+    messageInput.type = "hidden";
+    messageInput.name = "message";
+    messageInput.value = editorContent;
+    form.appendChild(messageInput);
 
     emailjs
       .sendForm("service_dn2r5pw", "template_m5bilni", form)
@@ -28,6 +36,10 @@
         console.log("FAILED...", error);
       });
   };
+
+  function handleEditorUpdate(event: { detail: { content: string } }) {
+    editorContent = event.detail.content;
+  }
 </script>
 
 <section
@@ -73,17 +85,18 @@
           class="w-1/2 bg-white md:w-2/3 lg:w-full input focus:outline-slate-700 focus:border-none input-bordered border-slate-400 text-slate-700"
         />
       </label>
+      <!-- svelte-ignore a11y-label-has-associated-control -->
       <label class="grid col-span-2">
         <div class="label">
           <span class="text-gray-600 label-text">Mesajul tau</span>
         </div>
-        <textarea
-          placeholder="Mesaj..."
-          name="message"
-          class="bg-white border-slate-400 focus:border-none focus:outline-slate-700 text-slate-700 textarea min-h-60 input-bordered"
-        />
+        <Editor bind:content={editorContent} on:update={handleEditorUpdate} />
       </label>
-      <input type="hidden" name="to_email" value="simona.ionescu@spicc.eu" />
+      <input
+        type="hidden"
+        name="to_email"
+        value="rares.ionescu2000@gmail.com"
+      />
       <button type="submit" class="w-full col-span-2 btn btn-tertiary"
         >Trimite</button
       >
