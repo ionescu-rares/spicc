@@ -57,7 +57,7 @@
     class={`relative ${className} inline-flex w-full overflow-hidden`}
     role="contentinfo"
     draggable={false}
-    use:swipe={{ timeframe: 300, minSwipeDistance: 20 }}
+    use:swipe={{ timeframe: 300, minSwipeDistance: 20, touchAction: "pan-y" }}
     on:swipe={handleSwipe}
     on:mouseenter={() => (chevronsVisible = true)}
     on:mouseleave={() => (chevronsVisible = false)}
@@ -86,7 +86,7 @@
       {/each}
     </div>
     <div
-      class={`absolute top-0 h-full w-full justify-between items-center flex px-4 md:px-10 text-3xl ${chevronsVisible ? "md:flex" : "md:hidden"}`}
+      class={`absolute top-0 h-full w-full justify-between items-center hidden px-4 md:px-10 text-3xl ${chevronsVisible && "md:flex"}`}
     >
       <Chevron onClick={prev}>{`<`}</Chevron>
       <Chevron onClick={next}>{`>`}</Chevron>
