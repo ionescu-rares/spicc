@@ -1,9 +1,23 @@
 <script lang="ts">
   import Chevron from "$lib/components/chevron.svelte";
+  import { swipe, type SwipeCustomEvent } from "svelte-gestures";
   import { onDestroy } from "svelte";
 
   export let slides: string[] = [];
   export let className: string = "";
+
+  let direction;
+  let target;
+
+  function handleSwipe(event: SwipeCustomEvent) {
+    direction = event.detail.direction;
+    if (direction === "left") {
+      next();
+    }
+    if (direction === "right") {
+      prev();
+    }
+  }
 
   let current = 0;
   let autoPlay = true;
@@ -42,6 +56,9 @@
   <div
     class={`relative ${className} inline-flex w-full overflow-hidden`}
     role="contentinfo"
+    draggable={false}
+    use:swipe={{ timeframe: 300, minSwipeDistance: 20 }}
+    on:swipe={handleSwipe}
     on:mouseenter={() => (chevronsVisible = true)}
     on:mouseleave={() => (chevronsVisible = false)}
   >
