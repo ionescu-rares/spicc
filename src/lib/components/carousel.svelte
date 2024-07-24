@@ -57,7 +57,7 @@
     class={`relative ${className} inline-flex w-full overflow-hidden`}
     role="contentinfo"
     draggable={false}
-    use:swipe={{ timeframe: 300, minSwipeDistance: 20, touchAction: "pan-y" }}
+    use:swipe={{ timeframe: 100, minSwipeDistance: 20, touchAction: "pan-y" }}
     on:swipe={handleSwipe}
     on:mouseenter={() => (chevronsVisible = true)}
     on:mouseleave={() => (chevronsVisible = false)}
