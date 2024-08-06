@@ -13,8 +13,10 @@
   import { handleMaiMulteClick } from "$lib/utils/handleMaiMulteClick.svelte";
 </script>
 
-<section class="flex flex-col items-center gap-24 px-4 py-16 md:px-8 bg-brand">
-  <SectionTitle title={"Noutăți"} withSpacing={false} />
+<section
+  class="flex flex-col items-center gap-16 px-4 py-8 md:py-16 md:px-8 bg-brand"
+>
+  <SectionTitle title={"Noutăți"} variant="huge" withSpacing={false} />
   <Article
     videoSrc={voceaVideoSrc}
     poster={voceaPoster}
