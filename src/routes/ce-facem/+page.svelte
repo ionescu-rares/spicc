@@ -11,7 +11,7 @@
 </script>
 
 <PageLayout withSpacing>
-  <SectionTitle title="Ce facem?" />
+  <SectionTitle variant="huge" title="Ce facem?" />
   <Article title="Educăm" src={educamSrc}>
     <Typography
       >Promovăm prin educație drepturile femeilor, combatem inegalități,

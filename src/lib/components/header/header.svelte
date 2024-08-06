@@ -1,5 +1,5 @@
 <script>
-  import logo from "$lib/images/spicclogo.jpg";
+  import logo from "$lib/images/logo-transparent.png";
   import { page } from "$app/stores";
   import MenuIcon from "../icons/menuIcon.svelte";
   import HeaderItem from "./headerItem.svelte";
@@ -17,14 +17,20 @@
 
 <div class="z-30 drawer drawer-end">
   <input id="my-drawer-3" type="checkbox" class="drawer-toggle" bind:checked />
-  <div class="flex flex-col drawer-content">
+  <div class="relative flex flex-col drawer-content">
     <!-- Navbar -->
-    <div class="flex items-center justify-between w-full py-0 navbar bg-brand">
-      <a href="/" class="text-xl">
-        <img src={logo} alt="logo" class="border-none rounded-full btn-ghost" />
+    <div
+      class={`flex absolute top-0 items-center  justify-between w-full px-8 py-0 transparent-navbar navbar`}
+    >
+      <a href="/" class="py-2">
+        <img
+          src={logo}
+          alt="logo"
+          class="object-cover p-2 border-none btn-circle btn-lg btn-ghost"
+        />
       </a>
       <div class="hidden lg:block">
-        <ul class="text-md menu menu-horizontal">
+        <ul class="rounded-full text-md menu menu-horizontal backdrop-filter">
           <!-- Navbar content here -->
           {#each paths as path}
             <li>
@@ -52,10 +58,10 @@
   <div class="drawer-side">
     <label for="my-drawer-3" aria-label="close sidebar" class="drawer-overlay"
     ></label>
-    <ul class="min-h-full p-4 menu bg-brand w-80">
+    <ul class="min-h-full menu w-80 backdrop-filter">
       <!-- Sidebar content here -->
       <button
-        class="items-center self-end btn btn-ghost btn-circle text-md"
+        class="items-center self-end mx-4 btn btn-ghost btn-circle text-md"
         on:click={() => (checked = false)}>X</button
       >
       {#each paths as path}
@@ -68,3 +74,12 @@
     </ul>
   </div>
 </div>
+
+<style>
+  .transparent-navbar {
+    background: transparent !important;
+  }
+  .backdrop-filter {
+    backdrop-filter: blur(100px);
+  }
+</style>

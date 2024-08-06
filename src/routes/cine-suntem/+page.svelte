@@ -6,7 +6,7 @@
 </script>
 
 <PageLayout>
-  <SectionTitle title="Cine suntem?" />
+  <SectionTitle variant="huge" title="Cine suntem?" />
   <p class="mt-16 text-lg leading-relaxed md:text-2xl">
     Suntem o asociație feministă, care militează împotriva discriminării de gen
     prin activism și advocacy și sprijină prin acțiunile sale egalitatea de

@@ -7,8 +7,10 @@
     large: "text-lg lg:text-2xl",
     xl: "text-xl lg:text-3xl",
     xxl: "text-2xl lg:text-4xl",
+    huge: "text-3xl lg:text-5xl",
   };
-  export let variant: "small" | "medium" | "large" | "xl" | "xxl" = "medium";
+  export let variant: "small" | "medium" | "large" | "xl" | "xxl" | "huge" =
+    "medium" as const;
 </script>
 
 <p class={`${variants[variant]} ${bold && "font-bold"} ${className} `}>

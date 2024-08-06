@@ -16,7 +16,7 @@
 </script>
 
 <PageLayout withSpacing>
-  <SectionTitle title="Acțiuni" />
+  <SectionTitle variant="huge" title="Acțiuni" />
   <div class="w-full gap-8 grid-container place-items-center">
     <Card
       thumbnail={copaculSrc}

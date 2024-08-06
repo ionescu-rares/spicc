@@ -26,7 +26,7 @@
   <section
     class="flex flex-col items-center justify-center w-full gap-16 p-4 bg-white md:p-8 text-slate-700"
   >
-    <SectionTitle title="Sponsori" withSpacing={false} />
+    <SectionTitle variant="huge" title="Sponsori" withSpacing={false} />
     <div class="grid grid-cols-2 gap-16">
       {#each sponsors as sponsor}
         <a href={sponsor.href} target="_blank">
@@ -34,7 +34,7 @@
         </a>
       {/each}
     </div>
-    <SectionTitle title="Parteneri" withSpacing={false} />
+    <SectionTitle variant="huge" title="Parteneri" withSpacing={false} />
 
     <div class="grid grid-cols-2 gap-16 md:grid-cols-4 place-items-center">
       {#each partners as partner}

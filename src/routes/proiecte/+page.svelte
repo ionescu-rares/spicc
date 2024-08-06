@@ -10,7 +10,7 @@
 </script>
 
 <PageLayout withSpacing
-  ><SectionTitle title="Proiecte" />
+  ><SectionTitle variant="huge" title="Proiecte" />
   <Article title="Her City. Our Europe" src={herCitySrc}>
     <p class="text-lg md:text-2xl">
       HerCity reconfigurează harta culturală a Timișoarei, luminând zone aflate
