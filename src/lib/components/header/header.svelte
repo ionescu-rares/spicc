@@ -20,13 +20,13 @@
   <div class="relative flex flex-col drawer-content">
     <!-- Navbar -->
     <div
-      class={`flex absolute top-0 items-center  justify-between w-full px-8 py-0 transparent-navbar navbar`}
+      class={`flex absolute top-0 items-center  justify-between w-full px-4 md:px-8 py-0 transparent-navbar navbar`}
     >
       <a href="/" class="py-2">
         <img
           src={logo}
           alt="logo"
-          class="object-cover p-2 border-none btn-circle btn-lg btn-ghost"
+          class="object-cover p-2 border-none btn-circle btn-md btn-ghost"
         />
       </a>
       <div class="hidden lg:block">
