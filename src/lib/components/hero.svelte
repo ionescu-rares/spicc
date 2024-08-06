@@ -62,7 +62,7 @@
   <button
     id="scroll-down-button"
     on:click={handleClick}
-    class={`absolute text-xl font-bold text-white border-none md:text-3xl btn-accent bg-brand btn-circle bottom-8 right-12 md:right-24 btn-md ${animateButton && "bounce-animation"} md:btn-lg`}
+    class={`hidden md:block absolute text-xl font-bold text-white border-none btn-ghost md:text-3xl btn-accent btn-circle bottom-8 right-12 md:right-24 btn-md ${animateButton && "bounce-animation"} md:btn-lg`}
     >↓</button
   >
 </section>
