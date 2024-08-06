@@ -8,6 +8,7 @@
   import sixth from "$lib/images/6.jpg";
   import seventh from "$lib/images/7.jpg";
   import eighth from "$lib/images/8.jpg";
+  import { afterUpdate } from "svelte";
   import nineth from "$lib/images/9.jpg";
   import { onDestroy } from "svelte";
   const slides = [
@@ -35,13 +36,23 @@
     }, 1000);
   };
 
+  const toggleBounce = setInterval(() => {
+    triggerAnimation();
+  }, 7000);
+
   const initialDelay = setTimeout(() => {
     triggerAnimation();
-    const toggleBounce = setInterval(() => {
-      triggerAnimation();
-    }, 7000);
+
     onDestroy(() => clearInterval(toggleBounce));
   }, 7000);
+
+  afterUpdate(() => {
+    window.addEventListener("scroll", () => {
+      animateButton = false;
+      clearInterval(toggleBounce);
+      clearTimeout(initialDelay);
+    });
+  });
 
   onDestroy(() => clearTimeout(initialDelay));
 </script>

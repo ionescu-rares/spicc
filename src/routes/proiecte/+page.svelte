@@ -6,6 +6,7 @@
   import femSrc from "$lib/images/proiecte/fem.jpg";
   import MaiMulteButton from "$lib/components/buttons/MaiMulteButton.svelte";
   import thinkOutsideSrc from "$lib/images/proiecte/thinkoutside.jpg";
+  import { handleMaiMulteClick } from "$lib/utils/handleMaiMulteClick.svelte";
 </script>
 
 <PageLayout withSpacing
@@ -17,7 +18,9 @@
       împărtășind astfel generației de mâine o istorie urbană inclusivă, din
       care femeile sunt parte integrantă.
     </p>
-    <MaiMulteButton /></Article
+    <MaiMulteButton
+      onClick={() => handleMaiMulteClick("/proiecte/her-city")}
+    /></Article
   >
 
   <Article title="FEM" src={femSrc} reversed>
@@ -29,7 +32,7 @@
       implicarea lor în construirea unei comunități online, capabile să adreseze
       informat problematica de gen.
     </p>
-    <MaiMulteButton onClick={() => window.open("/fem", "_self")} /></Article
+    <MaiMulteButton onClick={() => handleMaiMulteClick("/fem")} /></Article
   >
   <Article title="Think outside the box" src={thinkOutsideSrc}>
     <p class="text-lg md:text-2xl">
