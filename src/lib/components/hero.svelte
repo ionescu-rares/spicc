@@ -12,15 +12,15 @@
   import nineth from "$lib/images/9.jpg";
   import { onDestroy } from "svelte";
   const slides = [
-    first,
     second,
     third,
-    fourth,
+    first,
     fifth,
     sixth,
     seventh,
     eighth,
     nineth,
+    fourth,
   ];
   const handleClick = () => {
     window.scrollTo({

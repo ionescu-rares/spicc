@@ -62,12 +62,12 @@
     on:mouseleave={() => (chevronsVisible = false)}
   >
     <div
-      class={`inline-flex w-full transition ease-in-out duration-500  h-full`}
+      class={`inline-flex w-full transition ease-in-out skeleton duration-500  h-full`}
       style={`transform: translateX(${-current * 100}%)`}
     >
       {#each slides as slide}
         <div
-          class="flex flex-col items-center justify-center w-full h-full mx-auto skeleton slide"
+          class="flex flex-col items-center justify-center w-full h-full mx-auto slide"
         >
           <img
             src={slide}
@@ -86,7 +86,7 @@
       <Chevron onClick={next}>{`>`}</Chevron>
     </div>
 
-    <div class="absolute bottom-0 flex justify-center w-full gap-3 pb-2">
+    <div class="absolute flex justify-center w-full gap-3 pb-2 bottom-4">
       {#each slides as _, index}
         <button
           on:click={() => jump(index)}
