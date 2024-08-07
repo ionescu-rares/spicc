@@ -7,8 +7,8 @@
 
   const paths = [
     { url: "/", label: "Acasă" },
-    { url: "/ce-facem", label: "Ce facem" },
     { url: "/cine-suntem", label: "Cine suntem" },
+    { url: "/ce-facem", label: "Ce facem" },
     { url: "/proiecte", label: "Proiecte" },
     { url: "/actiuni", label: "Acțiuni" },
     { url: "/contact", label: "Contact" },

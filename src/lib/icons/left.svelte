@@ -3,7 +3,7 @@
 </script>
 
 <svg
-  fill="#b2ccd6"
+  fill="#F1F1F1"
   class={className}
   version="1.1"
   id="Layer_1"

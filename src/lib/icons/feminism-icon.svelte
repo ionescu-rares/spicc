@@ -10,7 +10,7 @@
   fill-rule="evenodd"
   clip-rule="evenodd"
   class={className}
-  fill="#b2ccd6"
+  fill="#F1F1F1"
   viewBox="0 0 358 511.86"
   ><path
     fill-rule="nonzero"

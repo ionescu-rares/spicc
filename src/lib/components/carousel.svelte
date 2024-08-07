@@ -67,7 +67,7 @@
     >
       {#each slides as slide}
         <div
-          class="flex flex-col items-center justify-center w-full h-full mx-auto slide"
+          class="flex flex-col items-center justify-center w-full h-full mx-auto skeleton slide"
         >
           <img
             src={slide}

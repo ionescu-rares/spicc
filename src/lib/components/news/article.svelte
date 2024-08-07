@@ -42,7 +42,7 @@
     {#if title}
       <SectionTitle className="mt-4 md:mt-0" withSpacing={false} {title} />
     {/if}
-    <div class="pt-4 slot-area md:mt-0">
+    <div class="pt-4 leading-relaxed slot-area md:mt-0">
       <slot />
     </div>
   </article>
