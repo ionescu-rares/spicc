@@ -13,6 +13,9 @@
   import Hero from "$lib/components/hero.svelte";
   import FullImageCard from "$lib/components/cards/fullImageCard.svelte";
   import { goto } from "$app/navigation";
+  import Hat from "$lib/icons/home/hat.svelte";
+  import Info from "$lib/icons/home/info.svelte";
+  import Book from "$lib/icons/home/book.svelte";
   const sponsors = [
     { logo: lauralaurentiu, href: "https://lauralaurentiu.ro/" },
     { logo: toluna, href: "https://tolunacorporate.com/" },
@@ -37,22 +40,33 @@
     >
       <FullImageCard
         className="col-start-1 col-end-5 md:col-start-1 md:col-end-4"
-        title="Educăm"
         imageSrc={educamSrc}
         onClick={() => goto("/ce-facem/educam")}
-      />
+      >
+        <div class="flex flex-col items-center">
+          <Hat className="w-8 md:w-14" /> Educăm
+        </div></FullImageCard
+      >
       <FullImageCard
         className="col-start-5 col-end-9 md:col-start-4 md:col-end-7"
-        title="Informăm"
         imageSrc={informamSrc}
         onClick={() => goto("/ce-facem/informam")}
-      />
+      >
+        <div class="flex flex-col items-center">
+          <Info className="w-8 md:w-12" />
+
+          Informăm
+        </div></FullImageCard
+      >
       <FullImageCard
         className="col-start-3 col-end-7 pl-[25%] row-start-2 md:row-start-1 md:col-start-7 md:col-end-10"
-        title="Capacităm"
         imageSrc={capacitamSrc}
         onClick={() => goto("/ce-facem/capacitam")}
-      />
+      >
+        <div class="flex flex-col items-center">
+          <Book className="w-8 md:w-12" />Capacităm
+        </div></FullImageCard
+      >
     </div>
   </section>
   <News />

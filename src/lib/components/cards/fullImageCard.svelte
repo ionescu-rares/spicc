@@ -1,5 +1,4 @@
 <script>
-  export let title = "";
   export let imageSrc = "";
   export let className = "";
   export let onClick = () => {};
@@ -19,7 +18,7 @@
     <h2
       class="self-center text-sm md:text-xl lg:text-4xl text-[#F1F1F1] card-title"
     >
-      {title}
+      <slot />
     </h2>
   </div>
 </div>
