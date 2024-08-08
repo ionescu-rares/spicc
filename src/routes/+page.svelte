@@ -33,7 +33,7 @@
       <p class="text-xl md:text-3xl text-[#82ac90]">voice of together</p>
     </div>
     <div
-      class="grid w-full grid-cols-8 grid-rows-2 gap-4 px-8 my-16 md:grid-cols-9"
+      class="grid w-full grid-cols-8 grid-rows-2 gap-4 px-8 my-16 md:grid-rows-1 md:grid-cols-9"
     >
       <FullImageCard
         className="col-start-1 col-end-5 md:col-start-1 md:col-end-4"
