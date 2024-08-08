@@ -14,7 +14,7 @@
   import FullImageCard from "$lib/components/cards/fullImageCard.svelte";
   import { goto } from "$app/navigation";
   import Hat from "$lib/icons/home/hat.svelte";
-  import Info from "$lib/icons/home/info.svelte";
+  import Info from "$lib/icons/home/megaphone.svelte";
   import Book from "$lib/icons/home/book.svelte";
   const sponsors = [
     { logo: lauralaurentiu, href: "https://lauralaurentiu.ro/" },
