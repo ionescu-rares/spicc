@@ -29,21 +29,26 @@
   <Hero />
   <section class="pt-8 overflow-hidden">
     <div class="flex flex-col items-center w-full text-white custom-font">
-      <h2 class="text-8xl">spicc</h2>
-      <p class="text-3xl text-[#82ac90]">voice of together</p>
+      <h2 class="text-6xl md:text-8xl">spicc</h2>
+      <p class="text-xl md:text-3xl text-[#82ac90]">voice of together</p>
     </div>
-    <div class="grid w-full grid-cols-3 gap-4 px-8 my-16 md:gap-8">
+    <div
+      class="grid w-full grid-cols-8 grid-rows-2 gap-4 px-8 my-16 md:grid-cols-9"
+    >
       <FullImageCard
+        className="col-start-1 col-end-5 md:col-start-1 md:col-end-4"
         title="Educăm"
         imageSrc={educamSrc}
         onClick={() => goto("/ce-facem/educam")}
       />
       <FullImageCard
+        className="col-start-5 col-end-9 md:col-start-4 md:col-end-7"
         title="Informăm"
         imageSrc={informamSrc}
         onClick={() => goto("/ce-facem/informam")}
       />
       <FullImageCard
+        className="col-start-3 col-end-7 pl-[25%] row-start-2 md:row-start-1 md:col-start-7 md:col-end-10"
         title="Capacităm"
         imageSrc={capacitamSrc}
         onClick={() => goto("/ce-facem/capacitam")}

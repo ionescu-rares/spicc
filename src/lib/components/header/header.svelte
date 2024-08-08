@@ -30,13 +30,13 @@
         />
       </a>
       <div class="hidden lg:block">
-        <ul class="rounded-full text-md menu menu-horizontal backdrop-filter">
+        <ul class="rounded-full menu menu-horizontal backdrop-filter">
           <!-- Navbar content here -->
           {#each paths as path}
-            <li>
+            <li class="text-lg">
               <a
                 href={path.url}
-                class={`${$page.url.pathname === path.url && "font-bold"}`}
+                class={`${$page.url.pathname === path.url && "font-extrabold"}`}
                 >{path.label}</a
               >
             </li>

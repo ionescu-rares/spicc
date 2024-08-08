@@ -1,11 +1,12 @@
 <script>
   export let title = "";
   export let imageSrc = "";
+  export let className = "";
   export let onClick = () => {};
 </script>
 
 <div
-  class="transition cursor-pointer no-padding card image-full hover:scale-105"
+  class={`transition cursor-pointer no-padding card image-full hover:scale-105 ${className}`}
   on:keydown={onClick}
   on:click={onClick}
   role="button"
@@ -16,7 +17,7 @@
   </figure>
   <div class="flex justify-center p-0 card-body">
     <h2
-      class="self-center text-md md:text-xl lg:text-4xl text-[#F1F1F1] card-title"
+      class="self-center text-sm md:text-xl lg:text-4xl text-[#F1F1F1] card-title"
     >
       {title}
     </h2>
