@@ -5,20 +5,24 @@
 </script>
 
 <div
-  class={`transition cursor-pointer relative no-padding image-full hover:scale-105 ${className}`}
+  class={`cursor-pointer relative h-full image-full ${className}`}
   on:keydown={onClick}
   on:click={onClick}
   role="button"
   tabindex="0"
 >
   <figure>
-    <img src={imageSrc} alt="card background" class="rounded-md" />
+    <img
+      src={imageSrc}
+      alt="card background"
+      class="object-cover w-full h-full rounded-lg"
+    />
   </figure>
   <div
-    class="absolute rounded-lg bottom-0 flex justify-end w-full h-[30%] p-0 bg-gradient-to-t from-black to-transparent card-body"
+    class="absolute rounded-lg bottom-0 flex justify-end w-full h-[40%] p-0 bg-gradient-to-t from-black to-transparent card-body"
   >
     <h2
-      class="self-center mb-0 md:mb-2 text-sm md:text-lg lg:text-3xl text-[#F1F1F1] card-title"
+      class="self-center mb-2 md:mb-4 text-md md:text-xl lg:text-4xl text-[#F1F1F1] card-title"
     >
       <slot />
     </h2>
