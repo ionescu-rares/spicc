@@ -55,12 +55,14 @@
       </div>
     {/each}
   </EmblaCarousel>
-  <div class="absolute flex justify-center w-full gap-3 pb-2 bottom-4">
+  <div
+    class="absolute flex items-center justify-center w-full gap-3 pb-2 bottom-4"
+  >
     {#each slides as _, index}
       <button
         on:click={() => embla?.scrollTo(index)}
         on:keydown={() => embla?.scrollTo(index)}
-        class={`rounded-full w-2 h-2 md:w-3 md:h-3 cursor-pointer ${current === index ? "bg-brand" : "bg-white"}`}
+        class={`rounded-full w-2 h-2 md:w-3 md:h-3 transition-all i cursor-pointer ${current === index ? "bg-brand w-3 h-3 md:w-4 md:h-4" : "bg-white"}`}
       />
     {/each}
   </div>
