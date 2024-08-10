@@ -37,7 +37,7 @@
 </script>
 
 <div
-  class={`${className} relative flex justify-center w-full`}
+  class={`${className} relative flex justify-center w-full skeleton`}
   role="contentinfo"
   on:mouseenter={() => (chevronsVisible = true)}
   on:mouseleave={() => (chevronsVisible = false)}
@@ -48,7 +48,7 @@
         <img
           src={slide}
           id={`${slide}-cover`}
-          class="object-cover w-full h-full rounded-lg"
+          class="object-cover w-full h-full"
           alt="photoshoot"
           draggable={false}
         />
