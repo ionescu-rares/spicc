@@ -7,9 +7,11 @@
 
   import informamSrc from "$lib/images/actiuni/siguranta-2022/3.jpg";
   import EmblaCarousel from "$lib/components/EmblaCarousel.svelte";
+  import Chevron from "$lib/components/chevron.svelte";
+  let embla;
 </script>
 
-<EmblaCarousel>
+<EmblaCarousel bind:embla>
   <div class="embla__slide">
     <FullImageCard
       imageSrc={educamSrc}
@@ -35,6 +37,20 @@
     >
   </div>
 </EmblaCarousel>
+<div class="hidden gap-2 mx-8 mt-2 md:flex">
+  <Chevron
+    onClick={() => embla?.scrollPrev()}
+    className="embla__button embla__button--prev"
+  >
+    {`<`}
+  </Chevron>
+  <Chevron
+    onClick={() => embla?.scrollNext()}
+    className="embla__button embla__button--next"
+  >
+    {`>`}
+  </Chevron>
+</div>
 
 <style>
   .embla__slide {
