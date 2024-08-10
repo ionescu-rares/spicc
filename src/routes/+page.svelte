@@ -36,36 +36,28 @@
       <p class="text-xl md:text-3xl text-[#82ac90]">voice of together</p>
     </div>
     <div
-      class="grid w-full grid-cols-8 grid-rows-2 gap-4 px-8 my-16 md:grid-rows-1 md:grid-cols-9"
+      class="grid w-full grid-cols-8 grid-rows-2 gap-8 px-8 my-16 md:grid-rows-1 md:grid-cols-9"
     >
       <FullImageCard
         className="col-start-1 col-end-5 md:col-start-1 md:col-end-4"
         imageSrc={educamSrc}
         onClick={() => goto("/ce-facem/educam")}
       >
-        <div class="flex flex-col items-center">
-          <Hat className="w-8 md:w-14" /> Educăm
-        </div></FullImageCard
+        <div class="flex items-center">Educăm</div></FullImageCard
       >
       <FullImageCard
         className="col-start-5 col-end-9 md:col-start-4 md:col-end-7"
         imageSrc={informamSrc}
         onClick={() => goto("/ce-facem/informam")}
       >
-        <div class="flex flex-col items-center">
-          <Info className="w-8 md:w-12" />
-
-          Informăm
-        </div></FullImageCard
+        <div class="flex items-center">Informăm</div></FullImageCard
       >
       <FullImageCard
         className="col-start-3 col-end-7 pl-[25%] row-start-2 md:row-start-1 md:col-start-7 md:col-end-10"
         imageSrc={capacitamSrc}
         onClick={() => goto("/ce-facem/capacitam")}
       >
-        <div class="flex flex-col items-center">
-          <Book className="w-8 md:w-12" />Capacităm
-        </div></FullImageCard
+        <div class="flex flex-col items-center">Capacităm</div></FullImageCard
       >
     </div>
   </section>

@@ -5,7 +5,7 @@
 </script>
 
 <div
-  class={`transition cursor-pointer no-padding card image-full hover:scale-105 ${className}`}
+  class={`transition cursor-pointer relative no-padding image-full hover:scale-105 ${className}`}
   on:keydown={onClick}
   on:click={onClick}
   role="button"
@@ -14,9 +14,11 @@
   <figure>
     <img src={imageSrc} alt="card background" class="rounded-md" />
   </figure>
-  <div class="flex justify-center p-0 card-body">
+  <div
+    class="absolute rounded-lg bottom-0 flex justify-end w-full h-[30%] p-0 bg-gradient-to-t from-black to-transparent card-body"
+  >
     <h2
-      class="self-center text-sm md:text-xl lg:text-4xl text-[#F1F1F1] card-title"
+      class="self-center mb-0 md:mb-2 text-lg md:text-xl lg:text-3xl text-[#F1F1F1] card-title"
     >
       <slot />
     </h2>
