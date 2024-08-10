@@ -63,7 +63,7 @@
   </div>
   {#if slides.length > 1}
     <Carousel
-      className="max-h-[300px] md:max-h-[600px] rounded-md mt-2 mb-4"
+      className="max-h-[300px] md:max-h-[600px] md:max-w-screen-lg rounded-md mt-2 mb-4"
       {slides}
     />
   {:else if slides.length === 1}

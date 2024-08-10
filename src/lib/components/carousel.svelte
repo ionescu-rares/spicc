@@ -1,106 +1,92 @@
 <script lang="ts">
   import Chevron from "$lib/components/chevron.svelte";
-  import { swipe, type SwipeCustomEvent } from "svelte-gestures";
-  import { onDestroy } from "svelte";
+  import { onDestroy, onMount } from "svelte";
+  import EmblaCarousel from "./EmblaCarousel.svelte";
 
   export let slides: string[] = [];
   export let className: string = "";
 
-  let direction;
-  let target;
-
-  function handleSwipe(event: SwipeCustomEvent) {
-    direction = event.detail.direction;
-    if (direction === "left") {
-      next();
-    }
-    if (direction === "right") {
-      prev();
-    }
-  }
-
-  let current = 0;
-  let autoPlay = true;
   let chevronsVisible = false;
-  function updateCurrentSlide(delta: number, jump = false) {
-    if (jump) {
-      current = delta;
-    } else {
-      current = (current + delta + slides.length) % slides.length;
+  let current = 0; // Initialize current slide index to 0
+  let embla;
+
+  let options = {
+    loop: true,
+    speed: 10,
+    align: "center",
+    containScroll: "trimSnaps",
+    dragFree: false, // Ensure snapping behavior
+  };
+
+  function updateCurrentSlide() {
+    const selectedSnap = embla.selectedScrollSnap();
+    if (current !== selectedSnap) {
+      current = selectedSnap; // Update the current slide index if it has changed
     }
   }
-  const stopAutoPlay = () => (autoPlay = false);
-  const prev = () => {
-    stopAutoPlay();
-    updateCurrentSlide(-1);
-  };
-  const next = () => {
-    stopAutoPlay();
-    updateCurrentSlide(1);
-  };
-  const jump = (index: number) => {
-    stopAutoPlay();
-    updateCurrentSlide(index, true);
-  };
-  let interval = setInterval(() => {
-    if (autoPlay) {
-      updateCurrentSlide(1);
-    }
-  }, 5000);
-  onDestroy(() => {
-    clearInterval(interval);
+
+  // Ensure embla is initialized before accessing its methods
+  onMount(() => {
+    embla.on("select", () => {
+      if (embla) {
+        updateCurrentSlide(); // Update current when a new slide is selected
+      }
+    });
   });
+
+  console.log("CURRENT", current);
 </script>
 
-<div class="flex justify-center w-full">
-  <div
-    class={`relative ${className} inline-flex w-full overflow-hidden`}
-    role="contentinfo"
-    use:swipe={{ timeframe: 400, minSwipeDistance: 10, touchAction: "pan-y" }}
-    on:swipe={handleSwipe}
-    on:mouseenter={() => (chevronsVisible = true)}
-    on:mouseleave={() => (chevronsVisible = false)}
-  >
-    <div
-      class={`inline-flex w-full transition ease-in-out skeleton duration-500  h-full`}
-      style={`transform: translateX(${-current * 100}%)`}
-    >
-      {#each slides as slide}
-        <div
-          class="flex flex-col items-center justify-center w-full h-full mx-auto slide"
-        >
-          <img
-            src={slide}
-            id={`${slide}-cover`}
-            class="object-cover w-full h-full"
-            alt="photoshoot"
-            draggable={false}
-          />
-        </div>
-      {/each}
-    </div>
-    <div
-      class={`absolute top-0 h-full w-full justify-between items-center hidden px-4 md:px-10 text-3xl ${chevronsVisible && "md:flex"}`}
-    >
-      <Chevron onClick={prev}>{`<`}</Chevron>
-      <Chevron onClick={next}>{`>`}</Chevron>
-    </div>
-
-    <div class="absolute flex justify-center w-full gap-3 pb-2 bottom-4">
-      {#each slides as _, index}
-        <button
-          on:click={() => jump(index)}
-          on:keydown={() => jump(index)}
-          class={`rounded-full w-2 h-2 md:w-3 md:h-3 cursor-pointer ${current === index ? "bg-brand" : "bg-white"}`}
+<div
+  class={`${className} relative flex justify-center w-full`}
+  role="contentinfo"
+  on:mouseenter={() => (chevronsVisible = true)}
+  on:mouseleave={() => (chevronsVisible = false)}
+>
+  <EmblaCarousel {options} bind:current bind:embla>
+    {#each slides as slide}
+      <div class="embla__slide">
+        <img
+          src={slide}
+          id={`${slide}-cover`}
+          class="object-cover w-full h-full rounded-lg"
+          alt="photoshoot"
+          draggable={false}
         />
-      {/each}
-    </div>
+      </div>
+    {/each}
+  </EmblaCarousel>
+  <div class="absolute flex justify-center w-full gap-3 pb-2 bottom-4">
+    {#each slides as _, index}
+      <button
+        on:click={() => embla?.scrollTo(index)}
+        on:keydown={() => embla?.scrollTo(index)}
+        class={`rounded-full w-2 h-2 md:w-3 md:h-3 cursor-pointer ${current === index ? "bg-brand" : "bg-white"}`}
+      />
+    {/each}
+  </div>
+  <div
+    class={`pointer-events-none absolute top-0 flex items-center justify-between hidden w-full h-full px-8 md:flex ${chevronsVisible ? "visible" : "invisible"}`}
+  >
+    <Chevron
+      onClick={() => embla?.scrollPrev()}
+      className="embla__button embla__button--prev pointer-events-auto"
+    >
+      {`<`}
+    </Chevron>
+    <Chevron
+      onClick={() => embla?.scrollNext()}
+      className="embla__button embla__button--next pointer-events-auto"
+    >
+      {`>`}
+    </Chevron>
   </div>
 </div>
 
 <style>
-  .slide {
+  .embla__slide {
     flex: 0 0 100%; /* Ensure each slide takes full width */
-    align-content: center;
+    min-width: 100%;
+    height: 100%;
   }
 </style>
