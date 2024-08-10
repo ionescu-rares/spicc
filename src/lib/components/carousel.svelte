@@ -7,7 +7,7 @@
   export let className: string = "";
 
   let chevronsVisible = false;
-  let current = 0; // Initialize current slide index to 0
+  let current = 0;
   let embla;
 
   let options = {
@@ -25,11 +25,10 @@
     }
   }
 
-  // Ensure embla is initialized before accessing its methods
   onMount(() => {
     embla.on("select", () => {
       if (embla) {
-        updateCurrentSlide(); // Update current when a new slide is selected
+        updateCurrentSlide();
       }
     });
   });
