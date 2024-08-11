@@ -53,7 +53,7 @@
       />
     </div>
     <div class="flex justify-end w-full">
-      <div class="items-end flex mx-8 md:mx-12 mt-24 max-w-[70ch]">
+      <div class="items-end flex mx-8 md:mx-12 mt-8 md:mt-24 max-w-[70ch]">
         <Typography>
           <strong>HerCity, Our Europe</strong> insistă asupra identității
           europene a timișorenilor, integrând cultura orașului în cea europeană
@@ -70,7 +70,7 @@
   <section class="flex flex-col">
     <img alt="compozitie" src={legoStraight} class="z-10 w-1/2 mt-8 md:-mt-8" />
     <div
-      class="grid w-full grid-cols-1 grid-rows-2 bg-white md:grid-rows-1 md:grid-cols-2"
+      class="flex flex-col w-full bg-white md:grid md:grid-rows-1 md:grid-cols-2"
     >
       <img
         alt="poza"
@@ -79,17 +79,13 @@
       />
 
       <div class="flex flex-col col-span-1 overflow-x-hidden">
-        <div class="flex w-full">
+        <div class="flex items-center w-full">
           <img
             src={legoStraight}
             alt="compozitie"
-            class="order-2 w-full h-48 md:w-1/3 md:order-1"
+            class="order-1 w-32 h-48 md:w-1/3"
           />
-          <img
-            src={logoBlack}
-            alt="logo"
-            class="order-1 h-48 ml:0 md:ml-16 md:order-2"
-          />
+          <img src={logoBlack} alt="logo" class="order-2 h-32 p-4 md:h-48" />
         </div>
         <div
           class="flex flex-col justify-between h-full m-8 md:mt-24 md:ml-24 text-slate-700"
@@ -110,7 +106,7 @@
     </div>
     <iframe
       src="https://her-city-map.vercel.app"
-      class="w-full h-[60vh] md:h-[80vh] px-4 xl:px-48 mt-8 md:mt-16"
+      class="w-full h-[60vh] md:h-[80vh] xl:px-32 mt-8 md:mt-16"
       title="her city map"
     />
   </section>
@@ -137,7 +133,11 @@
     </div>
   </section>
   <section>
-    <img src={legoBig} class="w-full h-full -mt-1" alt="lego" />
+    <img
+      src={legoBig}
+      class="hidden w-full h-full -mt-[1px] md:block"
+      alt="lego"
+    />
   </section>
   <section class="grid grid-cols-6 grid-rows-2 md:grid-rows-1 md:grid-cols-12">
     <div
@@ -159,7 +159,7 @@
     <div
       class="flex flex-col justify-between col-start-6 col-end-7 md:col-end-8 md:col-start-7"
     >
-      <img src={squareSrc} alt="lego" class="w-full" />
+      <img src={squareSrc} alt="lego" class="hidden w-full md:block" />
       <img src={dnbSrc} alt="dnb" class="self-end rotate-270" />
     </div>
     <div
@@ -179,14 +179,14 @@
       </Typography>
     </div>
   </section>
-  <section class="mt-8 md:mt-16">
+  <section class="my-8 md:my-16">
     <img
       src={centrulSrc}
       alt="Centrul de proiecte"
-      class="w-2/3 mx-4 md:w-1/3 md:mx-36"
+      class="w-full px-4 md:w-1/3 md:mx-36"
     />
   </section>
   <section class="w-full h-full">
-    <img src={footerSrc} alt="footer" class="w-full h-[80vh]" />
+    <img src={footerSrc} alt="footer" class="w-full h-[40vh] md:h-[80vh]" />
   </section>
 </div>
