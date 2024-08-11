@@ -75,7 +75,7 @@
       <img
         alt="poza"
         src={poza1}
-        class="w-[80%] md:-mt-2 -mt-[1px] align-self-start md:justify-self-end"
+        class="w-[90%] md:w-[80%] md:-mt-2 -mt-[1px] align-self-start md:justify-self-end"
       />
 
       <div class="flex flex-col col-span-1 overflow-x-hidden">
