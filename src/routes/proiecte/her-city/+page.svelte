@@ -114,8 +114,8 @@
     class="grid grid-cols-1 grid-rows-2 pt-8 overflow-hidden md:grid-rows-1 md:grid-cols-2 md:pt-24 md:pl-16 lg:pl-48"
   >
     <div class="m-8 md:m-0">
-      <img src={herEuropeSrc} alt="Her europe logo" />
-      <Typography className="max-w-[50ch] mt-24 text-slate-700"
+      <img src={herEuropeSrc} class="w-2/3" alt="Her europe logo" />
+      <Typography className="max-w-[50ch] mt-16 md:mt-24 text-slate-700"
         >HerEurope vizibilizează aportul femeilor la construcția europeană,
         prezentându-le publicului timișorean în cadrul unei expoziții virtuale,
         a unei reviste și a unui montaj video, menite să le omagieze viziunea și
@@ -141,7 +141,7 @@
   </section>
   <section class="grid grid-cols-6 grid-rows-2 md:grid-rows-1 md:grid-cols-12">
     <div
-      class="flex flex-col col-start-1 col-end-6 md:col-end-7 md:col-start-2"
+      class="flex flex-col col-start-1 col-end-6 row-start-2 md:row-start-1 md:col-end-7 md:col-start-2"
     >
       <img src={djSrc} alt="dj" class="w-full" />
       <div class="flex justify-between w-full">
@@ -157,13 +157,13 @@
       </div>
     </div>
     <div
-      class="flex flex-col justify-between col-start-6 col-end-7 md:col-end-8 md:col-start-7"
+      class="flex flex-col justify-between col-start-6 col-end-7 row-start-2 md:row-start-1 md:col-end-8 md:col-start-7"
     >
       <img src={squareSrc} alt="lego" class="hidden w-full md:block" />
       <img src={dnbSrc} alt="dnb" class="self-end rotate-270" />
     </div>
     <div
-      class="flex flex-col justify-center col-span-7 row-start-2 row-end-3 p-8 md:row-start-1 md:col-end-13 md:col-start-9"
+      class="flex flex-col justify-center col-span-7 row-start-1 p-8 md:row-start-1 md:col-end-13 md:col-start-9"
     >
       <img
         src={herPartySrc}
