@@ -97,9 +97,9 @@
             femeile cu trecutul și prezentul unei istorii și culturi urbane
             comune.
           </Typography>
-          <Typography
-            ><strong>din 20 august</strong> <br /> <br /> harta interactiva HerCity
-            accesibila aici:</Typography
+          <Typography variant="large" className="mt-8 md:mt-0"
+            ><strong>din 20 august</strong> <br /> harta interactiva HerCity accesibila
+            aici:</Typography
           >
         </div>
       </div>
