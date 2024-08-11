@@ -18,7 +18,7 @@
 </script>
 
 <div class="bg-white">
-  <section class="relative w-full h-[100vh]">
+  <section class="relative w-full h-[80vh] md:h-[100vh]">
     <img alt="her city banner" src={hero} class="object-cover w-full h-full" />
     <img
       alt="logo"
