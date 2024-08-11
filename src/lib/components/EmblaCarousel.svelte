@@ -1,11 +1,13 @@
 <script>
   import { onMount } from "svelte";
   import EmblaCarousel from "embla-carousel";
-  import Chevron from "./chevron.svelte";
+  import Autoplay from "embla-carousel-autoplay";
 
   export let embla;
   let viewport;
   export let current;
+  let autoplayInstance;
+  export let autoplay = true;
   // Embla options for partial visibility
   export let options = {
     loop: false,
@@ -15,13 +17,23 @@
     dragFree: true, // Allows dragging without snapping to each slide
   };
 
+  const autoplayOptions = {
+    delay: 4000,
+    stopOnInteraction: true,
+  };
+
   onMount(() => {
-    embla = EmblaCarousel(viewport, options);
+    autoplayInstance = Autoplay(autoplayOptions);
+    embla = EmblaCarousel(viewport, options, autoplay && [autoplayInstance]);
 
     return () => {
       embla.destroy();
     };
   });
+
+  export function stopAutoplay() {
+    autoplayInstance?.stop();
+  }
 </script>
 
 <div class="embla">

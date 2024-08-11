@@ -30,6 +30,7 @@
 		"dotenv": "^16.4.5",
 		"easymde": "^2.18.0",
 		"emailjs": "^4.0.3",
+		"embla-carousel-autoplay": "^8.1.8",
 		"embla-carousel-svelte": "^8.1.8",
 		"marked": "^13.0.2",
 		"mongoose": "^8.5.1",

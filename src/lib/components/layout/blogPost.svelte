@@ -67,7 +67,9 @@
       {slides}
     />
   {:else if slides.length === 1}
-    <div class="relative flex flex-col w-full my-4 overflow-hidden md:h-full">
+    <div
+      class="relative flex flex-col w-full my-2 overflow-hidden md:my-4 md:h-full"
+    >
       <img
         src={slides[0]}
         alt="cover"

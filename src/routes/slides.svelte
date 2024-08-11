@@ -11,7 +11,7 @@
   let embla;
 </script>
 
-<EmblaCarousel bind:embla>
+<EmblaCarousel bind:embla autoplay={false}>
   <div class="embla__slide">
     <FullImageCard
       imageSrc={educamSrc}

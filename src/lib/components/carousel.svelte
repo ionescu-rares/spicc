@@ -2,9 +2,12 @@
   import Chevron from "$lib/components/chevron.svelte";
   import { onDestroy, onMount } from "svelte";
   import EmblaCarousel from "./EmblaCarousel.svelte";
+  import Autoplay from "embla-carousel-autoplay";
 
   export let slides: string[] = [];
   export let className: string = "";
+
+  let stopAutoplay: () => {};
 
   let chevronsVisible = false;
   let current = 0;
@@ -25,6 +28,26 @@
     }
   }
 
+  const handleInteraction = (
+    direction: "prev" | "next" | "jump",
+    index?: number
+  ) => {
+    if (stopAutoplay) {
+      stopAutoplay(); // Ensure stopAutoplay is defined before calling
+    }
+    switch (direction) {
+      case "prev":
+        embla.scrollPrev();
+        break;
+      case "next":
+        embla.scrollNext();
+        break;
+      case "jump":
+        embla.scrollTo(index);
+        break;
+    }
+  };
+
   onMount(() => {
     embla.on("select", () => {
       if (embla) {
@@ -42,7 +65,7 @@
   on:mouseenter={() => (chevronsVisible = true)}
   on:mouseleave={() => (chevronsVisible = false)}
 >
-  <EmblaCarousel {options} bind:current bind:embla>
+  <EmblaCarousel {options} bind:current bind:embla bind:stopAutoplay>
     {#each slides as slide}
       <div class="embla__slide">
         <img
@@ -60,8 +83,8 @@
   >
     {#each slides as _, index}
       <button
-        on:click={() => embla?.scrollTo(index)}
-        on:keydown={() => embla?.scrollTo(index)}
+        on:click={() => handleInteraction("jump", index)}
+        on:keydown={() => handleInteraction("jump", index)}
         class={`rounded-full w-2 h-2 md:w-3 md:h-3 transition-all i cursor-pointer ${current === index ? "bg-brand w-3 h-3 md:w-4 md:h-4" : "bg-white"}`}
       />
     {/each}
@@ -70,13 +93,13 @@
     class={`pointer-events-none absolute top-0 flex items-center justify-between hidden w-full h-full px-8 md:flex ${chevronsVisible ? "visible" : "invisible"}`}
   >
     <Chevron
-      onClick={() => embla?.scrollPrev()}
+      onClick={() => handleInteraction("prev")}
       className="embla__button embla__button--prev pointer-events-auto"
     >
       {`<`}
     </Chevron>
     <Chevron
-      onClick={() => embla?.scrollNext()}
+      onClick={() => handleInteraction("next")}
       className="embla__button embla__button--next pointer-events-auto"
     >
       {`>`}
