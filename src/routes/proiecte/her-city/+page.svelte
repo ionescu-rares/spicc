@@ -106,7 +106,7 @@
     </div>
     <iframe
       src="https://her-city-map.vercel.app"
-      class="w-full h-[60vh] md:h-[80vh] xl:px-32 mt-8 md:mt-16"
+      class="w-full h-[70vh] md:h-[80vh] xl:px-32 mt-8 md:mt-16"
       title="her city map"
     />
   </section>
