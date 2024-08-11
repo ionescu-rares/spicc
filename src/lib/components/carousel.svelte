@@ -78,9 +78,7 @@
       </div>
     {/each}
   </EmblaCarousel>
-  <div
-    class="absolute flex items-center justify-center w-full gap-3 pb-2 bottom-4"
-  >
+  <div class="absolute flex items-center justify-center w-full gap-3 bottom-4">
     {#each slides as _, index}
       <button
         on:click={() => handleInteraction("jump", index)}
