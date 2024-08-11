@@ -135,7 +135,7 @@
   <section>
     <img
       src={legoBig}
-      class="hidden w-full h-full -mt-[1px] md:block"
+      class="hidden w-full h-full -mt-[1px] md:-mt-[4px] md:block"
       alt="lego"
     />
   </section>
