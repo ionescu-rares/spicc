@@ -23,7 +23,7 @@
     <img
       alt="logo"
       src={logo}
-      class="absolute top-0 left-0 right-0 mx-auto top-24 w-96"
+      class="absolute top-0 left-0 right-0 w-40 mx-auto top-12 md:top-24 md:w-96"
     />
   </section>
   <section class="flex flex-col w-full bg-white text-slate-700">
