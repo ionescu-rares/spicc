@@ -3,7 +3,7 @@
   import logo from "$lib/images/proiecte/her_city/her-city-logo.png";
   import lego1 from "$lib/images/proiecte/her_city/lego1.png";
   import legoStraight from "$lib/images/proiecte/her_city/legostraight.png";
-  import Typography from "$lib/components/font/Typography.svelte";
+  import Typography from "$lib/components/font/typography.svelte";
   import poza1 from "$lib/images/proiecte/her_city/poza1.jpg";
   import herEuropeSrc from "$lib/icons/her_europe.png";
   import logoBlack from "$lib/images/proiecte/her_city/logoBlack.png";
