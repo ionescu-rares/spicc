@@ -5,7 +5,6 @@
 
   export let embla;
   let viewport;
-  export let current;
   let autoplayInstance;
   export let isRounded = true;
   export let autoplay = true;
