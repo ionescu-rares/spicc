@@ -39,7 +39,7 @@
     <div class="grid grid-cols-2 gap-16">
       {#each sponsors as sponsor}
         <a href={sponsor.href} target="_blank">
-          <img alt="sponsor" src={sponsor.logo} class="max-h-24" />
+          <img alt="sponsor" src={sponsor.logo} class="max-h-16" />
         </a>
       {/each}
     </div>

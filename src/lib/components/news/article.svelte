@@ -11,10 +11,10 @@
 </script>
 
 <div
-  class={`flex flex-col article-grid max-h-auto text-start ${fullSize ? "no-max-height" : "with-max-height"} overflow-auto relative`}
+  class={`flex flex-col article-grid text-start ${fullSize ? "no-max-height" : "with-max-height"} overflow-auto relative`}
 >
   <div
-    class={`image-area h-full flex ${reversed ? "col-start-4 col-end-7" : "col-start-1 col-end-4"} sticky top-0`}
+    class={`image-area h-full flex ${reversed ? "col-start-4 col-end-7" : "col-start-1 col-end-4"} top-0`}
   >
     {#if src}
       <img

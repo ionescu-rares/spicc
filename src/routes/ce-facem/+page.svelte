@@ -13,7 +13,7 @@
 <PageLayout withSpacing>
   <SectionTitle variant="huge" title="Ce facem?" />
   <Article title="Educăm" src={educamSrc}>
-    <Typography
+    <Typography variant="large"
       >Promovăm prin educație drepturile femeilor, combatem inegalități,
       stereotipuri și discriminări de gen, dezvoltăm conștiința socială, abordăm
       probleme specifice femeilor, redefinim conceptele de masculinitate și
@@ -24,7 +24,7 @@
     /></Article
   >
   <Article title="Informăm" src={planSigurantaSrc} reversed
-    ><Typography
+    ><Typography variant="large"
       >Informarea este necesară pentru a conștientiza și înțelege inegalitățile
       și discriminarea de gen, pentru a găsi mijloacele adecvate de combatere a
       acestora, pentru a responsabiliza, implica și inspira membrii societății.
@@ -33,7 +33,7 @@
     /></Article
   >
   <Article title="Capacităm" src={capacitamSrc}
-    ><Typography>
+    ><Typography variant="large">
       Dezvoltăm competențe, cunoștințe și abilități necesare pentru a înțelege
       și promova egalitatea de gen, prin formare și training, conceperea și
       distribuirea resurselor și materialelor educaționale. Antamăm parteneriate

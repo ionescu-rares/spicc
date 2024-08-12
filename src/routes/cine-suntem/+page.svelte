@@ -5,18 +5,18 @@
   import viziuneSrc from "$lib/images/cine-suntem/viziune.jpg";
 </script>
 
-<PageLayout>
+<PageLayout withSpacing>
   <SectionTitle variant="huge" title="Cine suntem?" />
-  <p class="mt-16 text-lg leading-relaxed md:text-2xl">
+  <p class="text-lg leading-relaxed md:text-2xl">
     Suntem o asociație feministă, care militează împotriva discriminării de gen
     prin activism și advocacy și sprijină prin acțiunile sale egalitatea de
     șanse, emanciparea femeilor, educația și politicile publice sensibile la gen
     și incluziunea socială.
   </p>
   <div
-    class="flex flex-col mt-24 gap-y-8 lg:gap-y-0 lg:grid lg:grid-rows-6 lg:grid-cols-2 lg:gap-x-8 place-items-center text-start"
+    class="flex flex-col text-center gap-y-8 lg:gap-y-0 lg:grid lg:grid-rows-6 lg:grid-cols-2 lg:gap-x-8 place-items-center"
   >
-    <img src={misiuneSrc} alt="misiune" class="-start-1 lg:row-span-6" />
+    <img src={misiuneSrc} alt="misiune" class=" lg:row-span-6" />
     <h3 class="col-start-2 row-end-2 text-4xl font-bold">Misiune</h3>
     <p class="col-start-2 row-start-2 row-end-4 text-lg md:text-2xl">
       Dorim să construim un spațiu deschis participării și propunerilor tuturor
@@ -25,7 +25,7 @@
     </p>
   </div>
   <div
-    class="flex flex-col mt-24 gap-y-8 lg:gap-y-0 lg:grid lg:grid-rows-6 lg:grid-cols-2 lg:gap-x-8 place-items-center text-start"
+    class="flex flex-col mt-8 text-center gap-y-8 lg:gap-y-0 lg:grid lg:grid-rows-6 lg:grid-cols-2 lg:gap-x-8 place-items-center"
   >
     <img src={viziuneSrc} alt="viziune" class="row-span-6" />
     <h3 class="col-start-1 row-end-2 text-4xl font-bold">Viziune</h3>

@@ -14,6 +14,8 @@
   let embla;
   export let isRounded = true;
 
+  console.log("CURRENT", current);
+
   let options = {
     loop: true,
     speed: 10,
@@ -56,8 +58,6 @@
       }
     });
   });
-
-  console.log("CURRENT", current);
 </script>
 
 <div
@@ -66,13 +66,7 @@
   on:mouseenter={() => (chevronsVisible = true)}
   on:mouseleave={() => (chevronsVisible = false)}
 >
-  <EmblaCarousel
-    {options}
-    bind:current
-    bind:embla
-    bind:stopAutoplay
-    bind:isRounded
-  >
+  <EmblaCarousel {options} bind:embla bind:stopAutoplay bind:isRounded>
     {#each slides as slide}
       <div class="embla__slide">
         <img
