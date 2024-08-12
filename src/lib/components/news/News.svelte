@@ -14,7 +14,7 @@
 </script>
 
 <section
-  class="flex flex-col items-center gap-16 px-4 py-8 md:mb-16 md:px-8 bg-brand"
+  class="flex flex-col items-center gap-16 px-4 py-16 md:py-24 md:px-8 bg-brand"
 >
   <SectionTitle title={"Noutăți"} variant="huge" withSpacing={false} />
   <Article
