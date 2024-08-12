@@ -54,6 +54,7 @@
 <style>
   :global(.editor-toolbar) {
     background-color: white;
+    color: #64748b;
   }
 
   :global(.EasyMDEContainer) {
