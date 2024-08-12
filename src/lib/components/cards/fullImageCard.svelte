@@ -2,12 +2,15 @@
   export let imageSrc = "";
   export let className = "";
   export let onClick = () => {};
+  let isHovered = false;
 </script>
 
 <div
-  class={`cursor-pointer relative h-full image-full ${className}`}
+  class={`cursor-pointer relative h-full rounded-lg image-full ${className} overflow-hidden`}
   on:keydown={onClick}
   on:click={onClick}
+  on:mouseenter={() => (isHovered = true)}
+  on:mouseleave={() => (isHovered = false)}
   role="button"
   tabindex="0"
 >
@@ -15,7 +18,8 @@
     <img
       src={imageSrc}
       alt="card background"
-      class="object-cover w-full h-full rounded-lg"
+      class="object-cover w-full h-full overflow-hidden transition-all scale-100 rounded-lg"
+      class:scale={isHovered}
     />
   </figure>
   <div
@@ -32,5 +36,8 @@
 <style>
   .no-padding {
     padding: 0px !important;
+  }
+  .scale {
+    transform: scale(1.1);
   }
 </style>
