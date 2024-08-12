@@ -37,7 +37,7 @@
     >
   </div>
 </EmblaCarousel>
-<div class="hidden gap-2 mx-8 mt-2 md:flex">
+<div class="hidden gap-2 mx-8 mt-2 md:flex xl:hidden">
   <Chevron
     onClick={() => embla?.scrollPrev()}
     className="embla__button embla__button--prev"
@@ -61,9 +61,15 @@
   }
   @media (min-width: 640px) {
     .embla__slide {
-      flex: 0 0 45%;
-      min-width: 45%;
-      padding: 0 24px;
+      flex: 0 0 38%;
+      min-width: 38%;
+      padding: 0 16px;
+    }
+  }
+  @media (min-width: 1025px) {
+    .embla__slide {
+      flex: 0 0 33%;
+      min-width: 33%;
     }
   }
 </style>
