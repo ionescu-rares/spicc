@@ -61,12 +61,12 @@
   }
   @media (min-width: 640px) {
     .embla__slide {
-      flex: 0 0 38%;
-      min-width: 38%;
+      flex: 0 0 44%;
+      min-width: 44%;
       padding: 0 16px;
     }
   }
-  @media (min-width: 1025px) {
+  @media (min-width: 1280px) {
     .embla__slide {
       flex: 0 0 33%;
       min-width: 33%;
