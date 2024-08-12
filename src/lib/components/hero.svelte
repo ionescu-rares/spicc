@@ -58,7 +58,7 @@
 </script>
 
 <section class="relative flex w-full h-[50vh] md:h-[100svh]">
-  <Carousel {slides} />
+  <Carousel {slides} isRounded={false} />
   <button
     id="scroll-down-button"
     on:click={handleClick}

@@ -3,7 +3,7 @@
   import logo from "$lib/images/proiecte/her_city/her-city-logo.png";
   import lego1 from "$lib/images/proiecte/her_city/lego1.png";
   import legoStraight from "$lib/images/proiecte/her_city/legostraight.png";
-  import Typography from "$lib/components/font/typography.svelte";
+  import Typography from "$lib/components/font/Typography.svelte";
   import poza1 from "$lib/images/proiecte/her_city/poza1.jpg";
   import herEuropeSrc from "$lib/icons/her_europe.png";
   import logoBlack from "$lib/images/proiecte/her_city/logoBlack.png";
@@ -29,9 +29,9 @@
   <section class="flex flex-col w-full bg-white text-slate-700">
     <div class="flex flex-col justify-between w-full md:flex-row">
       <div
-        class="max-w-[70ch] mt-16 md:mt-auto flex items-center mx-8 md:mx-16 md:order-1 order-2"
+        class="max-w-[70ch] md:mt-auto flex items-center mx-8 md:mx-16 md:order-1 order-2"
       >
-        <Typography>
+        <Typography variant="large" className="md:mt-16">
           <strong> Her City, Our Europe</strong> cercetează trecutul feminin,
           luminându-i realizările neștiute, completând și nuanțând astfel o
           istorie comună.
@@ -54,7 +54,7 @@
     </div>
     <div class="flex justify-end w-full">
       <div class="items-end flex mx-8 md:mx-12 mt-8 md:mt-24 max-w-[70ch]">
-        <Typography>
+        <Typography variant="large">
           <strong>HerCity, Our Europe</strong> insistă asupra identității
           europene a timișorenilor, integrând cultura orașului în cea europeană
           și îmbogățindu-le pe ambele cu o perspectivă feminină asupra lor.
@@ -90,14 +90,14 @@
         <div
           class="flex flex-col justify-between h-full m-8 md:mt-24 md:ml-24 text-slate-700"
         >
-          <Typography className="max-w-[50ch]">
+          <Typography variant="large" className="max-w-[50ch]">
             În spatele imaginii convenționale, Timișoara ascunde profiluri
             neexplorate și istorii încă nedezvăluite. HerCity va oferi o imagine
             alternativă a orașului, un itinerariu feminin, care va reconecta
             femeile cu trecutul și prezentul unei istorii și culturi urbane
             comune.
           </Typography>
-          <Typography variant="large" className="mt-8 md:mt-0"
+          <Typography variant="xl" className="mt-8 md:mt-0"
             ><strong>din 20 august</strong> <br /> harta interactiva HerCity accesibila
             aici:</Typography
           >
@@ -115,7 +115,9 @@
   >
     <div class="m-8 md:m-0">
       <img src={herEuropeSrc} class="w-2/3" alt="Her europe logo" />
-      <Typography className="max-w-[50ch] mt-16 md:mt-24 text-slate-700"
+      <Typography
+        variant="large"
+        className="max-w-[50ch] mt-16 md:mt-24 text-slate-700"
         >HerEurope vizibilizează aportul femeilor la construcția europeană,
         prezentându-le publicului timișorean în cadrul unei expoziții virtuale,
         a unei reviste și a unui montaj video, menite să le omagieze viziunea și
@@ -145,7 +147,7 @@
     >
       <img src={djSrc} alt="dj" class="w-full" />
       <div class="flex justify-between w-full">
-        <Typography className="text-slate-700 m-2"
+        <Typography variant="large" className="text-slate-700 m-2"
           ><p class="text-xl font-bold">28 octombrie</p>
           <br />eveniment muzical HerParty
           <br />
@@ -170,7 +172,7 @@
         alt="her party logo "
         class="w-2/3 mb-8 md:mb-24"
       />
-      <Typography className="max-w-[50ch] text-slate-700">
+      <Typography variant="large" className="max-w-[50ch] text-slate-700">
         Celebrăm, recunoaștem și onorăm prin HerParty energia, curajul și
         motivarea tuturor predecesoarelor noastre, ale căror experiențe ne
         întregesc biografia comună.<br /> <br /> Evenimentul muzical artistic este

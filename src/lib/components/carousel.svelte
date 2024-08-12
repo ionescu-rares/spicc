@@ -12,6 +12,7 @@
   let chevronsVisible = false;
   let current = 0;
   let embla;
+  export let isRounded = true;
 
   let options = {
     loop: true,
@@ -60,12 +61,18 @@
 </script>
 
 <div
-  class={`${className} relative flex justify-center w-full skeleton`}
+  class={`${className} relative flex justify-center w-full skeleton ${isRounded ? "rounded-md" : ""}`}
   role="contentinfo"
   on:mouseenter={() => (chevronsVisible = true)}
   on:mouseleave={() => (chevronsVisible = false)}
 >
-  <EmblaCarousel {options} bind:current bind:embla bind:stopAutoplay>
+  <EmblaCarousel
+    {options}
+    bind:current
+    bind:embla
+    bind:stopAutoplay
+    bind:isRounded
+  >
     {#each slides as slide}
       <div class="embla__slide">
         <img

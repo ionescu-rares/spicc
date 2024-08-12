@@ -7,6 +7,7 @@
   let viewport;
   export let current;
   let autoplayInstance;
+  export let isRounded = true;
   export let autoplay = true;
   // Embla options for partial visibility
   export let options = {
@@ -36,9 +37,9 @@
   }
 </script>
 
-<div class="embla">
+<div class="embla" class:rounded-border={isRounded}>
   <div class="embla__viewport" bind:this={viewport}>
-    <div class=" embla__container">
+    <div class="embla__container">
       <slot />
     </div>
   </div>
@@ -56,10 +57,13 @@
     height: 100%;
   }
 
+  .rounded-border {
+    border-radius: 6px;
+  }
+
   .embla__container {
     display: flex;
     width: "100%";
-    border-radius: 10px;
     height: 100%;
   }
 </style>
