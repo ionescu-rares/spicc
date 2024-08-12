@@ -45,16 +45,6 @@
 <section
   class="relative flex flex-col items-center w-full h-full p-4 overflow-hidden bg-white lg:p-16"
 >
-  <img
-    src={first}
-    alt="woman"
-    class="absolute w-64 -right-4 top-24 xl:top-[auto] lg:invisible xl:visible lg:-bottom-8 lg:-left-16 2xl:left-0 lg:w-96"
-  />
-  <img
-    src={second}
-    alt="man"
-    class="absolute right-0 invisible w-64 xl:visible lg:-bottom-8 2xl:right-0 -right-16 lg:w-96"
-  />
   <SectionTitle title="Contactează-ne" className="text-slate-700" />
   <div class="z-10 flex flex-col w-full max-w-screen-lg">
     <form
@@ -69,7 +59,7 @@
           type="text"
           placeholder="Nume Prenume"
           name="name"
-          class="w-1/2 bg-white md:w-2/3 lg:w-full input focus:outline-slate-700 focus:border-none input-bordered border-slate-400 text-slate-700"
+          class="w-full bg-white input focus:outline-slate-700 focus:border-none input-bordered border-slate-400 text-slate-700"
           required
         />
       </label>
@@ -82,7 +72,7 @@
           placeholder="Adresa de email"
           name="email"
           type="email"
-          class="w-1/2 bg-white md:w-2/3 lg:w-full input focus:outline-slate-700 focus:border-none input-bordered border-slate-400 text-slate-700"
+          class="w-full bg-white input focus:outline-slate-700 focus:border-none input-bordered border-slate-400 text-slate-700"
         />
       </label>
       <!-- svelte-ignore a11y-label-has-associated-control -->

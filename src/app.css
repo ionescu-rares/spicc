@@ -5,12 +5,14 @@
 html {
     height: 100%;
     overflow: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 :root {
     --font-exo-2: 'Exo 2', sans-serif;
-
 }
+
 
 body {
     color: #F1F1F1;

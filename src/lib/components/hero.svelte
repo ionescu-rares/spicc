@@ -8,9 +8,10 @@
   import sixth from "$lib/images/6.jpg";
   import seventh from "$lib/images/7.jpg";
   import eighth from "$lib/images/8.jpg";
-  import { afterUpdate } from "svelte";
+  import { afterUpdate, onMount } from "svelte";
   import nineth from "$lib/images/9.jpg";
   import { onDestroy } from "svelte";
+
   const slides = [
     second,
     seventh,
@@ -22,13 +23,20 @@
     nineth,
     fourth,
   ];
+
+  let hero: HTMLElement | null = null;
+  let hasScrolled = false; // Flag to track if the scroll has happened
+
   const handleClick = () => {
     window.scrollTo({
       top: window.innerHeight,
       behavior: "smooth",
     });
+    hasScrolled = true; // Set flag after scroll
   };
+
   let animateButton = false;
+
   const triggerAnimation = () => {
     animateButton = true;
     setTimeout(() => {
@@ -46,18 +54,32 @@
     onDestroy(() => clearInterval(toggleBounce));
   }, 7000);
 
-  afterUpdate(() => {
-    window.addEventListener("scroll", () => {
-      animateButton = false;
-      clearInterval(toggleBounce);
-      clearTimeout(initialDelay);
-    });
+  onMount(() => {
+    if (!hasScrolled) {
+      // Only add the scroll event listener if it hasn't scrolled yet
+      window.addEventListener("scroll", handleScroll);
+    }
   });
 
-  onDestroy(() => clearTimeout(initialDelay));
+  const handleScroll = () => {
+    const heroSize = hero?.getBoundingClientRect();
+    if (!hasScrolled && heroSize) {
+      window.scrollTo({
+        top: heroSize.bottom,
+        behavior: "smooth",
+      });
+      hasScrolled = true; // Set flag after scroll
+      window.removeEventListener("scroll", handleScroll); // Remove event listener after the first scroll
+    }
+  };
+
+  onDestroy(() => {
+    clearTimeout(initialDelay);
+    hero?.removeEventListener("scroll", handleScroll);
+  });
 </script>
 
-<section class="relative flex w-full h-[50vh] md:h-[100svh]">
+<section class="relative flex w-full h-[50vh] md:h-[100svh]" bind:this={hero}>
   <Carousel {slides} isRounded={false} />
   <button
     id="scroll-down-button"
