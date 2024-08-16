@@ -6,7 +6,7 @@
 </script>
 
 <div
-  class={`cursor-pointer relative h-full rounded-lg image-full ${className} overflow-hidden`}
+  class={`cursor-pointer relative h-full rounded-lg skeleton image-full ${className} overflow-hidden`}
   on:keydown={onClick}
   on:click={onClick}
   on:mouseenter={() => (isHovered = true)}
