@@ -19,11 +19,16 @@
   import bannerSrc from "$lib/images/proiecte/her_city/her_europe/Banner.jpg";
   import { goto } from "$app/navigation";
   import HeroSection from "./HeroSection.svelte";
+  import { fly } from "svelte/transition";
 </script>
 
-<div class="bg-white">
+<div
+  class="bg-white"
+  in:fly={{ y: -50, duration: 250, delay: 300 }}
+  out:fly={{ y: -50, duration: 250 }}
+>
   <HeroSection bannerSrc={hero} logoSrc={logo}>
-    <div class="absolute grid w-full grid-cols-3 bottom-16 left-16">
+    <div class="absolute grid w-full grid-cols-3 bottom-[30%] left-16">
       <FullImageCard
         onClick={() => goto("/proiecte/her-city/her-europe")}
         className="col-start-1 col-end-2"

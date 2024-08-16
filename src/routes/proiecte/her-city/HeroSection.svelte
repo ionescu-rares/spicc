@@ -4,11 +4,7 @@
   export let logoSrc = "";
 </script>
 
-<section
-  in:fly={{ y: -50, duration: 250, delay: 300 }}
-  out:fly={{ y: -50, duration: 250 }}
-  class="relative w-full overflow-hidden"
->
+<section class="relative w-full overflow-hidden">
   <img
     alt="her city banner"
     src={bannerSrc}

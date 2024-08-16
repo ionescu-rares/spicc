@@ -10,16 +10,19 @@
   import womanSrc from "$lib/images/proiecte/her_city/her_europe/04.jpg";
   import Divider from "./divider.svelte";
   import footerSrc from "$lib/images/proiecte/her_city/her_europe/05.png";
+  import { fly } from "svelte/transition";
 </script>
 
-<div class="bg-white text-slate-700">
+<div
+  class="bg-white text-slate-700"
+  in:fly={{ y: -50, duration: 250, delay: 300 }}
+  out:fly={{ y: -50, duration: 250 }}
+>
   <HeroSection {bannerSrc} logoSrc={herEuropeReversed} />
   <section
-    class="flex flex-col gapx-8lg:gap-0 lg:grid lg:grid-cols-3 lg:grid-rows-2"
+    class="flex flex-col gap-8 lg:gap-0 lg:grid lg:grid-cols-3 lg:grid-rows-2"
   >
-    <Typography
-      className="lg:col-start-1 mt-64 sm:mt-96 lg:mt-0  lg:col-end-2 m-8 lg:m-24 row-span-1"
-    >
+    <Typography className="lg:col-start-1  lg:col-end-2 m-24  row-span-1">
       <strong>HerEurope</strong> vizibilizează aportul femeilor la construcția europeană,
       prezentându-le publicului timișorean în cadrul unei expoziții virtuale, a unei
       reviste și a unui montaj video, menite să le omagieze viziunea și visele despre
