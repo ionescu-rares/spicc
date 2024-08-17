@@ -30,13 +30,13 @@
         />
       </a>
       <div class="hidden lg:block">
-        <ul class="rounded-full menu menu-horizontal blend">
+        <ul class="rounded-full menu menu-horizontal backdrop-filter">
           <!-- Navbar content here -->
           {#each paths as path}
             <li class="text-lg blend">
               <a
                 href={path.url}
-                class={`${$page.url.pathname === path.url && "font-extrabold"}`}
+                class={`${$page.url.pathname === path.url && "font-bold"}`}
                 >{path.label}</a
               >
             </li>
@@ -81,8 +81,5 @@
   }
   .backdrop-filter {
     backdrop-filter: blur(100px);
-  }
-  .blend {
-    mix-blend-mode: difference;
   }
 </style>
