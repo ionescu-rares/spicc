@@ -119,13 +119,13 @@
         allowtransparency
       />
       <div
-        class={`${showOverlay ? "flex" : "hidden"} flex-col items-center justify-center blur-overlay`}
+        class={`${showOverlay ? "flex" : "hidden"} flex-col items-center  justify-center blur-overlay`}
         role="button"
         tabindex={0}
         on:keydown={handleOverlayClick}
         on:click={handleOverlayClick}
       >
-        <Preview />
+        <Preview className="w-32 h-32 md:h-64 md:w-64" />
         <Typography variant="xl" className="text-slate-700"
           >Apasă pentru a vizualiza harta</Typography
         >
