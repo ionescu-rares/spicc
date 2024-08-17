@@ -1,19 +1,18 @@
-<script>
+<script lang="ts">
   import { onMount } from "svelte";
   import EmblaCarousel from "embla-carousel";
   import Autoplay from "embla-carousel-autoplay";
+  import type { EmblaCarouselSvelteType } from "embla-carousel-svelte";
 
-  export let embla;
-  let viewport;
-  let autoplayInstance;
+  export let embla: EmblaCarouselSvelteType;
+  let viewport: HTMLElement;
+  let autoplayInstance: any;
   export let isRounded = true;
   export let autoplay = true;
   // Embla options for partial visibility
   export let options = {
     loop: false,
     speed: 10,
-    align: "center",
-    containScroll: "trimSnaps",
     dragFree: true, // Allows dragging without snapping to each slide
   };
 
@@ -24,10 +23,16 @@
 
   onMount(() => {
     autoplayInstance = Autoplay(autoplayOptions);
-    embla = EmblaCarousel(viewport, options, autoplay && [autoplayInstance]);
+    embla = EmblaCarousel(
+      viewport,
+      options,
+      autoplay ? [autoplayInstance] : undefined
+    );
 
     return () => {
-      embla.destroy();
+      if (embla.destroy) {
+        embla.destroy();
+      }
     };
   });
 

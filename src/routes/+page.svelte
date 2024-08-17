@@ -9,8 +9,14 @@
   import SectionTitle from "$lib/components/typography/sectionTitle.svelte";
   import Hero from "$lib/components/hero.svelte";
 
+  import capacitamSrc from "$lib/images/ce-facem/capacitam.jpg";
+  import educamSrc from "$lib/images/ce-facem/educam.jpg";
+
+  import informamSrc from "$lib/images/actiuni/siguranta-2022/3.jpg";
   import Logo from "./logo.svelte";
   import Slides from "./slides.svelte";
+  import FullImageCard from "$lib/components/cards/fullImageCard.svelte";
+  import { goto } from "$app/navigation";
 
   const sponsors = [
     { logo: lauralaurentiu, href: "https://lauralaurentiu.ro/" },
@@ -29,7 +35,32 @@
   <section class="pt-8">
     <Logo />
 
-    <Slides />
+    <Slides>
+      <div class="embla__slide">
+        <FullImageCard
+          imageSrc={educamSrc}
+          onClick={() => goto("/ce-facem/educam")}
+        >
+          Educăm</FullImageCard
+        >
+      </div>
+      <div class="embla__slide">
+        <FullImageCard
+          imageSrc={informamSrc}
+          onClick={() => goto("/ce-facem/informam")}
+        >
+          Informăm</FullImageCard
+        >
+      </div>
+      <div class="embla__slide">
+        <FullImageCard
+          imageSrc={capacitamSrc}
+          onClick={() => goto("/ce-facem/capacitam")}
+        >
+          Capacităm</FullImageCard
+        >
+      </div></Slides
+    >
   </section>
   <News />
   <section
@@ -54,3 +85,25 @@
     </div>
   </section>
 </main>
+
+<style>
+  .embla__slide {
+    position: relative;
+    flex: 0 0 70%; /* Each slide takes 80% of the viewport width */
+    min-width: 70%; /* Ensures the slides do not shrink */
+    padding: 0 8px;
+  }
+  @media (min-width: 640px) {
+    .embla__slide {
+      flex: 0 0 44%;
+      min-width: 44%;
+      padding: 0 16px;
+    }
+  }
+  @media (min-width: 1280px) {
+    .embla__slide {
+      flex: 0 0 33%;
+      min-width: 33%;
+    }
+  }
+</style>

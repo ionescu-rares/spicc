@@ -31,7 +31,7 @@
     <img
       src={legoHorizontal}
       alt="lego"
-      class="absolute block w-full lg:hidden"
+      class="absolute block w-1/3 lg:hidden"
     />
     <Divider className="lg:hidden" />
     <Typography className="lg:col-start-1 lg:col-end-2 m-8 lg:m-24 row-start-2">
