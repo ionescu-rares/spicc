@@ -2,15 +2,12 @@
   import EmblaCarousel from "$lib/components/EmblaCarousel.svelte";
   import Chevron from "$lib/components/chevron.svelte";
   let embla;
-  export let showChevronsAlways = false;
 </script>
 
 <EmblaCarousel bind:embla autoplay={false} isRounded={false}>
   <slot />
 </EmblaCarousel>
-<div
-  class={`hidden gap-2 mx-8 mt-2 md:flex xl:${showChevronsAlways ? "flex" : "hidden"}`}
->
+<div class={`hidden gap-2 mx-8 mt-2 md:flex xl:hidden `}>
   <Chevron
     onClick={() => embla?.scrollPrev()}
     className="embla__button embla__button--prev"
