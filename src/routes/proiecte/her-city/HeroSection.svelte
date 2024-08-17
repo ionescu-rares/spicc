@@ -1,8 +1,8 @@
 <script lang="ts">
+  import { afterNavigate } from "$app/navigation";
   export let bannerSrc = "";
   export let logoSrc = "";
   import { page } from "$app/stores";
-  import { onMount } from "svelte";
 
   let hasScrolled = false;
   let hero: HTMLElement | null = null;
@@ -25,7 +25,7 @@
     window.removeEventListener("scroll", handleScroll);
   };
 
-  onMount(() => {
+  afterNavigate(() => {
     if (!hasScrolled) {
       // Only add the scroll event listener if it hasn't scrolled yet
       window.addEventListener("scroll", handleScroll);

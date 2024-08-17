@@ -28,7 +28,7 @@
   <section class="flex flex-col w-full bg-white text-slate-700">
     <div class="flex flex-col justify-between w-full md:flex-row">
       <div
-        class="max-w-[70ch] mt-8 md:mt-auto flex items-center mx-8 md:mx-16 md:order-1 order-2"
+        class="max-w-[70ch] mt-16 md:mt-auto flex items-center mx-8 md:mx-16 md:order-1 order-2"
       >
         <Typography variant="large" className="md:mt-16">
           <strong> Her City, Our Europe</strong> cercetează trecutul feminin,

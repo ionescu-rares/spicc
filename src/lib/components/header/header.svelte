@@ -20,7 +20,7 @@
   <div class="relative flex flex-col drawer-content">
     <!-- Navbar -->
     <div
-      class={`flex absolute top-0 items-center  justify-between w-full px-4 md:px-8 py-0 transparent-navbar navbar`}
+      class={`flex absolute top-0 items-center  justify-between w-full px-4 md:px-8 py-0  navbar`}
     >
       <a href="/" class="py-2">
         <img
@@ -30,10 +30,10 @@
         />
       </a>
       <div class="hidden lg:block">
-        <ul class="rounded-full menu menu-horizontal backdrop-filter">
+        <ul class="rounded-full menu menu-horizontal blend">
           <!-- Navbar content here -->
           {#each paths as path}
-            <li class="text-lg">
+            <li class="text-lg blend">
               <a
                 href={path.url}
                 class={`${$page.url.pathname === path.url && "font-extrabold"}`}
@@ -81,5 +81,8 @@
   }
   .backdrop-filter {
     backdrop-filter: blur(100px);
+  }
+  .blend {
+    mix-blend-mode: difference;
   }
 </style>
