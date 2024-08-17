@@ -25,7 +25,10 @@
   <section
     class="flex flex-col w-full mx-auto md:grid md:grid-cols-2 max-w-screen-2xl"
   >
-    <Typography variant="large" className="max-w-[50ch] m-24 self-center">
+    <Typography
+      variant="large"
+      className="max-w-[50ch] m-8 md:m-24 self-center"
+    >
       <strong> HerParty</strong> celebrează curajul, îndrăzneala și viziunea predecesoarelor
       noastre și rădăcina comună a experiențelor noastre feminine, printr-un eveniment
       artistic muzical susținut de către femei temerare, care au abordat domenii
@@ -52,18 +55,22 @@
       <img
         src={herSrc}
         alt="her"
-        class="absolute left-0 w-32 -top-16 md:w-96 md:-top-32"
+        class="absolute w-32 left-2 -top-12 md:w-96 md:-top-32"
       />
       <img
         src={partySrc}
         alt="party"
-        class="absolute right-0 md:w-24 w-8 bottom-[105%]"
+        class="absolute right-2 md:w-24 w-8 bottom-[105%]"
       />
     </div>
   </section>
   <div class="flex w-full">
-    <img src={secondLego} alt="compozitie" class="w-1/2 pr-16 -mt-32 h-96" />
-    <img src={dnbSrc} alt="dnb" class="h-64" />
+    <img
+      src={secondLego}
+      alt="compozitie"
+      class="w-1/2 h-64 pr-16 -mt-32 md:h-96"
+    />
+    <img src={dnbSrc} alt="dnb" class="self-center h-32 md:h-64" />
   </div>
   <section class="relative flex flex-col md:grid md:grid-cols-2">
     <Typography className="max-w-[70ch] p-8 md:p-24" variant="large"

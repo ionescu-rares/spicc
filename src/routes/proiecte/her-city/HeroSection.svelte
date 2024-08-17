@@ -34,7 +34,7 @@
 </script>
 
 <section
-  class="relative w-full overflow-hidden text-[#F1F1F1] h-[60vh] md:h-full"
+  class="relative w-full overflow-hidden text-[#F1F1F1] h-[70vh] md:h-full"
   bind:this={hero}
 >
   <img
