@@ -22,17 +22,13 @@
   <section
     class="flex flex-col gap-8 lg:gap-0 lg:grid lg:grid-cols-3 lg:grid-rows-2"
   >
-    <Typography className="lg:col-start-1  lg:col-end-2 m-24  row-span-1">
+    <Typography className="lg:col-start-1  lg:col-end-2 m-8  row-span-1">
       <strong>HerEurope</strong> vizibilizează aportul femeilor la construcția europeană,
       prezentându-le publicului timișorean în cadrul unei expoziții virtuale, a unei
       reviste și a unui montaj video, menite să le omagieze viziunea și visele despre
       o Europă democratică, solidară și, mai ales, unită de o cultură comună.</Typography
     >
-    <img
-      src={legoHorizontal}
-      alt="lego"
-      class="absolute block w-1/3 lg:hidden"
-    />
+
     <Divider className="lg:hidden" />
     <Typography className="lg:col-start-1 lg:col-end-2 m-8 lg:m-24 row-start-2">
       <Typography variant="xl" bold>Ziarul HerManifest</Typography><br />Ziarul

@@ -15,9 +15,6 @@
   import herPartySrc from "$lib/images/proiecte/her_city/Her-Party.png";
   import centrulSrc from "$lib/images/proiecte/her_city/Centrul-de-proiecte.png";
   import footerSrc from "$lib/images/proiecte/her_city/compozitie_footer.png";
-  import FullImageCard from "$lib/components/cards/fullImageCard.svelte";
-  import bannerSrc from "$lib/images/proiecte/her_city/her_europe/Banner.jpg";
-  import { goto } from "$app/navigation";
   import HeroSection from "./HeroSection.svelte";
   import { fly } from "svelte/transition";
 </script>
@@ -27,15 +24,7 @@
   in:fly={{ y: -50, duration: 250, delay: 300 }}
   out:fly={{ y: -50, duration: 250 }}
 >
-  <HeroSection bannerSrc={hero} logoSrc={logo}>
-    <div class="absolute grid w-full grid-cols-3 bottom-[30%] left-16">
-      <FullImageCard
-        onClick={() => goto("/proiecte/her-city/her-europe")}
-        className="col-start-1 col-end-2"
-        imageSrc={bannerSrc}>Her Europe</FullImageCard
-      >
-    </div>
-  </HeroSection>
+  <HeroSection bannerSrc={hero} logoSrc={logo}></HeroSection>
   <section class="flex flex-col w-full bg-white text-slate-700">
     <div class="flex flex-col justify-between w-full md:flex-row">
       <div
