@@ -1,8 +1,11 @@
-<script>
+<script lang="ts">
   export let bannerSrc = "";
   export let logoSrc = "";
   import { page } from "$app/stores";
+  import { onMount } from "svelte";
 
+  let hasScrolled = false;
+  let hero: HTMLElement | null = null;
   let paths = [
     {
       url: "/proiecte/her-city",
@@ -13,9 +16,27 @@
   ];
   $: currentPath = $page.url.pathname;
   $: filteredPaths = paths.filter((path) => currentPath !== path.url);
+  const handleScroll = () => {
+    window.scrollTo({
+      top: hero?.getBoundingClientRect().bottom,
+      behavior: "smooth",
+    });
+    hasScrolled = true;
+    window.removeEventListener("scroll", handleScroll);
+  };
+
+  onMount(() => {
+    if (!hasScrolled) {
+      // Only add the scroll event listener if it hasn't scrolled yet
+      window.addEventListener("scroll", handleScroll);
+    }
+  });
 </script>
 
-<section class="relative w-full overflow-hidden text-[#F1F1F1]">
+<section
+  class="relative w-full overflow-hidden text-[#F1F1F1] h-[60vh] md:h-full"
+  bind:this={hero}
+>
   <img
     alt="her city banner"
     src={bannerSrc}
