@@ -97,8 +97,11 @@
             comune.
           </Typography>
           <Typography variant="xl" className="mt-8 md:mt-0"
-            ><strong>din 20 august</strong> <br /> harta interactiva HerCity accesibila
-            aici:</Typography
+            ><strong>din 20 august</strong> <br /> harta interactivă HerCity
+            accesibilă
+            <a href="https://her-city-map.vercel.app" class="link">
+              aici</a
+            ></Typography
           >
         </div>
       </div>

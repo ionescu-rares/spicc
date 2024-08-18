@@ -18,19 +18,24 @@
   $: currentPath = $page.url.pathname;
   $: filteredPaths = paths.filter((path) => currentPath !== path.url);
   const handleScroll = () => {
-    window.scrollTo({
-      top: hero?.getBoundingClientRect().bottom,
-      behavior: "smooth",
-    });
+    if (hero && window.scrollY < hero.getBoundingClientRect().bottom) {
+      window.scrollTo({
+        top: hero.getBoundingClientRect().bottom,
+        behavior: "smooth",
+      });
+    }
     hasScrolled = true;
     window.removeEventListener("scroll", handleScroll);
   };
 
   afterNavigate(() => {
-    if (!hasScrolled) {
-      // Only add the scroll event listener if it hasn't scrolled yet
-      window.addEventListener("scroll", handleScroll);
-    }
+    window.scrollTo({ top: 0 });
+
+    setTimeout(() => {
+      if (!hasScrolled && window.scrollY <= 10) {
+        window.addEventListener("scroll", handleScroll);
+      }
+    }, 0);
   });
 </script>
 

@@ -55,10 +55,13 @@
   }, 7000);
 
   onMount(() => {
-    if (!hasScrolled) {
-      // Only add the scroll event listener if it hasn't scrolled yet
-      window.addEventListener("scroll", handleScroll);
-    }
+    window.scrollTo({ top: 0 });
+
+    setTimeout(() => {
+      if (!hasScrolled && window.scrollY <= 10) {
+        window.addEventListener("scroll", handleScroll);
+      }
+    }, 0);
   });
 
   const handleScroll = () => {

@@ -1,4 +1,6 @@
 <script>
+  import centrulSrc from "$lib/images/proiecte/her_city/Centrul-de-proiecte.png";
+
   import HeroSection from "../HeroSection.svelte";
   import bannerSrc from "$lib/images/proiecte/her_city/her-city/banner.jpg";
   import logoSrc from "$lib/images/proiecte/her_city/her-city/logo.png";
@@ -9,6 +11,7 @@
   import Preview from "$lib/components/icons/preview.svelte";
   import Hidden from "$lib/icons/hidden.svelte";
   import footerSrc from "$lib/images/proiecte/her_city/her-city/04.png";
+  import { fly } from "svelte/transition";
 
   let showOverlay = true;
 
@@ -17,7 +20,11 @@
   };
 </script>
 
-<div class="bg-white text-slate-700">
+<div
+  class="bg-white text-slate-700"
+  in:fly={{ y: -50, duration: 250, delay: 300 }}
+  out:fly={{ y: -50, duration: 250 }}
+>
   <HeroSection {bannerSrc} {logoSrc} />
   <section class="flex flex-col w-full lg:grid lg:grid-cols-2 max-w-screen-3xl">
     <Typography
@@ -101,6 +108,13 @@
       <Hidden />
     </div>
   </div>
+  <section class="my-8 lg:my-16">
+    <img
+      src={centrulSrc}
+      alt="Centrul de proiecte"
+      class="w-full px-4 lg:w-1/3 lg:mx-36"
+    />
+  </section>
   <img src={footerSrc} alt="compozitie" class="mt-16 h-1/2" />
 </div>
 

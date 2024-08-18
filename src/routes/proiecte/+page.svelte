@@ -43,6 +43,8 @@
       menite să reducă deficitul de cunoaștere în ceea ce privește contribuția
       femeilor la patrimoniul cultural regional, național și internațional.
     </p>
-    <MaiMulteButton /></Article
+    <MaiMulteButton
+      onClick={() => handleMaiMulteClick("/proiecte/think-outside-the-box")}
+    /></Article
   >
 </PageLayout>
