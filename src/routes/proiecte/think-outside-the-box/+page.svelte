@@ -17,7 +17,7 @@
   import story6 from "$lib/images/proiecte/think_outside_the_box/story_6.jpg";
   import story9 from "$lib/images/proiecte/think_outside_the_box/story_9.jpg";
   const slides = [first, second, third, fourth, fifth];
-  const storySlides = [story2, story1, story4, story9, story5, story6];
+  const storySlides = [story1, story2, story4, story9, story5, story6];
 </script>
 
 <PageLayout withSpacing withPadding={false}>
