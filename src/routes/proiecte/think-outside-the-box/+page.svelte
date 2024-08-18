@@ -118,7 +118,7 @@
         >HerStory</strong
       >
       onorează, recunoaște și celebrează realizările feminine ca sursă de inspirație
-      și tărie pentru noi toți.”. <br /> <br />
+      și tărie pentru noi toți. <br /> <br />
       <span class="italic"
         >Prin intermediul agendei, am dorit să re-dăm femeile unei istorii din
         care nu au lipsit niciodată și să provocăm viitorul!
