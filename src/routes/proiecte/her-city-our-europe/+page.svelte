@@ -17,14 +17,6 @@
   import footerSrc from "$lib/images/proiecte/her_city/compozitie_footer.png";
   import HeroSection from "./HeroSection.svelte";
   import { fly } from "svelte/transition";
-  import Preview from "$lib/components/icons/preview.svelte";
-  import Hidden from "$lib/icons/hidden.svelte";
-
-  let showOverlay = true;
-
-  const handleOverlayClick = () => {
-    showOverlay = !showOverlay;
-  };
 </script>
 
 <div
@@ -111,35 +103,6 @@
         </div>
       </div>
     </div>
-    <div class="relative w-full mt-8 md:mt-16 h-[90vh] md:h-[90vh]">
-      <iframe
-        src="https://her-city-map.vercel.app"
-        class="relative z-0 w-full h-full"
-        title="her city map"
-        allowtransparency
-      />
-      <div
-        class={`${showOverlay ? "flex" : "hidden"} flex-col items-center  justify-center blur-overlay`}
-        role="button"
-        tabindex={0}
-        on:keydown={handleOverlayClick}
-        on:click={handleOverlayClick}
-      >
-        <Preview className="w-32 h-32 md:h-64 md:w-64" />
-        <Typography variant="xl" className="text-slate-700"
-          >Apasă pentru a vizualiza harta</Typography
-        >
-      </div>
-      <div
-        class={`${showOverlay ? "hidden" : "flex"} absolute top-4 md:top-8 btn-circle right-4 md:right-8 btn btn-tertiary btn-md md:btn-lg`}
-        role="button"
-        tabindex={0}
-        on:keydown={handleOverlayClick}
-        on:click={handleOverlayClick}
-      >
-        <Hidden />
-      </div>
-    </div>
   </section>
   <section
     class="grid grid-cols-1 grid-rows-2 pt-8 overflow-hidden md:grid-rows-1 md:grid-cols-2 md:pt-24 md:pl-16 lg:pl-48"
@@ -223,16 +186,3 @@
     <img src={footerSrc} alt="footer" class="w-full h-[40vh] md:h-[80vh]" />
   </section>
 </div>
-
-<style>
-  .blur-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
-    backdrop-filter: blur(20px); /* Apply blur effect */
-    z-index: 10;
-  }
-</style>

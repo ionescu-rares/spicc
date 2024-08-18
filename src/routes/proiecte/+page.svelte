@@ -19,7 +19,7 @@
       care femeile sunt parte integrantă.
     </p>
     <MaiMulteButton
-      onClick={() => handleMaiMulteClick("/proiecte/her-city")}
+      onClick={() => handleMaiMulteClick("/proiecte/her-city-our-europe")}
     /></Article
   >
 

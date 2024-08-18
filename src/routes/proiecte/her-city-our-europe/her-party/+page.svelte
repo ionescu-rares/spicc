@@ -40,14 +40,14 @@
     </Typography>
     <div class="grid grid-rows-2 -mt-1">
       <img src={lego} alt="compozitie" class="w-full" />
-      <Typography variant="large" className="mx-8 md:mx-0 mt-24">
+      <Typography variant="large" className="mx-8 md:mx-0 mt-8 md:mt-24">
         Mixează: <strong>DJ Mantra & artiste locale</strong> <br />
         Locație: <strong>Escape Underground Hub</strong>
       </Typography>
     </div>
   </section>
   <section
-    class="relative flex flex-col w-full gap-48 mx-auto mt-16 md:mt-0 md:gap-0 md:grid md:grid-cols-2 max-w-screen-2xl place-items-center"
+    class="relative flex flex-col w-full gap-48 mx-auto md:mt-0 md:gap-0 md:grid md:grid-cols-2 max-w-screen-2xl place-items-center"
   >
     <img src={djSrcFirst} alt="dj" class="w-full md:p-24" />
     <div class="relative w-full">

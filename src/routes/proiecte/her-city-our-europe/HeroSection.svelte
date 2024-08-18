@@ -8,11 +8,12 @@
   let hero: HTMLElement | null = null;
   let paths = [
     {
-      url: "/proiecte/her-city",
-      label: "Pagina principala",
+      url: "/proiecte/her-city-our-europe",
+      label: "Acasa",
     },
-    { url: "/proiecte/her-city/her-europe", label: "Her Europe" },
-    { url: "/proiecte/her-city/her-party", label: "Her Party" },
+    { url: "/proiecte/her-city-our-europe/her-city", label: "Her City" },
+    { url: "/proiecte/her-city-our-europe/her-europe", label: "Her Europe" },
+    { url: "/proiecte/her-city-our-europe/her-party", label: "Her Party" },
   ];
   $: currentPath = $page.url.pathname;
   $: filteredPaths = paths.filter((path) => currentPath !== path.url);
