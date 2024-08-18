@@ -53,24 +53,22 @@
   <div class="mx-4 md:mx-16">
     <Article src={bannerSrc} title="La povești. Despre Banat și bănățence"
       ><Typography
-        >„La povești. Despre Banat și bănățence ”, o întâlnire dedicată culturii
-        bănățene și personalităților ei feminine marcante. D.na.lect.dr. Simona
-        Adam ne-a povestit despre stereotipuri ca forme de gândire rigide,
-        simplificatoare și generalizatoare și despre abundența stereotipurilor
-        de gen în media și în manualele școlare. D.na conf.dr. Smaranda Vultur
-        ne-a povestit despre Banatul de altădată și bănățencele lui grozave, așa
-        cum apar ele imortalizate în imaginile vechilor ateliere fotografice
-        timișorene, capabile să surprindă dincolo de chipuri, statutul cultural
-        al protagonistelor lor. Mădălina, Silviu, Victor, Simona și Sali ne-au
-        povestit despre patrimoniul cultural al Banatului la care femeile
-        locului și-au adus aportul, despre necesitatea reflectării critice
-        asupra istoriei tradiționale care a marginalizat sau ignorat contribuția
-        feminină la întreprinderea umană și despre importanța cunoașterii și
-        promovării realizărilor acestora.</Typography
+        >D.na.lect.dr. Simona Adam ne-a povestit despre stereotipuri ca forme de
+        gândire rigide, simplificatoare și generalizatoare și despre abundența
+        stereotipurilor de gen în media și în manualele școlare. D.na conf.dr.
+        Smaranda Vultur ne-a povestit despre Banatul de altădată și bănățencele
+        lui grozave, așa cum apar ele imortalizate în imaginile vechilor
+        ateliere fotografice timișorene, capabile să surprindă dincolo de
+        chipuri, statutul cultural al protagonistelor lor. Mădălina, Silviu,
+        Victor, Simona și Sali ne-au povestit despre patrimoniul cultural al
+        Banatului la care femeile locului și-au adus aportul, despre necesitatea
+        reflectării critice asupra istoriei tradiționale care a marginalizat sau
+        ignorat contribuția feminină la întreprinderea umană și despre
+        importanța cunoașterii și promovării realizărilor acestora.</Typography
       ></Article
     >
   </div>
-  <SectionTitle title={`Lansarea agendei "HerStory"`} />
+  <SectionTitle title={`Lansarea agendei "HerStory"`} withSpacing={false} />
   <Slides chevronsAlwaysVisible
     >{#each storySlides as slide}
       <div class="embla__slide">
