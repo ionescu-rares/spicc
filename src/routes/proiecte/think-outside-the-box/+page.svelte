@@ -118,10 +118,13 @@
       plusvaloarea pe care au adus-o acestea societății, să se simtă puternică,
       determinată și pe deplin încrezătoare în sine”. <br /> <br /><strong
         >HerStory</strong
-      > onorează, recunoaște și celebrează realizările feminine ca sursă de inspirație
-      și tărie pentru noi toți.”. Prin intermediul agendei, am dorit să re-dăm femeile
-      unei istorii din care nu au lipsit niciodată! Și să provocăm viitorul! Website:
-      http://herstory-spicc.weebly.com/
+      >
+      onorează, recunoaște și celebrează realizările feminine ca sursă de inspirație
+      și tărie pentru noi toți.”. <br /> <br />
+      <span class="italic"
+        >Prin intermediul agendei, am dorit să re-dăm femeile unei istorii din
+        care nu au lipsit niciodată și să provocăm viitorul!
+      </span>
     </Typography>
   </div>
 </PageLayout>
