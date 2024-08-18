@@ -25,6 +25,7 @@
   <section
     class="flex flex-col w-full mx-auto md:grid md:grid-cols-2 max-w-screen-2xl"
   >
+    <img src={lego} alt="compozitie" class="flex self-end w-1/2 md:hidden" />
     <Typography
       variant="large"
       className="max-w-[50ch] m-8 md:m-24 self-center"
@@ -39,8 +40,11 @@
       de gen în DNB.
     </Typography>
     <div class="grid grid-rows-2 -mt-1">
-      <img src={lego} alt="compozitie" class="w-full" />
-      <Typography variant="large" className="mx-8 md:mx-0 mt-8 md:mt-24">
+      <img src={lego} alt="compozitie" class="hidden w-full md:block" />
+      <Typography
+        variant="large"
+        className="mx-8 md:mx-0 mt-8 md:mt-24 max-w-screen-2xl"
+      >
         Mixează: <strong>DJ Mantra & artiste locale</strong> <br />
         Locație: <strong>Escape Underground Hub</strong>
       </Typography>

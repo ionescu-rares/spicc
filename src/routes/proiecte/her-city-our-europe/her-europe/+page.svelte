@@ -1,7 +1,7 @@
 <script>
   import centrulSrc from "$lib/images/proiecte/her_city/Centrul-de-proiecte.png";
-  import SectionTitle from "./../../../../lib/components/typography/sectionTitle.svelte";
-  import Typography from "./../../../../lib/components/font/typography.svelte";
+  import SectionTitle from "../../../../lib/components/typography/sectionTitle.svelte";
+  import Typography from "../../../../lib/components/font/typography.svelte";
   import bannerSrc from "$lib/images/proiecte/her_city/her_europe/Banner.jpg";
   import herEuropeReversed from "$lib/icons/her_europe_reversed.png";
   import HeroSection from "../HeroSection.svelte";
@@ -22,6 +22,11 @@
   <section
     class="flex flex-col gap-8 lg:gap-0 lg:grid lg:grid-cols-3 lg:grid-rows-2"
   >
+    <img
+      src={legoHorizontal}
+      alt="compozitie"
+      class="flex self-end w-1/2 -mt-1 lg:hidden"
+    />
     <Typography className="lg:col-start-1  lg:col-end-2 m-8 lg:m-24 row-span-1">
       <strong>HerEurope</strong> vizibilizează aportul femeilor la construcția europeană,
       prezentându-le publicului timișorean în cadrul unei expoziții virtuale, a unei
