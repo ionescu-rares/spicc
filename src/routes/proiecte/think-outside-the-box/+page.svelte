@@ -12,7 +12,6 @@
   import fifth from "$lib/images/proiecte/think_outside_the_box/5.jpg";
   import story1 from "$lib/images/proiecte/think_outside_the_box/story_1.jpg";
   import story2 from "$lib/images/proiecte/think_outside_the_box/story_2.jpg";
-  import story3 from "$lib/images/proiecte/think_outside_the_box/story_3.jpg";
   import story4 from "$lib/images/proiecte/think_outside_the_box/story_4.jpg";
   import story5 from "$lib/images/proiecte/think_outside_the_box/story_5.jpg";
   import story6 from "$lib/images/proiecte/think_outside_the_box/story_6.jpg";
