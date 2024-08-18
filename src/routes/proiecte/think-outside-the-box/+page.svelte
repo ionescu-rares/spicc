@@ -21,7 +21,6 @@
 </script>
 
 <PageLayout withSpacing withPadding={false}>
-  <SectionTitle title="Think Outside the Box" />
   <Slides chevronsAlwaysVisible
     >{#each slides as slide}
       <div class="embla__slide">
@@ -33,15 +32,16 @@
     class="flex flex-col gap-8 mx-4 md:mx-16 md:grid md:gap-24 md:grid-cols-2"
   >
     <Typography className="text-start">
-      „Think outside the box!”- Tineri impotriva stereotipurilor de gen s-a
-      dorit a fi un act reparatoriu al unei istorii eliptice şi exclusiviste,
-      care, ignorand contribuţiile a mai bine de jumatate din omenire la facerea
-      ei, nu poate avea pretenţia la mai mult de jumatate de adevar. Femeile au
-      fost, sunt şi vor fi parte a istoriei noastre şi o istorie cu adevarat
-      echilibrata şi inclusiva recunoaşte importanţa dintotdeauna a femeilor
-      pentru societate. Proiectul a dorit totodata sa onoreze, sa recunoasca şi
-      sa celebreze realizarile feminine ca sursa de inspiraţie şi tarie pentru
-      noi toţi şi sa ofere tinerei generaţii modele viabile. <br />
+      <strong>„Think outside the box!”</strong>- Tineri impotriva
+      stereotipurilor de gen s-a dorit a fi un act reparatoriu al unei istorii
+      eliptice şi exclusiviste, care, ignorand contribuţiile a mai bine de
+      jumatate din omenire la facerea ei, nu poate avea pretenţia la mai mult de
+      jumatate de adevar. Femeile au fost, sunt şi vor fi parte a istoriei
+      noastre şi o istorie cu adevarat echilibrata şi inclusiva recunoaşte
+      importanţa dintotdeauna a femeilor pentru societate. Proiectul a dorit
+      totodata sa onoreze, sa recunoasca şi sa celebreze realizarile feminine ca
+      sursa de inspiraţie şi tarie pentru noi toţi şi sa ofere tinerei generaţii
+      modele viabile. <br />
     </Typography>
     <Typography className="italic text-start">
       ​ Proiect finanțat de Primăria Municipiului Timișoara și realizat în
