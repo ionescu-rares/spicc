@@ -9,7 +9,7 @@
   let paths = [
     {
       url: "/proiecte/her-city-our-europe",
-      label: "Acasa",
+      label: "Acasă",
     },
     { url: "/proiecte/her-city-our-europe/her-city", label: "Her City" },
     { url: "/proiecte/her-city-our-europe/her-europe", label: "Her Europe" },
