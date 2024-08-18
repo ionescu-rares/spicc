@@ -16,12 +16,12 @@
   import story4 from "$lib/images/proiecte/think_outside_the_box/story_4.jpg";
   import story5 from "$lib/images/proiecte/think_outside_the_box/story_5.jpg";
   import story6 from "$lib/images/proiecte/think_outside_the_box/story_6.jpg";
-
+  import story9 from "$lib/images/proiecte/think_outside_the_box/story_9.jpg";
   const slides = [first, second, third, fourth, fifth];
-  const storySlides = [story2, story1, story3, story4, story5, story6];
+  const storySlides = [story2, story1, story4, story9, story5, story6];
 </script>
 
-<PageLayout withSpacing withPadding>
+<PageLayout withSpacing withPadding={false}>
   <SectionTitle title="Think Outside the Box" />
   <Slides chevronsAlwaysVisible
     >{#each slides as slide}
@@ -30,7 +30,9 @@
       </div>
     {/each}</Slides
   >
-  <div class="flex flex-col gap-8 md:grid md:gap-24 md:grid-cols-2">
+  <div
+    class="flex flex-col gap-8 mx-4 md:mx-16 md:grid md:gap-24 md:grid-cols-2"
+  >
     <Typography className="text-start">
       „Think outside the box!”- Tineri impotriva stereotipurilor de gen s-a
       dorit a fi un act reparatoriu al unei istorii eliptice şi exclusiviste,
@@ -49,25 +51,26 @@
       Inspectoratul Școlar Județean Timiș.
     </Typography>
   </div>
-
-  <Article src={bannerSrc} title="La povești. Despre Banat și bănățence"
-    ><Typography
-      >„La povești. Despre Banat și bănățence ”, o întâlnire dedicată culturii
-      bănățene și personalităților ei feminine marcante. D.na.lect.dr. Simona
-      Adam ne-a povestit despre stereotipuri ca forme de gândire rigide,
-      simplificatoare și generalizatoare și despre abundența stereotipurilor de
-      gen în media și în manualele școlare. D.na conf.dr. Smaranda Vultur ne-a
-      povestit despre Banatul de altădată și bănățencele lui grozave, așa cum
-      apar ele imortalizate în imaginile vechilor ateliere fotografice
-      timișorene, capabile să surprindă dincolo de chipuri, statutul cultural al
-      protagonistelor lor. Mădălina, Silviu, Victor, Simona și Sali ne-au
-      povestit despre patrimoniul cultural al Banatului la care femeile locului
-      și-au adus aportul, despre necesitatea reflectării critice asupra istoriei
-      tradiționale care a marginalizat sau ignorat contribuția feminină la
-      întreprinderea umană și despre importanța cunoașterii și promovării
-      realizărilor acestora.</Typography
-    ></Article
-  >
+  <div class="mx-4 md:mx-16">
+    <Article src={bannerSrc} title="La povești. Despre Banat și bănățence"
+      ><Typography
+        >„La povești. Despre Banat și bănățence ”, o întâlnire dedicată culturii
+        bănățene și personalităților ei feminine marcante. D.na.lect.dr. Simona
+        Adam ne-a povestit despre stereotipuri ca forme de gândire rigide,
+        simplificatoare și generalizatoare și despre abundența stereotipurilor
+        de gen în media și în manualele școlare. D.na conf.dr. Smaranda Vultur
+        ne-a povestit despre Banatul de altădată și bănățencele lui grozave, așa
+        cum apar ele imortalizate în imaginile vechilor ateliere fotografice
+        timișorene, capabile să surprindă dincolo de chipuri, statutul cultural
+        al protagonistelor lor. Mădălina, Silviu, Victor, Simona și Sali ne-au
+        povestit despre patrimoniul cultural al Banatului la care femeile
+        locului și-au adus aportul, despre necesitatea reflectării critice
+        asupra istoriei tradiționale care a marginalizat sau ignorat contribuția
+        feminină la întreprinderea umană și despre importanța cunoașterii și
+        promovării realizărilor acestora.</Typography
+      ></Article
+    >
+  </div>
   <SectionTitle title={`Lansarea agendei "HerStory"`} />
   <Slides chevronsAlwaysVisible
     >{#each storySlides as slide}
@@ -77,7 +80,7 @@
     {/each}</Slides
   >
   <div
-    class="flex flex-col gap-8 leading-relaxed md:grid md:grid-cols-2 md:gap-16 text-start"
+    class="flex flex-col gap-8 mx-4 leading-relaxed md:mx-16 md:grid md:grid-cols-2 md:gap-16 text-start"
   >
     <Typography>
       Marți, 24 noiembrie 2015, elevii a cinci licee timișorene (Colegiul
@@ -127,8 +130,8 @@
 <style>
   .embla__slide {
     position: relative;
-    width: 60%; /* Each slide takes 80% of the viewport width */
-    min-width: 60%; /* Ensures the slides do not shrink */
+    width: 70%; /* Each slide takes 80% of the viewport width */
+    min-width: 70%; /* Ensures the slides do not shrink */
     padding: 0 8px;
     display: flex;
   }
@@ -142,7 +145,7 @@
     .embla__slide {
       width: 40%; /* Each slide takes 80% of the viewport width */
       min-width: 40%; /* Ensures the slides do not shrink */
-      padding: 0 8px;
+      padding: 0 16px;
     }
   }
 </style>

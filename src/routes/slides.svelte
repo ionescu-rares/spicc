@@ -10,7 +10,7 @@
     <slot />
   </EmblaCarousel>
   <div
-    class={`hidden gap-2 self-start mt-2 md:flex xl:${chevronsAlwaysVisible === false && "hidden"} `}
+    class={`hidden mx-8 md:mx-16 gap-2 self-start mt-2 md:flex xl:${chevronsAlwaysVisible === false && "hidden"} `}
   >
     <Chevron
       onClick={() => embla?.scrollPrev()}
