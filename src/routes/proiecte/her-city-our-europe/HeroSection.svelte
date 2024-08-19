@@ -18,7 +18,7 @@
   $: currentPath = $page.url.pathname;
   $: filteredPaths = paths.filter((path) => currentPath !== path.url);
   const handleScroll = () => {
-    if (hero && window.scrollY < hero.getBoundingClientRect().bottom) {
+    if (hero) {
       window.scrollTo({
         top: hero.getBoundingClientRect().bottom,
         behavior: "smooth",
