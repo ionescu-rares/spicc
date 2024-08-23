@@ -6,9 +6,8 @@
   import SectionTitle from "$lib/components/typography/sectionTitle.svelte";
   import LeftIcon from "$lib/icons/left.svelte";
   import { page } from "$app/stores";
-  import { createEventDispatcher, onMount } from "svelte";
+  import { onMount } from "svelte";
 
-  import fallbackProfileSrc from "$lib/images/fallback_profile.png";
   import X from "../icons/x.svelte";
   import ProfilePicture from "../icons/profilePicture.svelte";
 
@@ -20,12 +19,15 @@
   export let slides: string[] = [];
   export let likes = 0;
   export let views = 0;
-  export let creator: { name: string; avatar: string } = {};
+  export let creator: { name: string; avatar: string } = {
+    name: "",
+    avatar: "",
+  };
   let liked = false;
   let slotElement: HTMLDivElement | null = null;
   let readTime = 0;
 
-  const dispatch = createEventDispatcher();
+  const isCreatorMode = creator.name;
 
   const calculateReadingTime = () => {
     const wordsPerMinute = 200; // Average case.
@@ -127,7 +129,7 @@
     <slot name="info" />
   </div>
 
-  {#if views || likes}
+  {#if isCreatorMode}
     <div class="divider" />
     <div class="flex items-center justify-between w-full gap-2 md:gap-4">
       <button class="btn btn-ghost btn-sm" on:click={handleLike}
