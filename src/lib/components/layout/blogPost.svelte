@@ -113,7 +113,7 @@
           <Typography>{creator.name}</Typography>
         </div>
       {/if}
-      <div class="flex flex-wrap gap-4">
+      <div class="flex flex-wrap items-center gap-4">
         {#if date}
           <Typography variant="small">📅 {date}</Typography>{/if}
         {#if location}
