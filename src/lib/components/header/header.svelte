@@ -11,6 +11,7 @@
     { url: "/ce-facem", label: "Ce facem" },
     { url: "/proiecte", label: "Proiecte" },
     { url: "/actiuni", label: "Acțiuni" },
+    { url: "/blog", label: "Blog" },
     { url: "/contact", label: "Contact" },
   ];
 </script>

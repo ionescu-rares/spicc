@@ -1,9 +1,10 @@
 <script>
   export let className = "";
+  export let fill = "";
 </script>
 
 <svg
-  fill="#334155"
+  fill={fill || "#334155"}
   version="1.1"
   id="Capa_1"
   class={className}

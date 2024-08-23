@@ -10,7 +10,7 @@
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-auto": "^3.0.0",
+		"@sveltejs/adapter-auto": "^3.2.4",
 		"@sveltejs/kit": "^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "^3.0.0",
 		"autoprefixer": "^10.4.19",
@@ -27,6 +27,8 @@
 	"type": "module",
 	"dependencies": {
 		"@emailjs/browser": "^4.4.1",
+		"aws-sdk": "^2.1677.0",
+		"crypto": "^1.0.1",
 		"dotenv": "^16.4.5",
 		"easymde": "^2.18.0",
 		"emailjs": "^4.0.3",
@@ -35,6 +37,7 @@
 		"marked": "^13.0.2",
 		"mongoose": "^8.5.1",
 		"svelte-gestures": "^5.0.3",
+		"svelte-preprocess": "^6.0.2",
 		"svelte-swiper": "^1.0.1"
 	}
 }

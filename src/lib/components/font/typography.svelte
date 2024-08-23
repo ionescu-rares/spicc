@@ -13,6 +13,12 @@
     "medium" as const;
 </script>
 
-<p class={`${variants[variant]} ${bold && "font-bold"} ${className} `}>
-  <slot />
-</p>
+{#if ["large", "xl", "xxl", "huge"].includes(variant)}
+  <h3 class={`${variants[variant]} ${bold && "font-bold"} ${className} `}>
+    <slot />
+  </h3>
+{:else}
+  <p class={`${variants[variant]} ${bold && "font-bold"} ${className} `}>
+    <slot />
+  </p>
+{/if}

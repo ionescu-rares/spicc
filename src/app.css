@@ -17,6 +17,28 @@ html {
 body {
     color: #F1F1F1;
     height: 100%;
+
+    .raw-html p {
+        font-size: 1em;
+        margin: 1em 0;
+    }
+
+    .raw-html h3 {
+        font-size: 1.1125em;
+        line-height: 1rem;
+    }
+
+    @media (min-width: 768px) {
+        .raw-html p {
+            font-size: 1.25em;
+        }
+
+        .raw-html h3 {
+            font-size: 1.5em;
+            line-height: 2rem;
+        }
+    }
+
 }
 
 @tailwind base;
