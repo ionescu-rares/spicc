@@ -15,7 +15,7 @@
   <div class="w-full grid-container">
     {#each data.blogPosts as blogPost}
       <div
-        class="flex flex-col gap-2 p-4 text-start md:p-8"
+        class="flex flex-col gap-2 m-4 text-start md:m-8"
         on:keydown={() => goto(`/blog/${blogPost._id}`)}
         on:click={() => goto(`/blog/${blogPost._id}`)}
         role="button"
