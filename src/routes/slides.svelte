@@ -23,7 +23,7 @@
   </EmblaCarousel>
   <Chevron
     onClick={() => embla?.scrollPrev()}
-    className={`${currentSlide === 0 && "md:lg:xl:hidden"} hidden md:flex bottom-1/2 translate-y-1/2 absolute left-4 ${chevronsAlwaysVisible === false && "xl:hidden"}`}
+    className={`${currentSlide === 0 && "md:lg:xl:hidden"} md:flex bottom-1/2 translate-y-1/2 absolute left-4 ${chevronsAlwaysVisible === false && "xl:hidden"}`}
   >
     {`<`}
   </Chevron>
