@@ -1,11 +1,13 @@
 // @ts-nocheck
 // src/routes/api/like-post/+server.ts
-import { blogPosts } from "$db/blogPosts";
 import { json } from "@sveltejs/kit";
 import { ObjectId } from "mongodb";
+import { start_mongo } from "$db/mongo";
 
 export async function POST({ request }) {
   const { postId } = await request.json();
+  const db = await start_mongo();
+  const blogPosts = db.collection("blogPosts");
 
   // Validate the postId and update the likes count
   if (!postId) {

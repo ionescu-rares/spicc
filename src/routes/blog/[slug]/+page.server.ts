@@ -1,8 +1,10 @@
-import { blogPosts } from "$db/blogPosts";
 import { ObjectId } from "mongodb";
 import type { PageServerLoad } from "./$types";
+import { start_mongo } from "$db/mongo";
 
 export const load: PageServerLoad = async ({ params }) => {
+  const db = await start_mongo();
+  const blogPosts = db.collection("blogPosts");
   const id = params.slug;
   // Fetch data from MongoDB
   const post = await blogPosts.findOne({ _id: new ObjectId(id) });
