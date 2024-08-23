@@ -99,7 +99,7 @@
       >
     </div>
     <div
-      class={`${showOverlay ? "hidden" : "flex"} absolute top-4 lg:top-8 btn-circle right-4 lg:right-8 btn btn-tertiary btn-md lg:btn-lg`}
+      class={`${showOverlay ? "hidden" : "flex"} absolute top-4 lg:top-8 btn-circle right-4 lg:right-8 btn map-button  btn-md lg:btn-lg`}
       role="button"
       tabindex={0}
       on:keydown={handleOverlayClick}
@@ -128,5 +128,12 @@
     background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
     backdrop-filter: blur(20px); /* Apply blur effect */
     z-index: 10;
+  }
+  .map-button {
+    background-color: white;
+    transition: all 0.2s;
+  }
+  .map-button:hover {
+    background-color: #f1f1f1 !important;
   }
 </style>

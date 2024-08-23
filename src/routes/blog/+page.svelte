@@ -29,7 +29,7 @@
             <p class="text-sm">{blogPost.date}</p>
           </div>
         </div>
-        <Typography>{blogPost.title}</Typography>
+        <p class="text-mg lg:text-xl">{blogPost.title}</p>
         <div class="m-0 divider" />
         <div class="flex justify-between">
           <p class="text-sm">❤️ {blogPost.likes}</p>
