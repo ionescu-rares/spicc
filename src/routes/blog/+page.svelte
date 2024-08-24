@@ -15,7 +15,7 @@
   <div class="w-full grid-container">
     {#each data.blogPosts as blogPost}
       <div
-        class="flex flex-col gap-2 my-4 text-start md:m-4"
+        class="flex flex-col gap-2 my-8 text-start md:m-4"
         on:keydown={() => goto(`/blog/${blogPost._id}`)}
         on:click={() => goto(`/blog/${blogPost._id}`)}
         role="button"
@@ -30,11 +30,13 @@
           </div>
         </div>
         <p class="text-mg lg:text-xl">{blogPost.title}</p>
-        <div class="m-0 divider" />
+
+        <div class="hidden m-0 divider lg:flex" />
         <div class="flex justify-between">
           <p class="text-sm">❤️ {blogPost.likes}</p>
           <p class="text-sm">{blogPost.views} views</p>
         </div>
+        <div class="flex m-0 lg:hidden divider" />
       </div>
     {/each}
   </div>
@@ -43,7 +45,7 @@
 <style>
   .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
   }
   @media (min-width: 640px) {
     .grid-container {

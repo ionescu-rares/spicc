@@ -3,7 +3,7 @@
   export let src = "";
 </script>
 
-<div class="w-10 h-10 rounded-full">
+<div class="w-8 h-8 rounded-full">
   <img
     src={src || fallbackProfileSrc}
     alt="profile"

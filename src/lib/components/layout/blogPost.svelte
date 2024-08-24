@@ -120,7 +120,7 @@
           <Typography variant="small">📍 {location}</Typography>
         {/if}
 
-        <Typography variant="small">🕒 {readTime} min. read</Typography>
+        <Typography variant="small">🕒 {readTime} min.</Typography>
       </div>
     </div>
   </SectionTitle>
