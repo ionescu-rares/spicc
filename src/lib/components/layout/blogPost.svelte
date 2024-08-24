@@ -107,7 +107,7 @@
   {/if}
   <SectionTitle {title} withSpacing={false} fullWidth>
     <div
-      class={`${creator.name ? "justify-between" : ""} w-full flex  flex-col md:flex-row flex-wrap gap-4`}
+      class={`${creator.name ? "justify-between" : ""} w-full flex  flex-wrap gap-4`}
       slot="subtitle"
     >
       {#if creator.name}
