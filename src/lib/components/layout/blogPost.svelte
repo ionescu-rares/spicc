@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Location from "./../icons/location.svelte";
   import Facebook from "$lib/components/icons/facebook.svelte";
   import { goBack } from "$lib/utils/goBack.ts";
   import Carousel from "$lib/components/carousel.svelte";
@@ -10,6 +11,8 @@
 
   import X from "../icons/x.svelte";
   import ProfilePicture from "../icons/profilePicture.svelte";
+  import Date from "../icons/date.svelte";
+  import Clock from "../icons/clock.svelte";
 
   export let date = "";
   export let _id = "";
@@ -104,7 +107,7 @@
   {/if}
   <SectionTitle {title} withSpacing={false} fullWidth>
     <div
-      class={`${creator.name ? "justify-between" : ""} w-full flex flex-wrap gap-4`}
+      class={`${creator.name ? "justify-between" : ""} w-full flex  flex-col md:flex-row flex-wrap gap-4`}
       slot="subtitle"
     >
       {#if creator.name}
@@ -115,12 +118,18 @@
       {/if}
       <div class="flex flex-wrap items-center gap-4">
         {#if date}
-          <Typography variant="small">📅 {date}</Typography>{/if}
+          <Typography variant="small" className="flex items-center gap-2"
+            ><Date className="w-5 h-5" /> {date}</Typography
+          >{/if}
         {#if location}
-          <Typography variant="small">📍 {location}</Typography>
+          <Typography variant="small" className="flex items-center gap-2"
+            ><Location className="w-4 h-4" /> {location}</Typography
+          >
         {/if}
 
-        <Typography variant="small">🕒 {readTime} min.</Typography>
+        <Typography variant="small" className="flex items-center gap-2"
+          ><Clock className="w-4 h-4" /> {readTime} min.</Typography
+        >
       </div>
     </div>
   </SectionTitle>
