@@ -119,16 +119,18 @@
       <div class="flex flex-wrap items-center gap-4">
         {#if date}
           <Typography variant="small" className="flex items-center gap-2"
-            ><Date className="w-5 h-5" /> {date}</Typography
+            ><Date className="w-4 h-4 md:w-5 md:h-5" /> {date}</Typography
           >{/if}
         {#if location}
           <Typography variant="small" className="flex items-center gap-2"
-            ><Location className="w-4 h-4" /> {location}</Typography
+            ><Location className="w-3 h-3 md:w-4 md:h-4" />
+            {location}</Typography
           >
         {/if}
 
         <Typography variant="small" className="flex items-center gap-2"
-          ><Clock className="w-4 h-4" /> {readTime} min.</Typography
+          ><Clock className="w-3 h-3 md:w-4 md:h-4" />
+          {readTime} min.</Typography
         >
       </div>
     </div>
