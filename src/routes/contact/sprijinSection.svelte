@@ -5,7 +5,7 @@
 </script>
 
 <section
-  class="flex flex-col p-8 pt-0 md:pb-16 lg:grid lg:grid-cols-3 place-items-center text-start"
+  class="flex flex-col p-8 pt-0 md:p-16 lg:grid lg:grid-cols-3 place-items-center text-start"
 >
   <div class="w-full h-full col-span-2">
     <Typography>
@@ -27,5 +27,5 @@ IBAN: RO57INGB0000999903599361
       Sprijinul tău contează! Mulțumim!
     </Typography>
   </div>
-  <FeminismIcon className="hidden w-2/3  lg:block" />
+  <FeminismIcon className="hidden w-2/3 xl:w-1/2 lg:block" />
 </section>
