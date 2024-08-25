@@ -2,6 +2,7 @@
   import "../app.css";
   import Header from "$lib/components/header/header.svelte";
   import { fly } from "svelte/transition";
+  import Footer from "$lib/components/footer/footer.svelte";
 </script>
 
 <div
@@ -11,4 +12,5 @@
 >
   <Header />
   <slot />
+  <Footer />
 </div>
