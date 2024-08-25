@@ -6,7 +6,7 @@ export const load: PageServerLoad = async () => {
   const db = await start_mongo();
   // Fetch data from MongoDB
   const blogPosts = db.collection("blogPosts");
-  const data = await blogPosts.find().toArray();
+  const data = await blogPosts.find().sort({ _id: -1 }).toArray();
 
   // Convert the `_id` field from `ObjectId` to string for each blog post
   const serializedData = data.map((post: BlogPostType) => ({
