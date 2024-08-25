@@ -25,7 +25,11 @@
   <section
     class="flex flex-col w-full mx-auto md:grid md:grid-cols-2 max-w-screen-2xl"
   >
-    <img src={lego} alt="compozitie" class="flex self-end w-1/2 md:hidden" />
+    <img
+      src={lego}
+      alt="compozitie"
+      class="flex self-end w-1/2 -top-1 md:hidden"
+    />
     <Typography
       variant="large"
       className="max-w-[50ch] m-8 md:m-24 self-center"

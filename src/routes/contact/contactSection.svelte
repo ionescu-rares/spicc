@@ -43,7 +43,7 @@
 </script>
 
 <section
-  class="relative flex flex-col items-center w-full h-full p-4 overflow-hidden bg-white lg:p-16"
+  class="relative flex flex-col items-center w-full h-full p-8 overflow-hidden bg-white lg:p-16"
 >
   <SectionTitle title="Contactează-ne" className="text-slate-700" />
   <div class="z-10 flex flex-col w-full max-w-screen-lg">

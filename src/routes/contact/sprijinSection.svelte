@@ -5,7 +5,7 @@
 </script>
 
 <section
-  class="flex flex-col p-8 md:p-16 lg:grid lg:grid-cols-3 place-items-center text-start"
+  class="flex flex-col p-8 pt-0 md:pb-16 lg:grid lg:grid-cols-3 place-items-center text-start"
 >
   <div class="w-full h-full col-span-2">
     <Typography>

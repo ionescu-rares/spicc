@@ -38,7 +38,7 @@
     <img
       src={legoFirst}
       alt="compozitie"
-      class="self-end order-1 w-1/2 -mt-2 lg:w-full lg:order-2"
+      class="self-end order-1 w-1/2 -mt-2 lg:self-start lg:w-full lg:order-2"
     />
   </section>
   <section class="flex flex-col w-full gap-8 lg:mt-16 lg:grid lg:grid-cols-2">
