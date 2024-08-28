@@ -60,10 +60,12 @@
   >
     {#each data as figure, index}
       <Modal modalId={figure.name.replace(" ", "-")}
-        ><div class="flex flex-col gap-8">
+        ><div class="flex flex-col gap-4 md:gap-8">
           <Typography variant="large" bold>{figure.name}</Typography>
-          <Typography className="font-thin">{figure.description}</Typography>
-          <ul class="px-8 text-sm list-disc md:text-lg">
+          <Typography className="font-thin text-slate-600"
+            >{figure.description}</Typography
+          >
+          <ul class="px-4 text-sm list-disc md:px-8 md:text-lg">
             {#each figure.details as detail}<li>{detail}</li>{/each}
           </ul>
           <cite class="text-sm md:text-lg">"{figure.motto}"</cite>
