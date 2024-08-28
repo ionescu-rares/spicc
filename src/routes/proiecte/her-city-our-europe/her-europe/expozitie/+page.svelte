@@ -38,7 +38,7 @@
 </script>
 
 <PageLayout withPadding={false}>
-  <HeroSection bannerSrc={expozitieBanner} paths={[]} />
+  <HeroSection bannerSrc={expozitieBanner} paths={[]} fixedHeight={false} />
   <div
     class="flex flex-col md:grid overflow-hidden w-full grid-cols-2 gap-4 md:gap-8 -mb-1 lg:gap-16 text-slate-700 bg-[#F1F1F1] p-8 md:p-16"
   >

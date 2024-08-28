@@ -67,10 +67,12 @@
     <div
       class="flex flex-col items-center max-w-screen-xl gap-32 mx-auto my-24 lg:grid lg:grid-cols-2"
     >
-      <div class="w-full col-span-1 max-w-[70ch] mx-8 lg:mx-0">
-        <Typography variant="xl" bold>Expoziția virtuală HerEurope</Typography>
+      <div class="w-full col-span-1 max-w-[70ch]">
+        <Typography variant="xl" bold className=" mx-8 lg:mx-0"
+          >Expoziția virtuală HerEurope</Typography
+        >
         <br />
-        <Typography
+        <Typography className=" mx-8 lg:mx-0"
           >Expoziția virtuală HerEurope celebrează unitatea europeană,
           prezentând publicului de pretutindeni femeile remarcabile, care au
           jucat un rol important în construirea și dezvoltarea Uniunii Europene.
@@ -81,7 +83,7 @@
           care ne întregește pe toți.</Typography
         >
         <div
-          class="flex items-center gap-2 mt-4"
+          class="flex items-center gap-2 mx-8 mt-4 lg:mx-0"
           tabindex={0}
           role="button"
           on:keydown={() =>
