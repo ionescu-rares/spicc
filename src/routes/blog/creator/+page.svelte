@@ -103,7 +103,7 @@
       title,
       content,
       date,
-      slides, // Array of URLs for the cover photos
+      slides,
       likes: 0,
       views: 0,
       creator: {
@@ -122,13 +122,11 @@
 
     if (response.ok) {
       console.log("Blog post saved successfully!");
-      goto("/blog"); // Redirect to the blog page or another page
+      goto("/blog");
     } else {
       console.error("Failed to save blog post:", await response.json());
     }
   }
-
-  // On mount, verify the user’s authentication
   onMount(() => {
     fetchProtectedData();
   });

@@ -1,7 +1,6 @@
 <script lang="ts">
   import PageLayout from "$lib/components/pageLayout.svelte";
   import type { BlogPostType } from "./types";
-  import Typography from "$lib/components/font/typography.svelte";
   import { goto } from "$app/navigation";
   import ProfilePicture from "$lib/components/icons/profilePicture.svelte";
   import SectionTitle from "$lib/components/typography/sectionTitle.svelte";

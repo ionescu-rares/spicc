@@ -11,6 +11,8 @@
   import Divider from "./divider.svelte";
   import footerSrc from "$lib/images/proiecte/her_city/her_europe/05.png";
   import { fly } from "svelte/transition";
+  import ArrowRight from "$lib/icons/home/arrowRight.svelte";
+  import { goto } from "$app/navigation";
 </script>
 
 <div
@@ -65,12 +67,10 @@
     <div
       class="flex flex-col items-center max-w-screen-xl gap-32 mx-auto my-24 lg:grid lg:grid-cols-2"
     >
-      <div class="w-full col-span-1 max-w-[70ch]">
-        <Typography variant="xl" bold className="mx-8 lg:mx-0"
-          >Expoziția virtuală HerEurope</Typography
-        >
+      <div class="w-full col-span-1 max-w-[70ch] mx-8 lg:mx-0">
+        <Typography variant="xl" bold>Expoziția virtuală HerEurope</Typography>
         <br />
-        <Typography className="mx-8 lg:mx-0"
+        <Typography
           >Expoziția virtuală HerEurope celebrează unitatea europeană,
           prezentând publicului de pretutindeni femeile remarcabile, care au
           jucat un rol important în construirea și dezvoltarea Uniunii Europene.
@@ -80,6 +80,24 @@
           povestea unui destin comun, european, în care ne regăsim cu toții și
           care ne întregește pe toți.</Typography
         >
+        <div
+          class="flex items-center gap-2 mt-4"
+          tabindex={0}
+          role="button"
+          on:keydown={() =>
+            goto("/proiecte/her-city-our-europe/her-europe/expozitie", {
+              noScroll: true,
+            })}
+          on:click={() =>
+            goto("/proiecte/her-city-our-europe/her-europe/expozitie", {
+              noScroll: true,
+            })}
+        >
+          <ArrowRight />
+          <Typography bold className="link"
+            >accesează expoziția virtuală</Typography
+          >
+        </div>
       </div>
       <div class="flex w-full">
         <img src={womanSrc} alt="woman" class="w-full h-full" />

@@ -1,12 +1,13 @@
 <script lang="ts">
   import { afterNavigate } from "$app/navigation";
+
   export let bannerSrc = "";
   export let logoSrc = "";
   import { page } from "$app/stores";
 
   let hasScrolled = false;
   let hero: HTMLElement | null = null;
-  let paths = [
+  export let paths = [
     {
       url: "/proiecte/her-city-our-europe",
       label: "Acasă",
@@ -46,14 +47,16 @@
   <img
     alt="her city banner"
     src={bannerSrc}
-    class="h-[60vh] lg:h-full object-cover w-full h-full"
+    class="h-[70vh] lg:h-full object-cover w-full h-full"
   />
 
   <div
     class="absolute top-0 left-0 right-0 flex flex-col w-full top-12 lg:top-24"
   >
     <div class="h-full p-8 mx-auto rounded-md">
-      <img alt="logo" src={logoSrc} class="z-20 w-40 mx-auto lg:w-96" />
+      {#if logoSrc}
+        <img alt="logo" src={logoSrc} class="z-20 w-40 mx-auto lg:w-96" />
+      {/if}
       <nav class="flex gap-4 mx-auto lg:gap-8">
         {#each filteredPaths as path}
           <li class="z-20 list-none">
