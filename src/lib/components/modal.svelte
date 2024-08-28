@@ -9,12 +9,12 @@
   >
     <form method="dialog">
       <button
-        class="absolute text-3xl btn btn-md btn-circle btn-ghost right-4 top-4"
+        class="absolute text-xl md:text-3xl btn btn-md btn-circle btn-ghost right-4 top-4"
         >✕</button
       >
     </form>
     <h3 class="text-4xl font-bold">{title}</h3>
-    <div class="flex flex-col justify-center gap-8 text-start">
+    <div class="flex flex-col justify-center gap-2 md:gap-8 text-start">
       <slot />
     </div>
     <!-- <form method="dialog" class="grid">

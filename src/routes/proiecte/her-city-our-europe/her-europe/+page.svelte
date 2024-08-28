@@ -72,7 +72,7 @@
           >Expoziția virtuală HerEurope</Typography
         >
         <br />
-        <Typography className=" mx-8 lg:mx-0"
+        <Typography className="mx-8 lg:mx-0"
           >Expoziția virtuală HerEurope celebrează unitatea europeană,
           prezentând publicului de pretutindeni femeile remarcabile, care au
           jucat un rol important în construirea și dezvoltarea Uniunii Europene.

@@ -276,33 +276,6 @@ export const data = [
       "Egalitatea de gen nu este un lux, ci o necesitate pentru dezvoltarea durabilă.",
   },
   {
-    name: "Emma Bonino",
-    description: `(1948 - ) - promotoare a valorilor democratice, a drepturilor omului, a politicilor externe active și a problemelor umanitare`,
-    imageSrc: EmmaBonino,
-    details: [
-      "Comisar European pentru Afaceri Externe și Politică de Securitate între 1995-1999",
-      "A promovat democrația și drepturile omului la nivel internațional",
-      "Comisar European pentru Politică de Ajutor Umanitar între 1995-1999",
-      "Luptătoare pentru legalizarea avortului în Italia și pentru drepturile femeilor",
-      "Aleasă în Parlamentul European de mai multe ori",
-    ],
-    motto:
-      "Libertatea nu este completă dacă nu este garantată și pentru femei.",
-  },
-  {
-    name: "Angela Merkel",
-    description: `(1954 - ) - „cancelarul de fier”, lider al Europei, susținătoare a valorilor europene`,
-    imageSrc: AngelaMerkel,
-    details: [
-      "A jucat un rol esențial în gestionarea crizei financiare din 2008-2009 și a crizei migranților din 2015",
-      "A promovat integrarea europeană și consolidarea Uniunii Europene",
-      "A pledat pentru integrarea economică și politică mai profundă în cadrul UE",
-      "A susținut inițiativele comune în domeniul apărării și securității europene",
-      "A avut o voce puternică în relațiile internaționale și stabilitatea UE",
-    ],
-    motto: "Uniunea Europeană este o comunitate a valorilor comune.",
-  },
-  {
     name: "Catherine Margaret Ashton",
     description: `(1956 - ) - prima Înaltă Reprezentantă a Uniunii Europene pentru Afaceri Externe și Politică de Securitate`,
     imageSrc: CatherineAshton,
