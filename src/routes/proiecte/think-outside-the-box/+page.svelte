@@ -77,7 +77,7 @@
     {/each}</Slides
   >
   <div
-    class="flex flex-col gap-8 mx-4 leading-relaxed md:mx-16 md:grid md:grid-cols-2 md:gap-16 text-start"
+    class="flex flex-col gap-8 mx-4 mb-8 leading-relaxed md:mb-16 md:mx-16 md:grid md:grid-cols-2 md:gap-16 text-start"
   >
     <Typography>
       Marți, 24 noiembrie 2015, elevii a cinci licee timișorene (Colegiul

@@ -13,8 +13,8 @@
   import { onDestroy } from "svelte";
 
   const slides = [
-    seventh,
     second,
+    seventh,
     third,
     sixth,
     first,
