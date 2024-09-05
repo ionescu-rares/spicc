@@ -50,7 +50,7 @@
       Inspectoratul Școlar Județean Timiș.
     </Typography>
   </div>
-  <div class="mx-4 md:mx-16">
+  <div class="mx-4 md:mt-8 md:mx-16">
     <Article src={bannerSrc} title="La povești. Despre Banat și bănățence"
       ><Typography
         >D.na.lect.dr. Simona Adam ne-a povestit despre stereotipuri ca forme de

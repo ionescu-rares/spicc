@@ -18,7 +18,7 @@
     <img
       src={imageSrc}
       alt="card background"
-      class="object-cover w-full h-full overflow-hidden transition-all scale-100 rounded-lg"
+      class="object-cover w-full h-full overflow-hidden transition-all duration-500 scale-100 rounded-lg"
       class:scale={isHovered}
     />
   </figure>
