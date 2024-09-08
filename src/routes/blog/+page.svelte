@@ -14,7 +14,7 @@
   <div class="w-full grid-container">
     {#each data.blogPosts as blogPost}
       <div
-        class="flex flex-col gap-2 my-8 text-start md:m-4"
+        class="flex flex-col gap-2 my-8 text-start md:m-4 wrapper"
         on:keydown={() => goto(`/blog/${blogPost._id}`)}
         on:click={() => goto(`/blog/${blogPost._id}`)}
         role="button"
@@ -41,10 +41,18 @@
   </div>
 </PageLayout>
 
-<style>
+<style lang="scss">
   .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  }
+  .wrapper img {
+    transform: scale(1);
+    transition: all 300ms ease;
+  }
+
+  .wrapper:hover img {
+    transform: scale(1.02);
   }
   @media (min-width: 640px) {
     .grid-container {

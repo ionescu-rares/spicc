@@ -4,18 +4,16 @@
   import PageLayout from "$lib/components/pageLayout.svelte";
   import { onMount } from "svelte";
   import Dropzone from "svelte-file-dropzone";
-  import type { BlogPostType } from "../types";
 
   let title = "";
   let date = "";
-  let content = ""; // Markdown content from the editor
+  let content = "";
   let creatorName = "";
   let avatarUrl: string | null = null;
-  let slides: string[] = []; // This will store the URLs of the uploaded cover photos (slides)
+  let slides: string[] = [];
   let uploadAvatarMessage = "";
   let uploadCoverMessage = "";
 
-  // Upload a file to S3 and get the URL
   async function uploadFile(file: File): Promise<string | null> {
     try {
       const response = await fetch("/api/upload-url", {
@@ -57,7 +55,6 @@
     }
   }
 
-  // Handle avatar upload
   async function handleAvatarUpload(e: any) {
     const { acceptedFiles } = e.detail;
     if (acceptedFiles.length > 0) {
@@ -68,7 +65,6 @@
         "Avatarul nu a fost incarcat. Incearca un refresh la pagina...";
   }
 
-  // Handle cover photos (slides) upload
   async function handleSlidesUpload(e: any) {
     const { acceptedFiles } = e.detail;
     for (const file of acceptedFiles) {
@@ -83,26 +79,19 @@
     }
   }
 
-  // Handle form submission
   async function handleSubmit(e: Event) {
     e.preventDefault();
 
-    if (
-      !avatarUrl ||
-      !slides.length ||
-      !title ||
-      !date ||
-      !content ||
-      !creatorName
-    ) {
-      console.error("Please fill all fields and upload the images.");
+    if (!avatarUrl || !slides.length || !title || !content || !creatorName) {
+      window.alert(
+        "Completeaza toate campurile si incarca toate imaginile pentru a salva postarea."
+      );
       return;
     }
 
     const blogPost = {
       title,
       content,
-      date,
       slides,
       likes: 0,
       views: 0,
@@ -182,16 +171,6 @@
         class="w-full text-black bg-white input"
       />
     </label>
-    <div class="grid items-center w-full grid-cols-2 gap-16 my-4">
-      <label class="flex flex-col items-start">
-        Data (ex: Jan 16)
-        <input
-          name="date"
-          bind:value={date}
-          class="w-full text-black bg-white input"
-        />
-      </label>
-    </div>
     <div class="flex flex-col mt-4 mb-8">
       <p class="mt-4 text-start">Poza de cover a postarii</p>
       <Dropzone on:drop={handleSlidesUpload} />

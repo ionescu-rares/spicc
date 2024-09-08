@@ -2,6 +2,7 @@ import { json } from "@sveltejs/kit";
 import { start_mongo } from "$db/mongo.js";
 import type { BlogPostType } from "../../blog/types";
 import { marked } from "marked";
+import { formatDate } from "$lib/utils/formatDate";
 
 export async function POST({ request }) {
   const db = await start_mongo();
@@ -9,8 +10,10 @@ export async function POST({ request }) {
   let blogPost: BlogPostType = await request.json();
 
   const htmlContent = await marked(blogPost.content);
-
   blogPost.content = htmlContent;
+
+  const date = new Date();
+  blogPost.date = formatDate(date);
 
   try {
     const result = await blogPosts.insertOne(blogPost);
