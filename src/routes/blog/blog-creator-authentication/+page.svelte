@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
   import PageLayout from "$lib/components/pageLayout.svelte";
 
   let username = "";
@@ -32,4 +32,4 @@
   {#if error}
     <p style="color: red;">{error}</p>
   {/if}
-</PageLayout>
+</PageLayout> -->
