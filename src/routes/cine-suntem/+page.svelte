@@ -18,7 +18,7 @@
     class="z-10 flex flex-col max-w-full gap-16 sm:grid sm:grid-cols-2 place-items-center"
   >
     <div
-      class="max-w-full shadow-xl xs:max-w-3/4 lg:max-w-[500px] h-80 card glass"
+      class="max-w-full shadow-xl xs:max-w-3/4 lg:max-w-[500px] h-70 md:h-80 card glass"
     >
       <div class="z-10 card-body text-start">
         <Typography variant="xl" className="card-title">Misiune</Typography>
@@ -34,7 +34,7 @@
     </div>
 
     <div
-      class="max-w-full shadow-xl xs:max-w-3/4 lg:max-w-[500px] h-80 card glass"
+      class="max-w-full shadow-xl xs:max-w-3/4 lg:max-w-[500px] h-70 md:h-80 card glass"
     >
       <div class="card-body text-start">
         <Typography variant="xl" className="card-title">Viziune</Typography>
