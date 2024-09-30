@@ -7,6 +7,9 @@ export default {
       colors: {
         brand: "#365b66",
       },
+      screens: {
+        xs: "480px",
+      },
     },
   },
   plugins: [daisyui],
