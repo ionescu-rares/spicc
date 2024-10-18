@@ -4,9 +4,9 @@
   import PageLayout from "$lib/components/pageLayout.svelte";
   import { onMount } from "svelte";
   import Dropzone from "svelte-file-dropzone";
+  import Typography from "$lib/components/font/typography.svelte";
 
   let title = "";
-  let date = "";
   let content = "";
   let creatorName = "";
   let avatarUrl: string | null = null;
@@ -72,7 +72,7 @@
 
       if (slideUrl) {
         uploadCoverMessage = "Coverul a fost incarcat cu succes!";
-        slides.push(slideUrl);
+        slides = [...slides, slideUrl];
       } else
         uploadCoverMessage =
           "Coverul nu a fost incarcat. Incearca un refresh la pagina...";
@@ -105,45 +105,35 @@
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        Authorization: `Bearer ${sessionStorage.getItem("jwt")}`,
       },
       body: JSON.stringify(blogPost),
     });
 
     if (response.ok) {
       console.log("Blog post saved successfully!");
-      goto("/blog");
+      goto("/blog/blog-posts-management");
     } else {
       console.error("Failed to save blog post:", await response.json());
-    }
-  }
-  onMount(() => {
-    fetchProtectedData();
-  });
-
-  async function fetchProtectedData() {
-    const token = localStorage.getItem("jwt");
-    if (!token) {
-      goto("/blog/blog-creator-authentication");
-      return;
-    }
-
-    const response = await fetch("/api/protected", {
-      method: "GET",
-      headers: {
-        Authorization: `Bearer ${token}`,
-        "Content-Type": "application/json",
-      },
-    });
-
-    if (!response.ok) {
-      const { error: responseError } = await response.json();
-      console.error(responseError);
-      goto("/blog/blog-creator-authentication");
     }
   }
 
   function handleEditorUpdate(event: { detail: { content: string } }) {
     content = event.detail.content;
+  }
+
+  function deleteSlide(slideToDelete: string) {
+    const slideToDeleteIndex = slides.findIndex(
+      (slide) => slide === slideToDelete
+    );
+    slides = [
+      ...slides.filter((_slide, index) => index !== slideToDeleteIndex),
+    ];
+    uploadCoverMessage = "Slide-ul a fost sters.";
+  }
+  function deleteAvatar() {
+    avatarUrl = "";
+    uploadAvatarMessage = "Avatarul a fost sters.";
   }
 </script>
 
@@ -159,7 +149,15 @@
       />
     </label>
     <p class="mt-4 text-start">Poza de profil</p>
-    <Dropzone on:drop={handleAvatarUpload} />
+    <Dropzone on:drop={handleAvatarUpload} multiple={false} />
+    {#if avatarUrl}
+      <div class="flex items-center gap-4">
+        <img src={avatarUrl} alt="Avatar" class="w-1/4 mt-2" />
+        <button class="btn btn-primary" type="button" on:click={deleteAvatar}
+          ><Typography variant="large">🗑️Sterge</Typography></button
+        >
+      </div>
+    {/if}
     {uploadAvatarMessage}
 
     <p class="mt-8">Despre continut</p>
@@ -174,6 +172,17 @@
     <div class="flex flex-col mt-4 mb-8">
       <p class="mt-4 text-start">Poza de cover a postarii</p>
       <Dropzone on:drop={handleSlidesUpload} />
+      {#each slides as slide}
+        <div class="flex items-center gap-4">
+          <img src={slide} alt="Cover" class="w-1/3 mt-2" />
+          <button
+            class="btn btn-primary"
+            type="button"
+            on:click={() => deleteSlide(slide)}
+            ><Typography variant="large">🗑️Sterge</Typography></button
+          >
+        </div>
+      {/each}
       {uploadCoverMessage}
       <!-- Multiple cover photos (slides) -->
     </div>

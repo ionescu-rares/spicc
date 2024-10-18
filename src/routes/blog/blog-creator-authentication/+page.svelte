@@ -1,4 +1,4 @@
-<!-- <script>
+<script>
   import PageLayout from "$lib/components/pageLayout.svelte";
 
   let username = "";
@@ -13,11 +13,10 @@
     });
 
     if (response.ok) {
-      const { token } = await response.json();
-      localStorage.setItem("jwt", token); // Store the JWT in localStorage
-      window.location.href = "/blog/creator"; // Redirect to a protected page
+      window.location.href = "/site-management";
     } else {
       const { error } = await response.json();
+      console.error(error);
     }
   }
 </script>
@@ -32,4 +31,4 @@
   {#if error}
     <p style="color: red;">{error}</p>
   {/if}
-</PageLayout> -->
+</PageLayout>

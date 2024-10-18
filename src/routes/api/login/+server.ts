@@ -7,7 +7,7 @@ import { JWT_SECRET } from "$env/static/private";
 
 // Assuming you have set up your MongoDB client
 
-export async function POST({ request }) {
+export async function POST({ request, cookies }) {
   const db = await start_mongo();
   const usersCollection = db.collection("account");
   const { username, password } = await request.json();
@@ -26,12 +26,17 @@ export async function POST({ request }) {
     return json({ error: "Invalid credentials" }, { status: 401 });
   }
 
-  // Convert _id to ObjectId if you're querying by _id elsewhere
   const userId = new ObjectId(user._id);
 
-  // Generate JWT
-  const token = jwt.sign({ userId }, JWT_SECRET || "", {
+  const token = jwt.sign({ userId }, JWT_SECRET, {
     expiresIn: "1h",
+  });
+  cookies.set("jwt", token, {
+    httpOnly: true, // Prevents client-side JS access to this cookie
+    secure: process.env.NODE_ENV === "production", // Ensure the cookie is secure in production
+    maxAge: 60 * 60, // 1 hour
+    path: "/", // Cookie will be available site-wide
+    sameSite: "strict", // Prevent CSRF
   });
 
   return json({ token });

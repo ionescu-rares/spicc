@@ -16,7 +16,7 @@
 
   export let date = "";
   export let _id = "";
-  export let onLike: (postId: string) => Promise<void>;
+  export let onLike: (postId: string) => Promise<void> = async () => {};
   export let location = "";
   export let title = "";
   export let slides: string[] = [];
@@ -38,7 +38,6 @@
       let textLength = slotElement.innerText.split(" ").length;
       if (textLength > 0) {
         readTime = Math.ceil(textLength / wordsPerMinute);
-        dispatch("readTimeCalculated", { readTime });
       }
     }
   };
@@ -65,7 +64,7 @@
   }
 
   function handleLike() {
-    onLike(_id);
+    onLike?.(_id);
     liked = !liked;
   }
 </script>
