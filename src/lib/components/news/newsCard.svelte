@@ -41,7 +41,7 @@
     class={`content-area grid p-4 ${reversed ? "col-start-1 col-end-4" : "col-start-4 col-end-7"}`}
   >
     {#if title}
-      <p class="text-xs font-bold md:text-lg">{title}</p>
+      <p class="text-sm font-bold md:text-xl">{title}</p>
     {/if}
     <div class="hidden pt-4 leading-relaxed md:block slot-area">
       <slot />

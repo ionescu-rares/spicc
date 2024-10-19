@@ -11,7 +11,7 @@
 >
   <SectionTitle title={"Noutăți"} variant="huge" withSpacing={false} />
   <div class="flex flex-col w-full md:gap-12 lg:grid lg:grid-cols-2">
-    {#each actions as action}
+    {#each actions as action, index}
       <div>
         <NewsCard
           src={action.slides[0]}
@@ -22,7 +22,9 @@
             {action.description}
           </Typography>
         </NewsCard>
-        <div class="m-0 sm:hidden divider" />
+        {#if index !== actions.length - 1}
+          <div class="m-0 sm:hidden divider" />
+        {/if}
       </div>
     {/each}
   </div>
