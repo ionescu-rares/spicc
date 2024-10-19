@@ -42,9 +42,8 @@
         <div
           class="flex flex-col gap-2 my-8 text-start md:m-4 wrapper"
           on:keydown={(e) =>
-            e.code === "Enter" &&
-            goto(`/blog/blog-posts-management/${blogPost._id}`)}
-          on:click={() => goto(`/blog/blog-posts-management/${blogPost._id}`)}
+            e.code === "Enter" && goto(`/blog/${blogPost._id}`)}
+          on:click={() => goto(`/blog/${blogPost._id}`)}
           role="button"
           tabindex={0}
         >
