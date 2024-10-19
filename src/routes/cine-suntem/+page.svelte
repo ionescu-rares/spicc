@@ -15,7 +15,7 @@
     și incluziunea socială.
   </p>
   <div
-    class="z-10 flex flex-col w-3/4 gap-16 sm:grid sm:grid-cols-2 place-items-center"
+    class="z-10 flex flex-col w-full gap-16 xl:w-3/4 sm:grid sm:grid-cols-2 place-items-center"
   >
     <div class="max-w-full shadow-xl xs:max-w-3/4 lg:max-w-[550px] card glass">
       <div class="z-10 gap-8 card-body text-start">
