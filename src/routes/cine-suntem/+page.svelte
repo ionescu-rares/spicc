@@ -28,7 +28,7 @@
         </Typography>
       </div>
       <div class="absolute -top-8 -right-4">
-        <Target className="w-20 h-20 md:w-24 md:h-24" />
+        <Target className="w-24 h-24 md:w-28 md:h-28" />
       </div>
     </div>
 
@@ -42,7 +42,7 @@
         </Typography>
       </div>
       <div class="absolute -top-8 -right-4">
-        <EyeRounded className="w-20 h-20 md:w-20 md:h-20 " />
+        <EyeRounded className="w-20 h-20 md:w-24 md:h-24 " />
       </div>
     </div>
   </div>
