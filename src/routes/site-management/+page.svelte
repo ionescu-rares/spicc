@@ -10,9 +10,11 @@
 <PageLayout>
   <SectionTitle title="Administrare Site SPICC" />
 
-  <div class="grid w-full max-w-screen-xl grid-cols-2 place-items-center">
+  <div
+    class="flex flex-col w-full max-w-screen-xl gap-16 md:gap-0 md:grid md:grid-cols-2 place-items-center"
+  >
     <button
-      class="items-center p-4 card glass w-96 h-80"
+      class="items-center p-4 card glass max-w-96 md:w-96 max-h-80 md:h-80"
       on:click={() => goto("/blog/blog-posts-management")}
     >
       <Typography variant="large">Bloguri</Typography>
@@ -22,7 +24,7 @@
       </div>
     </button>
     <button
-      class="items-center p-4 card glass w-96 h-80"
+      class="items-center p-4 card glass max-w-96 md:w-96 max-h-80 md:h-80"
       on:click={() => goto("/actiuni/actions-management")}
     >
       <Typography variant="large">Actiuni</Typography>

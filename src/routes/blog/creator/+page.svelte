@@ -173,7 +173,7 @@
       <p class="mt-4 text-start">Poza de cover a postarii</p>
       <Dropzone on:drop={handleSlidesUpload} />
       {#each slides as slide}
-        <div class="flex items-center gap-4">
+        <div class="flex items-center gap-4 card card-side bg-base-100">
           <img src={slide} alt="Cover" class="w-1/3 mt-2" />
           <button
             class="btn btn-primary"

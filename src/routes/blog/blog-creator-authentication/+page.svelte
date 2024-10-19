@@ -1,9 +1,10 @@
 <script>
+  import Typography from "$lib/components/font/typography.svelte";
   import PageLayout from "$lib/components/pageLayout.svelte";
-
+  import logo from "$lib/images/logo-transparent.png";
   let username = "";
   let password = "";
-  let error = "";
+  let errorMsg = "";
 
   async function login() {
     const response = await fetch("/api/login", {
@@ -17,18 +18,34 @@
     } else {
       const { error } = await response.json();
       console.error(error);
+      errorMsg = error;
     }
   }
 </script>
 
-<PageLayout withSpacing>
-  <form on:submit|preventDefault={login} class="flex flex-col gap-8">
-    <input type="text" placeholder="Username" bind:value={username} />
-    <input type="password" placeholder="Password" bind:value={password} />
-    <button type="submit">Login</button>
+<PageLayout withSpacing={false}>
+  <form
+    on:submit|preventDefault={login}
+    class="flex flex-col justify-center gap-8 p-8 my-auto rounded-lg bg-gradient-to-r from-base-100 to-gray-700 max-w-96"
+  >
+    <img src={logo} alt="logo" class="w-16 h-16 mx-auto" />
+    <Typography bold>SPICC Admin</Typography>
+    <input
+      type="text"
+      placeholder="Username"
+      bind:value={username}
+      class="max-w-xs mx-auto input input-bordered"
+    />
+    <input
+      type="password"
+      placeholder="Password"
+      bind:value={password}
+      class="max-w-xs mx-auto input input-bordered"
+    />
+    <button type="submit" class="w-32 mx-auto btn btn-primary">Login</button>
   </form>
 
-  {#if error}
-    <p style="color: red;">{error}</p>
+  {#if errorMsg}
+    <p style="color: red;">{errorMsg}</p>
   {/if}
 </PageLayout>
