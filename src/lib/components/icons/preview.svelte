@@ -4,7 +4,7 @@
 </script>
 
 <svg
-  fill={fill || "#4B5B6E"}
+  fill={fill || "lightgray"}
   version="1.1"
   id="Capa_1"
   class={className}

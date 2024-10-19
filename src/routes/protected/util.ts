@@ -21,5 +21,5 @@ export async function fetchProtectedData(
   if (!res.ok) {
     // If the token is invalid or expired, redirect to login
     throw redirect(302, "/blog/blog-creator-authentication");
-  } else console.log("SUCCESS");
+  }
 }

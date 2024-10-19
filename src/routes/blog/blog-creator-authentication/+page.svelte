@@ -26,7 +26,7 @@
 <PageLayout withSpacing={false}>
   <form
     on:submit|preventDefault={login}
-    class="flex flex-col justify-center gap-8 p-8 my-auto rounded-lg bg-gradient-to-r from-base-100 to-gray-700 max-w-96"
+    class="flex flex-col items-center justify-center gap-8 p-8 my-auto rounded-lg bg-gradient-to-r from-base-100 to-gray-700 max-w-96"
   >
     <img src={logo} alt="logo" class="w-16 h-16 mx-auto" />
     <Typography bold>SPICC Admin</Typography>

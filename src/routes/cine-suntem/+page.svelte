@@ -2,7 +2,7 @@
   import Typography from "$lib/components/font/typography.svelte";
   import PageLayout from "$lib/components/pageLayout.svelte";
   import SectionTitle from "$lib/components/typography/sectionTitle.svelte";
-  import Preview from "$lib/components/icons/preview.svelte";
+  import EyeRounded from "$lib/icons/eyeRounded.svelte";
   import Target from "$lib/components/icons/target.svelte";
 </script>
 
@@ -15,12 +15,10 @@
     și incluziunea socială.
   </p>
   <div
-    class="z-10 flex flex-col max-w-full gap-16 sm:grid sm:grid-cols-2 place-items-center"
+    class="z-10 flex flex-col w-3/4 gap-16 sm:grid sm:grid-cols-2 place-items-center"
   >
-    <div
-      class="max-w-full shadow-xl xs:max-w-3/4 lg:max-w-[500px] h-70 md:h-80 card glass"
-    >
-      <div class="z-10 card-body text-start">
+    <div class="max-w-full shadow-xl xs:max-w-3/4 lg:max-w-[550px] card glass">
+      <div class="z-10 gap-8 card-body text-start">
         <Typography variant="xl" className="card-title">Misiune</Typography>
         <Typography variant="medium" className="z-10">
           Dorim să construim un spațiu deschis participării și propunerilor
@@ -28,15 +26,13 @@
           cetățenia activă și dialogul intercultural.
         </Typography>
       </div>
-      <div class="absolute flex items-center justify-center centered -z-10">
-        <Target className="w-3/4 h-3/4" />
+      <div class="absolute top-4 right-8">
+        <Target className="w-16 h-16" />
       </div>
     </div>
 
-    <div
-      class="max-w-full shadow-xl xs:max-w-3/4 lg:max-w-[500px] h-70 md:h-80 card glass"
-    >
-      <div class="card-body text-start">
+    <div class="max-w-full shadow-xl xs:max-w-3/4 lg:max-w-[550px] card glass">
+      <div class="gap-8 card-body text-start">
         <Typography variant="xl" className="card-title">Viziune</Typography>
         <Typography variant="medium" className="z-10">
           Viziunea noastră este o lume fără violență împotriva femeilor, unde
@@ -44,18 +40,9 @@
           bucură de autonomie completă și își valorifică potențialul maxim.
         </Typography>
       </div>
-      <div class="absolute centered">
-        <Preview className="w-full h-full -z-10" />
+      <div class="absolute top-4 right-8">
+        <EyeRounded className="w-16 h-16 -z-10" />
       </div>
     </div>
   </div>
 </PageLayout>
-
-<style>
-  .centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-</style>
