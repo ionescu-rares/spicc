@@ -16,10 +16,10 @@
     și incluziunea socială.
   </p>
   <div
-    class="z-10 flex flex-col w-full gap-16 xl:w-3/4 sm:grid sm:grid-cols-2 place-items-center"
+    class="z-10 flex flex-col w-full gap-16 p-2 md:gap-0 xl:w-3/4 sm:grid sm:grid-cols-2 place-items-center"
   >
-    <div class="max-w-full shadow-xl xs:max-w-3/4 lg:max-w-[550px] card glass">
-      <div class="z-10 gap-8 card-body text-start">
+    <div class="max-w-full shadow-xl xs:max-w-3/4 lg:max-w-[450px] card glass">
+      <div class="z-10 gap-4 card-body text-start">
         <Typography variant="xl" className="card-title">Misiune</Typography>
         <Typography variant="medium" className="z-10">
           Dorim să construim un spațiu deschis participării și propunerilor
@@ -27,13 +27,13 @@
           cetățenia activă și dialogul intercultural.
         </Typography>
       </div>
-      <div class="absolute top-4 right-8">
-        <Target className="w-12 h-12 md:w-16 md:h-16" />
+      <div class="absolute -top-8 -right-4">
+        <Target className="w-20 h-20 md:w-24 md:h-24" />
       </div>
     </div>
 
-    <div class="max-w-full shadow-xl xs:max-w-3/4 lg:max-w-[550px] card glass">
-      <div class="gap-8 card-body text-start">
+    <div class="max-w-full shadow-xl xs:max-w-3/4 lg:max-w-[450px] card glass">
+      <div class="gap-4 card-body text-start">
         <Typography variant="xl" className="card-title">Viziune</Typography>
         <Typography variant="medium" className="z-10">
           Viziunea noastră este o lume fără violență împotriva femeilor, unde
@@ -41,8 +41,8 @@
           bucură de autonomie completă și își valorifică potențialul maxim.
         </Typography>
       </div>
-      <div class="absolute top-4 right-8">
-        <EyeRounded className="w-12 h-12 md:w-16 md:h-16 -z-10" />
+      <div class="absolute -top-8 -right-4">
+        <EyeRounded className="w-20 h-20 md:w-20 md:h-20 " />
       </div>
     </div>
   </div>
