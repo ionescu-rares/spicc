@@ -3,6 +3,7 @@
   import PageLayout from "$lib/components/pageLayout.svelte";
   import SectionTitle from "$lib/components/typography/sectionTitle.svelte";
   import EyeRounded from "$lib/icons/eyeRounded.svelte";
+  import Preview from "$lib/components/icons/preview.svelte";
   import Target from "$lib/components/icons/target.svelte";
 </script>
 

@@ -5,8 +5,14 @@
   export let className = "";
   export let withSpacing = true;
   export let fullWidth = false;
-  export let variant: "huge" | "small" | "medium" | "large" | "xl" | "xxl" =
-    "xxl";
+  export let variant:
+    | "xs"
+    | "huge"
+    | "small"
+    | "medium"
+    | "large"
+    | "xl"
+    | "xxl" = "xxl";
 </script>
 
 <div

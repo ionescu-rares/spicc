@@ -8,7 +8,7 @@
   Prin educație:
   <ol class="list-decimal list-inside">
     <li>
-      Eliminăm stereotipurile de gen: identificăm și combatem stereotipurilor de
+      Eliminăm stereotipurile de gen: identificăm și combatem stereotipurile de
       gen, care pot limita potențialul și opțiunile individuale, contribuind
       astfel la o viziune mai echitabilă și deschisă asupra rolurilor de gen
     </li>

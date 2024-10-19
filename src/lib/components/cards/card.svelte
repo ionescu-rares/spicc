@@ -1,11 +1,16 @@
-<script>
+<script lang="ts">
   export let title = "";
   export let thumbnail = "";
   export let date = "";
+  export let onClick;
 </script>
 
 <div
-  class="w-full h-full rounded-md shadow-xl card card-compact sm:w-96 bg-gradient-to-tr from-base-100 to-gray-700"
+  role="button"
+  tabindex={!!onClick ? 0 : -1}
+  on:keydown={(e) => e.code === "Enter" && onClick?.()}
+  on:click={onClick}
+  class={`w-full h-full ${!!onClick && "hover:shadow-xl"} rounded-md transition-all hover:shadow-slate-500 active:shadow-slate-500 card card-compact sm:w-96 bg-gradient-to-tr from-[#1B263B] to-[#163A47]`}
 >
   <figure class="relative flex justify-center h-64">
     <img

@@ -17,7 +17,7 @@
       <ol class="flex flex-col gap-4 p-2 list-decimal list-inside">
         <li>
           <strong>Eliminăm stereotipurile de gen</strong> : identificăm și combatem
-          stereotipurilor de gen, care pot limita potențialul și opțiunile individuale,
+          stereotipurile de gen, care pot limita potențialul și opțiunile individuale,
           contribuind astfel la o viziune mai echitabilă și deschisă asupra rolurilor
           de gen;
         </li>

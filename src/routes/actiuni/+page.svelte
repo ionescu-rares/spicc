@@ -14,15 +14,12 @@
   <SectionTitle variant="huge" title="Acțiuni" />
   <div class="w-full gap-8 grid-container place-items-center">
     {#each data.actions as action}
-      <Card title={action.title} thumbnail={action.slides[0]}
+      <Card
+        onClick={() => goto(`/actiuni/${action._id}`)}
+        title={action.title}
+        thumbnail={action.slides[0]}
         >{action.description}
-        <div slot="actions">
-          <button
-            class="btn btn-primary"
-            on:click={() => goto(`/actiuni/${action._id}`)}>Mai multe</button
-          >
-        </div></Card
-      >
+      </Card>
     {/each}
   </div>
 </PageLayout>

@@ -1,4 +1,5 @@
-<script>
+<script lang="ts">
+  import type { ActionType } from "./actiuni/types.ts";
   import News from "$lib/components/news/News.svelte";
   import lauralaurentiu from "$lib/images/sponsors/lauralaurentiu.jpg";
   import toluna from "$lib/images/sponsors/toluna.png";
@@ -17,6 +18,10 @@
   import Slides from "./slides.svelte";
   import FullImageCard from "$lib/components/cards/fullImageCard.svelte";
   import { goto } from "$app/navigation";
+
+  export let data: {
+    actions: ActionType[];
+  };
 
   const sponsors = [
     { logo: lauralaurentiu, href: "https://lauralaurentiu.ro/" },
@@ -62,7 +67,7 @@
       </div></Slides
     >
   </section>
-  <News />
+  <News actions={data.actions.slice(0, 4)} />
   <section
     class="flex flex-col items-center justify-center w-full gap-16 p-4 bg-white md:px-8 md:py-16 text-slate-700"
   >
