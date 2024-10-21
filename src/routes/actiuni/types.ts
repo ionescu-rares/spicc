@@ -3,7 +3,7 @@ export type ActionType = {
   title: string;
   description: string;
   content: string;
-  date: string;
+  date: Date;
   location: string;
   slides: string[];
 };

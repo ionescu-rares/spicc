@@ -1,18 +1,20 @@
 <script lang="ts">
-  import TurndownService from "turndown";
   import { goto } from "$app/navigation";
   import Editor from "$lib/components/MarkdownEditor/Editor.svelte";
   import PageLayout from "$lib/components/pageLayout.svelte";
   import { onMount } from "svelte";
   import Dropzone from "svelte-file-dropzone";
   import Typography from "$lib/components/font/typography.svelte";
+  import { DateInput } from "date-picker-svelte";
 
   let title = "";
   let content = "";
-  let date = "";
+  let date = new Date();
   let location = "";
   let description = "";
   let slides: string[] = [];
+
+  console.log("DATETATI", date);
 
   let uploadCoverMessage = "";
 
@@ -94,7 +96,7 @@
       slides,
       location,
       description,
-      date,
+      date: date.toISOString(),
     };
 
     const response = await fetch(`/api/save-action`, {
@@ -146,7 +148,7 @@
         class="w-full p-2 text-black bg-white"
       />
     </label>
-    <div class="flex justify-between mt-4">
+    <div class="flex gap-16 mt-4">
       <label class="flex flex-col items-start mt-4">
         Locatie
         <input
@@ -155,13 +157,9 @@
           class="w-full text-black bg-white input"
         />
       </label>
-      <label class="flex flex-col items-start mt-4">
-        Data in care a avut loc actiunea (Exemplu format: 10 Mar 2020)
-        <input
-          name="date"
-          bind:value={date}
-          class="w-full text-black bg-white input"
-        />
+      <label class="flex flex-col items-start mt-4" for="date">
+        Data in care a avut loc actiunea
+        <DateInput bind:value={date} format="dd MMM yyyy" />
       </label>
     </div>
     <div class="flex flex-col mt-4 mb-8">
@@ -186,3 +184,19 @@
     >
   </form>
 </PageLayout>
+
+<style>
+  /* Target the select dropdown */
+
+  /* Target the dropdown options */
+  :global(.svelte-go79cf option) {
+    background-color: white !important; /* Set option background to white */
+    color: black !important; /* Set option text color to black */
+  }
+
+  /* Target the option hover state */
+  :global(.svelte-go79cf option:hover) {
+    background-color: lightgray !important; /* Highlight hovered option */
+    color: black !important; /* Ensure text remains visible on hover */
+  }
+</style>

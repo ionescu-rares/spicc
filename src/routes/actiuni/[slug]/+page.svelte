@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { formatISO } from "./../../../lib/utils/formatDate.ts";
   import Typography from "$lib/components/font/typography.svelte";
   import BlogPost from "$lib/components/layout/blogPost.svelte";
   import PageLayout from "$lib/components/pageLayout.svelte";
@@ -15,7 +16,7 @@
   <BlogPost
     title={action.title}
     location={action.location}
-    date={action.date}
+    date={formatISO(new Date(action.date))}
     slides={action.slides}
     ><div slot="info">{@html action.content}</div></BlogPost
   >
