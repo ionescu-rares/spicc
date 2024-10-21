@@ -8,7 +8,7 @@ export const load: PageServerLoad = async () => {
 
   // Fetch data from MongoDB
   const actions = db.collection("actions");
-  const data = await actions.find().sort({ _id: -1 }).toArray();
+  const data = await actions.find().sort({ date: -1 }).toArray();
 
   // Convert the `_id` field from `ObjectId` to string for each blog post
   const serializedData = data.map((post: ActionType) => ({
