@@ -1,13 +1,11 @@
 <script lang="ts">
   import TurndownService from "turndown";
-  import type { ActionType } from "./../../types.ts";
   import { goto } from "$app/navigation";
   import Editor from "$lib/components/MarkdownEditor/Editor.svelte";
   import PageLayout from "$lib/components/pageLayout.svelte";
   import { onMount } from "svelte";
   import Dropzone from "svelte-file-dropzone";
   import Typography from "$lib/components/font/typography.svelte";
-  import { page } from "$app/stores";
 
   let title = "";
   let content = "";
@@ -113,14 +111,6 @@
     } else {
       console.error("Failed to save action:", await response.json());
     }
-  }
-  onMount(() => {
-    transformContentToMarkdown();
-  });
-
-  async function transformContentToMarkdown() {
-    const turndownService = new TurndownService();
-    content = await turndownService.turndown(action.content);
   }
 
   function handleEditorUpdate(event: { detail: { content: string } }) {

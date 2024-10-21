@@ -34,6 +34,7 @@
 		"@emailjs/browser": "^4.4.1",
 		"aws-sdk": "^2.1677.0",
 		"bcrypt": "^5.1.1",
+		"date-picker-svelte": "^2.13.0",
 		"dotenv": "^16.4.5",
 		"easymde": "^2.18.0",
 		"emailjs": "^4.0.3",

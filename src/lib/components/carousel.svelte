@@ -72,9 +72,13 @@
         <img
           src={slide}
           id={`${slide}-cover`}
-          class="object-cover w-full h-full"
-          alt="photoshoot"
-          draggable={false}
+          class="absolute top-0 object-cover w-full h-full -z-10 blur-lg"
+          alt="thumbnail"
+        />
+        <img
+          src={slide}
+          class="z-10 object-contain w-full h-full"
+          alt="thumbnail"
         />
       </div>
     {/each}
