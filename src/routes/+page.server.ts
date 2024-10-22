@@ -1,6 +1,5 @@
 import type { PageServerLoad } from "./$types";
 import type { ActionType } from "./actiuni/types";
-import { fetchProtectedData } from "./protected/util";
 import { start_mongo } from "$db/mongo";
 
 export const load: PageServerLoad = async () => {

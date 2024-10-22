@@ -7,11 +7,24 @@
   import MaiMulteButton from "$lib/components/buttons/MaiMulteButton.svelte";
   import thinkOutsideSrc from "$lib/images/proiecte/thinkoutside.jpg";
   import { handleMaiMulteClick } from "$lib/utils/handleMaiMulteClick.svelte";
+  import continuumSrc from "$lib/images/proiecte/continuum_feminin/continuum_cover.png";
 </script>
 
 <PageLayout withSpacing
   ><SectionTitle variant="huge" title="Proiecte" />
-  <Article title="Her City. Our Europe" src={herCitySrc}>
+  <Article title="Continuum Feminin" src={continuumSrc}>
+    <p class="text-lg md:text-2xl">
+      Situat la intersecția dintre activismul feminist și demersurile culturale
+      contemporane, Continuum Feminin facilitează dialogul și colaborarea între
+      trei generații de femei - tânără, adultă și vârstnică - prin întâlniri
+      tematice și produse culturale, evidențiind diversitatea și complexitatea
+      experienței feminine și promovând solidaritatea și incluziunea.
+    </p>
+    <MaiMulteButton
+      onClick={() => handleMaiMulteClick("/proiecte/continuum-feminin")}
+    /></Article
+  >
+  <Article title="Her City. Our Europe" src={herCitySrc} reversed>
     <p class="text-lg md:text-2xl">
       HerCity reconfigurează harta culturală a Timișoarei, luminând zone aflate
       acum în penumbră, completând-o cu locurile marcate de feminin și
@@ -23,7 +36,7 @@
     /></Article
   >
 
-  <Article title="FEM" src={femSrc} reversed>
+  <Article title="FEM" src={femSrc}>
     <p class="text-lg md:text-2xl">
       FEM este un proiect de formare și educație non-formală a tinerilor, care
       vizează un aport de cunoaștere adus acestora în domeniul egalității de
@@ -34,7 +47,7 @@
     </p>
     <MaiMulteButton onClick={() => handleMaiMulteClick("/fem")} /></Article
   >
-  <Article title="Think outside the box" src={thinkOutsideSrc}>
+  <Article title="Think outside the box" src={thinkOutsideSrc} reversed>
     <p class="text-lg md:text-2xl">
       „Think outside the box!”- Tineri împotriva stereotipurilor de gen, proiect
       finanțat de Primăria Municipiului Timișoara - a promovat egalitatea de gen

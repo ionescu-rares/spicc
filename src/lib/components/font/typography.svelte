@@ -21,11 +21,11 @@
 </script>
 
 {#if ["large", "xl", "xxl", "huge"].includes(variant)}
-  <h3 class={`${variants[variant]} ${bold && "font-bold"} ${className} `}>
+  <h3 class={`${variants[variant]} ${bold ? "font-bold" : ""} ${className} `}>
     <slot />
   </h3>
 {:else}
-  <p class={`${variants[variant]} ${bold && "font-bold"} ${className} `}>
+  <p class={`${variants[variant]} ${bold ? "font-bold" : ""} ${className} `}>
     <slot />
   </p>
 {/if}

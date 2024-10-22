@@ -6,6 +6,7 @@ export default {
     extend: {
       colors: {
         brand: "#365b66",
+        continuum: "#ce7287",
       },
       screens: {
         xs: "480px",
