@@ -13,7 +13,7 @@
 </script>
 
 <PageLayout withPadding={false}>
-  <div class="bg-white">
+  <div class="flex flex-col items-center bg-white">
     <HeroSection bannerSrc={continuumSrc} paths={[]} fixedHeight={false} />
     <section
       class="flex flex-col w-full gap-8 p-8 bg-white md:grid-rows-2 lg:grid-rows-1 md:grid-cols-6 lg:grid-cols-3 md:grid text-slate-700 text-start"
