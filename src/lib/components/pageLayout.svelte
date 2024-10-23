@@ -8,7 +8,7 @@
 <section
   in:fly={{ y: -50, duration: 250, delay: 300 }}
   out:fly={{ y: -50, duration: 250 }}
-  class={`${bgColor ?? "bg-brand"} flex flex-col items-center min-h-[100svh]  pt-[87px]  h-auto  ${withSpacing && " gap-8 md:gap-16"} ${withPadding && "md:px-8 py-8 px-4 lg:px-16"} lg:text-center `}
+  class={`${bgColor ?? "bg-brand"} flex flex-col items-center min-h-[100svh]    h-auto  ${withSpacing && " gap-8 md:gap-16"} ${withPadding && "md:px-8 py-8 px-4 lg:px-16 mt-[64px]"} lg:text-center `}
 >
   <slot />
 </section>

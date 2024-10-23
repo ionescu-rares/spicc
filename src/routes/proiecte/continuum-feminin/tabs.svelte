@@ -19,9 +19,11 @@
   ];
 </script>
 
-<div class="flex justify-center w-full overflow-x-hidden">
+<div
+  class="sticky top-0 z-20 flex justify-center w-full overflow-x-hidden bg-white"
+>
   <div
-    class="flex w-full max-w-full px-4 space-x-4 overflow-x-auto nowrap no-scrollbar"
+    class="flex w-full max-w-full px-4 my-2 space-x-4 overflow-x-auto text-nowrap no-scrollbar"
     style="scroll-behavior: smooth;"
   >
     {#each tabs as tab, index}
@@ -32,7 +34,7 @@
         class:text-gray-500={index !== activeTab}
         on:click={() => (activeTab = index)}
       >
-        <Typography variant="small">{tab}</Typography>
+        <Typography variant="small" className="nowrap">{tab}</Typography>
       </button>
     {/each}
   </div>
@@ -42,22 +44,22 @@
 <div class="w-full mt-4">
   <div class="w-full p-4 md:p-8 bg-gray-100 min-h-[100vh] text-slate-700">
     {#if activeTab === 0}
-      <div in:fade><ThreeXtab /></div>
+      <div in:fade={{ delay: 400 }}><ThreeXtab /></div>
     {/if}
     {#if activeTab === 1}
-      <div in:fade><CorpulTab /></div>
+      <div in:fade={{ delay: 400 }}><CorpulTab /></div>
     {/if}
     {#if activeTab === 2}
-      <div in:fade><SinguraTab /></div>
+      <div in:fade={{ delay: 400 }}><SinguraTab /></div>
     {/if}
     {#if activeTab === 3}
-      <div in:fade><EgaleTab /></div>
+      <div in:fade={{ delay: 400 }}><EgaleTab /></div>
     {/if}
     {#if activeTab === 4}
-      <div in:fade><BulaTab /></div>
+      <div in:fade={{ delay: 400 }}><BulaTab /></div>
     {/if}
     {#if activeTab === 5}
-      <div in:fade><DrumulTab /></div>
+      <div in:fade={{ delay: 400 }}><DrumulTab /></div>
     {/if}
   </div>
 </div>

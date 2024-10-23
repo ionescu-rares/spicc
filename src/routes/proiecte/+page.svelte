@@ -12,7 +12,7 @@
 
 <PageLayout withSpacing
   ><SectionTitle variant="huge" title="Proiecte" />
-  <!-- <Article title="Continuum Feminin" src={continuumSrc}>
+  <Article title="Continuum Feminin" src={continuumSrc}>
     <p class="text-lg md:text-2xl">
       Situat la intersecția dintre activismul feminist și demersurile culturale
       contemporane, Continuum Feminin facilitează dialogul și colaborarea între
@@ -23,7 +23,7 @@
     <MaiMulteButton
       onClick={() => handleMaiMulteClick("/proiecte/continuum-feminin")}
     /></Article
-  > -->
+  >
   <Article title="Her City. Our Europe" src={herCitySrc} reversed>
     <p class="text-lg md:text-2xl">
       HerCity reconfigurează harta culturală a Timișoarei, luminând zone aflate

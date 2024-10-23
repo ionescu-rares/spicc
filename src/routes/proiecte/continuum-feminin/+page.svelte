@@ -13,10 +13,10 @@
 </script>
 
 <PageLayout withPadding={false}>
-  <div class="flex flex-col items-center bg-white">
+  <div class="flex flex-col items-center w-full bg-white mt-[64px]">
     <HeroSection bannerSrc={continuumSrc} paths={[]} fixedHeight={false} />
     <section
-      class="flex flex-col w-full gap-8 p-8 bg-white md:grid-rows-2 lg:grid-rows-1 md:grid-cols-6 lg:grid-cols-3 md:grid text-slate-700 text-start"
+      class="flex flex-col w-full gap-8 p-4 bg-white md:p-8 md:grid-rows-2 lg:grid-rows-1 md:grid-cols-6 lg:grid-cols-3 md:grid text-slate-700 text-start"
     >
       <div
         class="flex flex-col gap-4 md:col-start-1 md:col-end-4 lg:col-span-1"
@@ -71,13 +71,25 @@
     </section>
     <Timeline />
     <SectionTitle title="Ateliere" className="text-slate-700" />
-    <Tabs />
-    <section class="my-8 md:my-16">
-      <img
-        src={centrulSrc}
-        alt="Centrul de proiecte"
-        class="w-full px-16 w-[800px]"
-      />
+    <div class="relative flex flex-col w-full">
+      <Tabs />
+    </div>
+    <section class="my-8 md:my-16 max-w-[70ch] text-slate-700 flex">
+      <Typography variant="small"
+        >Proiectul face parte din Programul cultural național „Timișoara –
+        Capitală Europeană a Culturii în anul 2023” și este finanțat prin
+        programul Legacy Timișoara 2023, derulat de <a
+          class="link"
+          href="https://www.facebook.com/centruldeproiectetimisoara"
+          target="_blank">Centrul de Proiecte Timișoara</a
+        >
+        cu sume alocate de la bugetul de stat, prin bugetul
+        <a
+          class="link"
+          href="https://www.facebook.com/@MinisterulCulturiiRomania/"
+          target="_blank">Ministerului Culturii</a
+        >.</Typography
+      >
     </section>
   </div>
 </PageLayout>

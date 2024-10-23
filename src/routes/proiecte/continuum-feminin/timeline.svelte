@@ -4,7 +4,7 @@
 
 <SectionTitle title="Cronologie" className="text-slate-700" />
 <ul
-  class="timeline text-start timeline-snap-icon max-md:timeline-compact text-slate-700 timeline-vertical"
+  class="mb-4 timeline text-start timeline-snap-icon max-md:timeline-compact text-slate-700 timeline-vertical"
 >
   <li>
     <div class="timeline-middle">
