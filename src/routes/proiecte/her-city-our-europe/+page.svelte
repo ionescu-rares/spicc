@@ -67,7 +67,12 @@
     </div>
   </section>
   <section class="flex flex-col">
-    <img alt="compozitie" src={legoStraight} class="z-10 w-1/2 mt-8 md:-mt-8" />
+    <img
+      loading="lazy"
+      alt="compozitie"
+      src={legoStraight}
+      class="z-10 w-1/2 mt-8 md:-mt-8"
+    />
     <div
       class="flex flex-col w-full bg-white md:grid md:grid-rows-1 md:grid-cols-2"
     >
@@ -84,7 +89,12 @@
             alt="compozitie"
             class="order-1 w-32 h-48 md:w-1/3"
           />
-          <img src={logoBlack} alt="logo" class="order-2 h-32 p-4 md:h-48" />
+          <img
+            loading="lazy"
+            src={logoBlack}
+            alt="logo"
+            class="order-2 h-32 p-4 md:h-48"
+          />
         </div>
         <div
           class="flex flex-col justify-between h-full m-8 md:mt-24 md:ml-24 text-slate-700"
@@ -111,7 +121,12 @@
     class="grid grid-cols-1 grid-rows-2 pt-8 overflow-hidden md:grid-rows-1 md:grid-cols-2 md:pt-24 md:pl-16 lg:pl-48"
   >
     <div class="m-8 md:m-0">
-      <img src={herEuropeSrc} class="w-2/3" alt="Her europe logo" />
+      <img
+        loading="lazy"
+        src={herEuropeSrc}
+        class="w-2/3"
+        alt="Her europe logo"
+      />
       <Typography
         variant="large"
         className="max-w-[50ch] mt-16 md:mt-24 text-slate-700"
@@ -123,7 +138,12 @@
       >
     </div>
     <div class="relative flex flex-col w-full md:flex-row">
-      <img src={herCityFlag} alt="UE Flag" class="object-cover w-full" />
+      <img
+        loading="lazy"
+        src={herCityFlag}
+        alt="UE Flag"
+        class="object-cover w-full"
+      />
       <img
         src={legoStraight}
         alt="lego"
@@ -142,7 +162,7 @@
     <div
       class="flex flex-col col-start-1 col-end-6 row-start-2 md:row-start-1 md:col-end-7 md:col-start-2"
     >
-      <img src={djSrc} alt="dj" class="w-full" />
+      <img loading="lazy" src={djSrc} alt="dj" class="w-full" />
       <div class="flex justify-between w-full">
         <Typography variant="large" className="text-slate-700 m-2"
           ><p class="text-xl font-bold">28 octombrie</p>
@@ -152,14 +172,24 @@
           <br />
           Locație: Escape Underground Hub</Typography
         >
-        <img src={squareSrc} alt="lego" class="w-24 md:w-24 lg:w-36" />
+        <img
+          loading="lazy"
+          src={squareSrc}
+          alt="lego"
+          class="w-24 md:w-24 lg:w-36"
+        />
       </div>
     </div>
     <div
       class="flex flex-col justify-between col-start-6 col-end-7 row-start-2 md:row-start-1 md:col-end-8 md:col-start-7"
     >
-      <img src={squareSrc} alt="lego" class="hidden w-full md:block" />
-      <img src={dnbSrc} alt="dnb" class="self-end rotate-270" />
+      <img
+        loading="lazy"
+        src={squareSrc}
+        alt="lego"
+        class="hidden w-full md:block"
+      />
+      <img loading="lazy" src={dnbSrc} alt="dnb" class="self-end rotate-270" />
     </div>
     <div
       class="flex flex-col justify-center col-span-7 row-start-1 p-8 md:row-start-1 md:col-end-13 md:col-start-9"
@@ -186,6 +216,11 @@
     />
   </section>
   <section class="w-full h-full">
-    <img src={footerSrc} alt="footer" class="w-full h-[40vh] md:h-[80vh]" />
+    <img
+      loading="lazy"
+      src={footerSrc}
+      alt="footer"
+      class="w-full h-[40vh] md:h-[80vh]"
+    />
   </section>
 </div>

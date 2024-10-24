@@ -102,7 +102,7 @@
         </div>
       </div>
       <div class="flex w-full">
-        <img src={womanSrc} alt="woman" class="w-full h-full" />
+        <img loading="lazy" src={womanSrc} alt="woman" class="w-full h-full" />
       </div>
     </div>
   </section>
@@ -127,5 +127,5 @@
       class="w-full px-4 lg:w-1/3 lg:mx-36"
     />
   </section>
-  <img src={footerSrc} alt="compozitie" class="h-1/2" />
+  <img loading="lazy" src={footerSrc} alt="compozitie" class="h-1/2" />
 </div>

@@ -47,7 +47,12 @@
           role="button"
           tabindex={0}
         >
-          <img src={blogPost.slides[0]} alt="cover" class="rounded-md" />
+          <img
+            loading="lazy"
+            src={blogPost.slides[0]}
+            alt="cover"
+            class="rounded-md"
+          />
           <div class="flex items-center w-full gap-2">
             <ProfilePicture src={blogPost.creator.avatar} />
             <div class="flex flex-col">

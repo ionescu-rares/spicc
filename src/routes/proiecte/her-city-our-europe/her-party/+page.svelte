@@ -44,7 +44,12 @@
       de gen în DNB.
     </Typography>
     <div class="grid grid-rows-2 -mt-1">
-      <img src={lego} alt="compozitie" class="hidden w-full md:block" />
+      <img
+        loading="lazy"
+        src={lego}
+        alt="compozitie"
+        class="hidden w-full md:block"
+      />
       <Typography
         variant="large"
         className="mx-8 md:mx-0 mt-8 md:mt-24 max-w-screen-2xl"
@@ -57,9 +62,9 @@
   <section
     class="relative flex flex-col w-full gap-48 mx-auto md:mt-0 md:gap-0 md:grid md:grid-cols-2 max-w-screen-2xl place-items-center"
   >
-    <img src={djSrcFirst} alt="dj" class="w-full md:p-24" />
+    <img loading="lazy" src={djSrcFirst} alt="dj" class="w-full md:p-24" />
     <div class="relative w-full">
-      <img src={djSrcSecond} alt="dj" class="w-full" />
+      <img loading="lazy" src={djSrcSecond} alt="dj" class="w-full" />
       <img
         src={herSrc}
         alt="her"
@@ -78,7 +83,12 @@
       alt="compozitie"
       class="w-1/2 h-64 pr-16 -mt-32 md:h-96"
     />
-    <img src={dnbSrc} alt="dnb" class="self-center h-32 md:h-64" />
+    <img
+      loading="lazy"
+      src={dnbSrc}
+      alt="dnb"
+      class="self-center h-32 md:h-64"
+    />
   </div>
   <section class="relative flex flex-col md:grid md:grid-cols-2">
     <Typography className="max-w-[70ch] p-8 md:p-24" variant="large"
@@ -86,7 +96,12 @@
       vor fi printr-un party deosebit, electrizant, prin muzică underground,
       pentru că este muzică despre toleranță și susținere reciprocă.</Typography
     >
-    <img src={legoHard} class="w-full -mt-8 md:-mt-24" alt="compozitie" />
+    <img
+      loading="lazy"
+      src={legoHard}
+      class="w-full -mt-8 md:-mt-24"
+      alt="compozitie"
+    />
   </section>
   <section class="relative flex flex-col w-full my-24">
     <div class="relative top-0 left-0 w-full md:absolute">
@@ -96,6 +111,6 @@
         class="w-full px-4 mb-8 md:mb-0 md:w-1/3 md:mx-36"
       />
     </div>
-    <img src={footerSrc} alt="compozitie" class="h-1/2" />
+    <img loading="lazy" src={footerSrc} alt="compozitie" class="h-1/2" />
   </section>
 </div>

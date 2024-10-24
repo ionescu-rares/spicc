@@ -56,7 +56,12 @@
   >
     <div class="h-full p-8 mx-auto rounded-md">
       {#if logoSrc}
-        <img alt="logo" src={logoSrc} class="z-20 w-40 mx-auto lg:w-96" />
+        <img
+          loading="lazy"
+          alt="logo"
+          src={logoSrc}
+          class="z-20 w-40 mx-auto lg:w-96"
+        />
       {/if}
       <nav class="flex gap-4 mx-auto lg:gap-8">
         {#each filteredPaths as path}

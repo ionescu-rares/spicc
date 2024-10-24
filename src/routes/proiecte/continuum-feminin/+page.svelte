@@ -1,5 +1,5 @@
 <script>
-  import centrulSrc from "$lib/images/proiecte/her_city/Centrul-de-proiecte.png";
+  import expozitieContinuumSrc from "$lib/images/proiecte/continuum_feminin/exppozitie_continuum.png";
   import Typography from "$lib/components/font/typography.svelte";
   import PageLayout from "$lib/components/pageLayout.svelte";
   import continuumSrc from "$lib/images/proiecte/continuum_feminin/continuum_cover.png";
@@ -58,7 +58,7 @@
       >
         <img
           class="object-cover w-full h-96"
-          src={expozitieSrc}
+          src={expozitieContinuumSrc}
           alt="expozitie"
         />
         <Typography variant="small">
@@ -70,7 +70,7 @@
       </div>
     </section>
     <Timeline />
-    <SectionTitle title="Ateliere" className="text-slate-700" />
+    <SectionTitle title="Întâlniri" className="text-slate-700" />
     <div class="relative flex flex-col w-full">
       <Tabs />
     </div>

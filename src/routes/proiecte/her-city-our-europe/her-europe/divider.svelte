@@ -5,6 +5,16 @@
 </script>
 
 <div class={`grid w-full grid-cols-2 ${className}`}>
-  <img src={firstDivider} alt="compozitie" class="object-cover w-full" />
-  <img src={secondDivider} alt="compozitie" class="object-cover w-full h-3/4" />
+  <img
+    loading="lazy"
+    src={firstDivider}
+    alt="compozitie"
+    class="object-cover w-full"
+  />
+  <img
+    loading="lazy"
+    src={secondDivider}
+    alt="compozitie"
+    class="object-cover w-full h-3/4"
+  />
 </div>

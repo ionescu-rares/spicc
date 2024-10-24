@@ -24,7 +24,7 @@
   <Slides chevronsAlwaysVisible
     >{#each slides as slide}
       <div class="embla__slide">
-        <img src={slide} alt="meeting" />
+        <img loading="lazy" src={slide} alt="meeting" />
       </div>
     {/each}</Slides
   >
@@ -72,7 +72,12 @@
   <Slides chevronsAlwaysVisible
     >{#each storySlides as slide}
       <div class="embla__slide">
-        <img src={slide} alt="meeting" class="object-cover w-full" />
+        <img
+          loading="lazy"
+          src={slide}
+          alt="meeting"
+          class="object-cover w-full"
+        />
       </div>
     {/each}</Slides
   >

@@ -43,7 +43,7 @@
   </section>
   <section class="flex flex-col w-full gap-8 lg:mt-16 lg:grid lg:grid-cols-2">
     <div class="relative w-full">
-      <img src={legoSecond} alt="compozitie" />
+      <img loading="lazy" src={legoSecond} alt="compozitie" />
       <img
         src={tourSrc}
         alt="tour"
@@ -115,7 +115,7 @@
       class="w-full px-4 lg:w-1/3 lg:mx-36"
     />
   </section>
-  <img src={footerSrc} alt="compozitie" class="mt-16 h-1/2" />
+  <img loading="lazy" src={footerSrc} alt="compozitie" class="mt-16 h-1/2" />
 </div>
 
 <style>

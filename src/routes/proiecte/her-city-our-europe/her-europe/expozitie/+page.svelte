@@ -75,10 +75,13 @@
         id="figure-item"
         class={`flex flex-col items-start xl:mx-16 gap-2 md:gap-4 opacity-0 text-start ${index % 2 === 0 ? "-translate-x-3/4" : "translate-x-3/4"}`}
       >
-        <img src={figure.imageSrc} alt={figure.name} /><Typography
-          variant="xl"
-          bold>{figure.name}</Typography
-        ><Typography variant="small">{figure.description}</Typography><button
+        <img
+          loading="lazy"
+          src={figure.imageSrc}
+          alt={figure.name}
+        /><Typography variant="xl" bold>{figure.name}</Typography><Typography
+          variant="small">{figure.description}</Typography
+        ><button
           class="flex items-center gap-2 text-sm btn-ghost link md:text-lg"
           on:click={() => openModal(figure.name.replace(" ", "-"))}
           ><ArrowRight /> descoperă</button

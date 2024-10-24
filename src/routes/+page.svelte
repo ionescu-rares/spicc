@@ -75,7 +75,12 @@
     <div class="grid grid-cols-2 gap-16">
       {#each sponsors as sponsor}
         <a href={sponsor.href} target="_blank">
-          <img alt="sponsor" src={sponsor.logo} class="max-h-16" />
+          <img
+            loading="lazy"
+            alt="sponsor"
+            src={sponsor.logo}
+            class="max-h-16"
+          />
         </a>
       {/each}
     </div>
@@ -84,7 +89,12 @@
     <div class="grid grid-cols-2 gap-16 md:grid-cols-4 place-items-center">
       {#each partners as partner}
         <a href={partner.href} target="_blank">
-          <img alt="partner" src={partner.logo} class="max-h-24" />
+          <img
+            loading="lazy"
+            alt="partner"
+            src={partner.logo}
+            class="max-h-24"
+          />
         </a>
       {/each}
     </div>

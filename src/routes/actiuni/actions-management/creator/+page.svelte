@@ -167,7 +167,7 @@
       <Dropzone on:drop={handleSlidesUpload} />
       {#each slides as slide}
         <div class="flex items-center gap-4">
-          <img src={slide} alt="Cover" class="w-1/3 mt-2" />
+          <img loading="lazy" src={slide} alt="Cover" class="w-1/3 mt-2" />
           <button
             class="btn btn-primary"
             type="button"
