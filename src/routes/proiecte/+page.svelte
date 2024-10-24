@@ -7,12 +7,12 @@
   import MaiMulteButton from "$lib/components/buttons/MaiMulteButton.svelte";
   import thinkOutsideSrc from "$lib/images/proiecte/thinkoutside.jpg";
   import { handleMaiMulteClick } from "$lib/utils/handleMaiMulteClick.svelte";
-  import continuumSrc from "$lib/images/proiecte/continuum_feminin/continuum_cover.png";
+  import continuumSquare from "$lib/images/proiecte/continuum_feminin/continuum_square.jpg";
 </script>
 
 <PageLayout withSpacing
   ><SectionTitle variant="huge" title="Proiecte" />
-  <Article title="Continuum Feminin" src={continuumSrc}>
+  <Article title="Continuum Feminin" src={continuumSquare}>
     <p class="text-lg md:text-2xl">
       Situat la intersecția dintre activismul feminist și demersurile culturale
       contemporane, Continuum Feminin facilitează dialogul și colaborarea între

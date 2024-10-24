@@ -6,7 +6,7 @@
 
 <dialog id={modalId} class="modal modal-backdrop">
   <div
-    class={`w-11/12 md:w-full  h-auto max-w-4xl max-h-[80%] modal-box bg-white bg-opacity-90 text-slate-700 ${className}`}
+    class={`w-11/12 md:w-full  h-auto max-w-4xl  modal-box bg-white bg-opacity-90 text-slate-700 ${className}`}
   >
     <form method="dialog">
       <button

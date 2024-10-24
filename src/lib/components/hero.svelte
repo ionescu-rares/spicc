@@ -83,7 +83,7 @@
 </script>
 
 <section class="relative flex w-full h-[50vh] md:h-[100svh]" bind:this={hero}>
-  <Carousel {slides} isRounded={false} />
+  <Carousel {slides} isRounded={false} withBlur={false} />
   <button
     id="scroll-down-button"
     on:click={handleClick}

@@ -6,6 +6,7 @@
 
   export let slides: string[] = [];
   export let className: string = "";
+  export let withBlur = true;
 
   let stopAutoplay: () => {};
 
@@ -13,8 +14,6 @@
   let current = 0;
   let embla;
   export let isRounded = true;
-
-  console.log("CURRENT", current);
 
   let options = {
     loop: true,
@@ -69,17 +68,25 @@
   <EmblaCarousel {options} bind:embla bind:stopAutoplay bind:isRounded>
     {#each slides as slide}
       <div class="embla__slide">
-        <img
-          src={slide}
-          id={`${slide}-cover`}
-          class="absolute top-0 object-cover w-full h-full -z-10 blur-lg"
-          alt="thumbnail"
-        />
-        <img
-          src={slide}
-          class="z-10 object-contain w-full h-full"
-          alt="thumbnail"
-        />
+        {#if withBlur}
+          <img
+            src={slide}
+            id={`${slide}-cover-1`}
+            class="absolute top-0 object-cover w-full h-full -z-10 blur-lg"
+            alt="thumbnail"
+          />
+          <img
+            src={slide}
+            class={`z-10 object-contain w-full h-full`}
+            alt="thumbnail"
+          />
+        {:else}
+          <img
+            src={slide}
+            class={`z-10 object-cover w-full h-full`}
+            alt="thumbnail"
+          />
+        {/if}
       </div>
     {/each}
   </EmblaCarousel>
